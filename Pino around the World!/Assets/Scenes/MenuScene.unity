@@ -9659,8 +9659,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706581131}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 1706581133}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: NewGameButton
         m_Mode: 1
         m_Arguments:
@@ -10548,8 +10548,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706581131}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 1706581133}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -13803,8 +13803,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706581131}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 1706581133}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: LoadGameButton
         m_Mode: 1
         m_Arguments:
@@ -14390,6 +14390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1706581132}
   - component: {fileID: 1706581131}
+  - component: {fileID: 1706581133}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -14409,13 +14410,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8a0b7d8510e404c83f77ce0d229d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSaved: 0
-  loadGameButton: {fileID: 1657730538}
   optionMenu: {fileID: 1170539830}
   menuStartButtons: {fileID: 995008788}
   specificOptionMenu: {fileID: 1535527061}
-  confirmedVideoChanges: 0
-  vibrationCheck: 0
   videoMenu: {fileID: 1599631269}
   closeVideoMenu: {fileID: 598564705}
   applyChangeVideo: {fileID: 1135158538}
@@ -14425,6 +14422,7 @@ MonoBehaviour:
   resolutionDropDown: {fileID: 1779252798}
   FPSDropDown: {fileID: 1379648786}
   postProcess: {fileID: 14939487}
+  confirmedVideoChanges: 0
   audioMixer: {fileID: 24100000, guid: e676c7d4b3c85974da6543742106bb5f, type: 2}
   masterValue: {fileID: 652035180}
   musicValue: {fileID: 1548288847}
@@ -14435,6 +14433,7 @@ MonoBehaviour:
   closeGameMenu: {fileID: 387171774}
   languageDropDown: {fileID: 824239572}
   vibrationToggle: {fileID: 904876064}
+  vibrationCheck: 0
   controlsMenu: {fileID: 1479253549}
   closeControlsMenu: {fileID: 0}
   helpMenu: {fileID: 1496716707}
@@ -14454,6 +14453,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706581133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706581130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec06ea498cbfe2d408393685696b7747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSaved: 0
+  loadGameButton: {fileID: 1657730538}
 --- !u!1001 &1726067288
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,0 +1,4 @@
+1. Sistemare il movimento e gameplay (generale)
+2. Creare sistema di salvataggio
+3. Creare mappa mondo da cui spostarsi per i livelli
+4. Creare sistema per salvare le impostazioni tra una scena e l'altra

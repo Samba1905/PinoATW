@@ -7,12 +7,17 @@ using UnityEngine.SceneManagement;
 public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenuPanel, exitPanel, mainMenuPanel;
+    OptionManager oM;
     bool checkPauseMenu;
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
         Time.timeScale = 1.0f;
+    }
+    private void Start()
+    {
+        oM = FindObjectOfType<OptionManager>();
     }
 
     private void LateUpdate()
@@ -22,19 +27,20 @@ public class PauseMenuManager : MonoBehaviour
 
     void openPauseMenu()
     {
-        if(!checkPauseMenu && Input.GetButtonDown("Menu")) //Apre il menu durante il gioco fermando il tempo
+        if(!checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Apre il menu durante il gioco fermando il tempo
         {
             Time.timeScale = 0f;
             pauseMenuPanel.SetActive(true);
             checkPauseMenu = true;
         }
-        else if(checkPauseMenu && Input.GetButtonDown("Menu")) //Chiude il menu durante il gioco riprendendo il tempo
+        else if(checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Chiude il menu durante il gioco riprendendo il tempo
         {
             Time.timeScale = 1f;
             pauseMenuPanel.SetActive(false);
             checkPauseMenu = false;
         }
     }
+
     #region LevelEndMenu
     public void RetryButton()
     {        
@@ -52,6 +58,8 @@ public class PauseMenuManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
         checkPauseMenu = false;
     }
+    #endregion
+    #region Option
     #endregion
     #region MainMenu
     public void OpenMainMenuPanel() //Apre il pannello di conferma per tornare al MainMenu
