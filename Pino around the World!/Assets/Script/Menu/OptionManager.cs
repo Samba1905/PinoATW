@@ -17,7 +17,6 @@ public class OptionManager : MonoBehaviour
     [SerializeField]
     GameObject optionMenu, menuStartButtons, specificOptionMenu;
     public bool checkOptionMenu, checkSpecificOptionMenu;
-    SavedSettings SSettings;
 
     #region VideoSettings
     [SerializeField]
@@ -63,15 +62,7 @@ public class OptionManager : MonoBehaviour
 
     private void Start()
     {
-        postProcess.profile.TryGetSettings(out autoExposure);
-        brightnessSlider.value = SSettings.Btightness;
-        vSyncToggle.isOn = SSettings.vSync;
-        fullscreenToggle.isOn = SSettings.fullScreen;
-        resolutionDropDown.value = SSettings.resolution;
-        FPSDropDown.value = SSettings.FPS;
-        masterValue.value = SSettings.master;
-        musicValue.value = SSettings.music;
-        SFXValue.value = SSettings.SFX;
+        postProcess.profile.TryGetSettings(out autoExposure);        
     }
 
     void LateUpdate()
@@ -80,18 +71,6 @@ public class OptionManager : MonoBehaviour
         PostProcessing();
         AudioChanger();
         GameChanger();
-    }
-
-    private void OnDisable()
-    {
-         SSettings.Btightness = brightnessSlider.value;
-         SSettings.vSync = vSyncToggle.isOn;
-         SSettings.fullScreen = fullscreenToggle.isOn;
-         SSettings.resolution = resolutionDropDown.value;
-         SSettings.FPS = FPSDropDown.value;
-         SSettings.master = masterValue.value;
-         SSettings.music = musicValue.value;
-         SSettings.SFX = SFXValue.value;
     }
 
     #region OptionMenu

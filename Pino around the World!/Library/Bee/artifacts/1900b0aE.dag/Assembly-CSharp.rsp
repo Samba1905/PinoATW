@@ -382,7 +382,6 @@
 "Assets/Script/Menu/OptionManager.cs"
 "Assets/Script/Player/Player.cs"
 "Assets/Script/Player/Sword.cs"
-"Assets/Script/Saved/SavedSettings.cs"
 "Assets/Script/TriggerMap/NextZone/TriggerLoadScene.cs"
 "Assets/Script/TriggerMap/TriggerArea.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
