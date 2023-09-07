@@ -10,6 +10,7 @@ TagManager:
   - TreasureChest
   - DarkEnergyPotion
   - Enemy
+  - MenuPausa
   layers:
   - Default
   - TransparentFX

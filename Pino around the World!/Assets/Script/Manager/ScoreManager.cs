@@ -3,10 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    #region Singleton
+    [HideInInspector] public bool destroyOnLoad;
+    private static ScoreManager _main;
+    public static ScoreManager Main { get { return _main; } }
+    #endregion
+
     public bool levelEnd;
     int enemyKilled, enemyCount, coinsCount;
     [SerializeField]
@@ -18,11 +25,23 @@ public class ScoreManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI gameOver, scoreVal, coinsVal, enemiesVal;
     Player player;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-    }
+        if (_main != null && _main != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _main = this;
+        }
 
+        if (!destroyOnLoad)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+    }
     void Start()
     {
         levelEnd = false;

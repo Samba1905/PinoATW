@@ -7,10 +7,16 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField]
+    GameObject menuStartButtons;
+    [SerializeField]
     bool isSaved = false;
     [SerializeField]
     Button loadGameButton;
 
+    private void Awake()
+    {
+        menuStartButtons.gameObject.SetActive(true);
+    }
     private void LateUpdate()
     {
         LoadGameButton();

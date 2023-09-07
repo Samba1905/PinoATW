@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
@@ -14,9 +15,16 @@ using UnityEngine.UI;
 
 public class OptionManager : MonoBehaviour
 {
+    #region Singleton
+    [HideInInspector] public bool destroyOnLoad;
+    private static OptionManager _main;
+    public static OptionManager Main { get { return _main; } }
+    #endregion
+
     [SerializeField]
     GameObject optionMenu, menuStartButtons, specificOptionMenu;
     public bool checkOptionMenu, checkSpecificOptionMenu;
+    private bool SaveCheck = false;
 
     #region VideoSettings
     [SerializeField]
@@ -60,9 +68,32 @@ public class OptionManager : MonoBehaviour
     GameObject helpMenu, closeHelpMenu;
     #endregion
 
+    private void Awake()
+    {
+        if (_main != null && _main != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _main = this;
+        }
+
+        if (!destroyOnLoad)
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+        if(SaveCheck)
+        {
+            SaveOptions();
+            SaveCheck = false;
+        }
+        LoadOptions();
+    }
+
     private void Start()
     {
-        postProcess.profile.TryGetSettings(out autoExposure);        
+        postProcess.profile.TryGetSettings(out autoExposure);
     }
 
     void LateUpdate()
@@ -71,6 +102,11 @@ public class OptionManager : MonoBehaviour
         PostProcessing();
         AudioChanger();
         GameChanger();
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveOptions();
     }
 
     #region OptionMenu
@@ -195,6 +231,7 @@ public class OptionManager : MonoBehaviour
     //Conferma le modifiche apportate nel menu video
     public void ConfirmVideoSettings()
     {
+        SaveOptions();
         VideoSettings();
         applyChangeVideo.SetActive(false);
         videoMenu.SetActive(false);
@@ -250,8 +287,29 @@ public class OptionManager : MonoBehaviour
     }
     #endregion
     #region ControlsMenu
+
+    public void ChangeControls()
+    {
+        
+    }
+
+    public void CloseControlsMenu()
+    {        
+        controlsMenu.SetActive(false);
+        specificOptionMenu.SetActive(false);
+        optionMenu.SetActive(true);        
+    }
     #endregion
     #region HelpMenu
+
+
+
+    public void CloseHelpMenu()
+    {
+        helpMenu.SetActive(false);
+        specificOptionMenu.SetActive(false);
+        optionMenu.SetActive(true);
+    }
     #endregion
     #endregion
 
@@ -259,5 +317,38 @@ public class OptionManager : MonoBehaviour
     {
         if (optionMenu.activeSelf) checkOptionMenu = true; else checkOptionMenu = false;
         if (specificOptionMenu.activeSelf) checkSpecificOptionMenu = true; else checkSpecificOptionMenu = false;
+    }
+
+    void SaveOptions()
+    {
+        Options options = new Options();
+        options.brightness = brightnessSlider.value;
+        options.vSync = vSyncToggle.isOn;
+        options.fullScreen = fullscreenToggle.isOn;
+        options.resolution = resolutionDropDown.value;
+        options.FPS = FPSDropDown.value;
+        options.audioMaster = masterValue.value;
+        options.audioMusic = musicValue.value;
+        options.audioSFX = SFXValue.value;
+
+        string json = JsonUtility.ToJson(options);
+
+        File.WriteAllText(Application.persistentDataPath + "/OptionsData.json", json);
+    }
+
+    void LoadOptions()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "/OptionsData.json");
+
+        Options options = JsonUtility.FromJson<Options>(json);
+
+        brightnessSlider.value = options.brightness;
+        vSyncToggle.isOn = options.vSync;
+        fullscreenToggle.isOn = options.fullScreen;
+        resolutionDropDown.value = options.resolution;
+        FPSDropDown.value = options.FPS;
+        masterValue.value = options.audioMaster;
+        musicValue.value = options.audioMusic;
+        SFXValue.value = options.audioSFX;
     }
 }

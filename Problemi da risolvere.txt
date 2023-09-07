@@ -1,4 +1,21 @@
-1. Sistemare il movimento e gameplay (generale)
-2. Creare sistema di salvataggio
-3. Creare mappa mondo da cui spostarsi per i livelli
-4. Creare sistema per salvare le impostazioni tra una scena e l'altra
+UI
+1. Modificare script opzioni per salvare e caricare preferenze giocatore (PlayerPref) FATTO
+2. Creare selezione personaggio inizio gioco
+3. Creare multisalvataggio
+4. Creare menu selezione livelli
+5. Creare selezione difficoltà livello
+
+---------------------------------------------------------------------------------------------------
+
+Gameplay
+1. Migliorare Deficenza artificiale
+2. Migliorare sistema combattimento
+3. Implementare sistema spell personaggio
+4. Creare companion per storia
+5. Implementare tutto il sistema salvataggio progressi giocatore
+6. Creare sistema di stamina interno + UI
+
+---------------------------------------------------------------------------------------------------
+
+Singleton
+1. Creare e sistemare tutti i Singleton

@@ -12,15 +12,19 @@ ScriptsOnlyBuild:
     - OptionManager
     - PauseMenuManager
     - Player
+    - PlayerMovement
     - ScoreManager
     - Swine
     - Sword
     - TreasureChest
     - TriggerLoadScene
     Unity.InputSystem.dll:
+    - UnityEngine.InputSystem.InputActionAsset
+    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
+    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Postprocessing.Runtime.dll:
     - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
     - UnityEngine.Rendering.PostProcessing.AutoExposure
@@ -50,8 +54,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -59,7 +65,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
@@ -70,8 +75,15 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Toggle
   serializedClasses:
+    Unity.InputSystem:
+    - UnityEngine.InputSystem.InputAction
+    - UnityEngine.InputSystem.InputActionMap
+    - UnityEngine.InputSystem.InputBinding
+    - UnityEngine.InputSystem.InputControlScheme
+    - UnityEngine.InputSystem.InputControlScheme/DeviceRequirement
     Unity.Postprocessing.Runtime:
     - UnityEngine.Rendering.PostProcessing.BoolParameter
+    - UnityEngine.Rendering.PostProcessing.ColorParameter
     - UnityEngine.Rendering.PostProcessing.EyeAdaptationParameter
     - UnityEngine.Rendering.PostProcessing.FastApproximateAntialiasing
     - UnityEngine.Rendering.PostProcessing.FloatParameter
@@ -85,6 +97,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.PostProcessResources/Shaders
     - UnityEngine.Rendering.PostProcessing.SubpixelMorphologicalAntialiasing
     - UnityEngine.Rendering.PostProcessing.TemporalAntialiasing
+    - UnityEngine.Rendering.PostProcessing.TextureParameter
     - UnityEngine.Rendering.PostProcessing.Vector2Parameter
     - UnityEngine.Rendering.PostProcessing.VectorscopeMonitor
     - UnityEngine.Rendering.PostProcessing.WaveformMonitor
@@ -139,6 +152,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseControlsMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: OpenGameMenu
@@ -320,49 +336,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3202}
     - Class: 114
-      Script: {instanceID: 3666}
+      Script: {instanceID: 3664}
     - Class: 114
-      Script: {instanceID: 3808}
+      Script: {instanceID: 3806}
     - Class: 114
-      Script: {instanceID: 3904}
+      Script: {instanceID: 3902}
     - Class: 114
-      Script: {instanceID: 4428}
+      Script: {instanceID: 4262}
     - Class: 114
-      Script: {instanceID: 5198}
+      Script: {instanceID: 4426}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 5196}
     - Class: 114
-      Script: {instanceID: 5482}
+      Script: {instanceID: 5400}
     - Class: 114
-      Script: {instanceID: 5574}
+      Script: {instanceID: 5480}
     - Class: 114
-      Script: {instanceID: 5852}
+      Script: {instanceID: 5572}
     - Class: 114
-      Script: {instanceID: 5948}
+      Script: {instanceID: 5850}
     - Class: 114
-      Script: {instanceID: 6060}
+      Script: {instanceID: 5946}
     - Class: 114
-      Script: {instanceID: 6306}
+      Script: {instanceID: 6058}
     - Class: 114
-      Script: {instanceID: 6638}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 6816}
+      Script: {instanceID: 6636}
     - Class: 114
-      Script: {instanceID: 6878}
+      Script: {instanceID: 6814}
     - Class: 114
-      Script: {instanceID: 7204}
+      Script: {instanceID: 6876}
     - Class: 114
-      Script: {instanceID: 7218}
+      Script: {instanceID: 7216}
+    - Class: 114
+      Script: {instanceID: 7648}
     - Class: 114
       Script: {instanceID: 8390}
     - Class: 114
       Script: {instanceID: 8462}
     - Class: 114
+      Script: {instanceID: 8470}
+    - Class: 114
       Script: {instanceID: 8500}
     - Class: 114
-      Script: {instanceID: 9002}
+      Script: {instanceID: 8706}
     - Class: 114
-      Script: {instanceID: 9342}
+      Script: {instanceID: 9004}
+    - Class: 114
+      Script: {instanceID: 9344}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -420,6 +442,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 72
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
@@ -427,6 +451,12 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -453,42 +483,54 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3666}
+      Script: {instanceID: 3664}
     - Class: 114
-      Script: {instanceID: 3904}
+      Script: {instanceID: 3902}
     - Class: 114
-      Script: {instanceID: 4330}
+      Script: {instanceID: 4056}
     - Class: 114
-      Script: {instanceID: 4642}
+      Script: {instanceID: 4262}
     - Class: 114
-      Script: {instanceID: 4768}
+      Script: {instanceID: 4328}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 4640}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 4766}
     - Class: 114
-      Script: {instanceID: 5574}
+      Script: {instanceID: 5074}
     - Class: 114
-      Script: {instanceID: 5852}
+      Script: {instanceID: 5400}
     - Class: 114
-      Script: {instanceID: 5948}
+      Script: {instanceID: 5572}
     - Class: 114
-      Script: {instanceID: 6638}
+      Script: {instanceID: 5850}
     - Class: 114
-      Script: {instanceID: 6816}
+      Script: {instanceID: 5946}
     - Class: 114
-      Script: {instanceID: 7204}
+      Script: {instanceID: 6636}
     - Class: 114
-      Script: {instanceID: 7218}
+      Script: {instanceID: 6814}
+    - Class: 114
+      Script: {instanceID: 7216}
+    - Class: 114
+      Script: {instanceID: 7648}
     - Class: 114
       Script: {instanceID: 8462}
+    - Class: 114
+      Script: {instanceID: 8470}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 205
       Script: {instanceID: 0}
@@ -935,7 +977,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 81e91b33af0ca03f84805fb8d4634370
+      Hash: df1d2d6df20400bc51db881978eac0c0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OptionManager
@@ -1385,7 +1427,7 @@ ScriptsOnlyBuild:
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: 202d34400da09b6c951d0868fbff2c75
+      Hash: b5e02ff8a5f80545df9523fbb64291a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1704,6 +1746,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ControlsOptionManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSubmitMessageListener
@@ -1773,6 +1821,12 @@ ScriptsOnlyBuild:
     assemblyName: CFXRRuntime.dll
     namespaceName: CartoonFX
     className: CFXR_ParticleTextFontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 624b26dc53330dc82288ec0ccf058ada
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerMovement
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1917,6 +1971,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 83ebb6521f5b1afc5358e0f5b6451065
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Singleton
   platform: 19
   scenePathNames:
   - Assets/Scenes/MenuScene.unity

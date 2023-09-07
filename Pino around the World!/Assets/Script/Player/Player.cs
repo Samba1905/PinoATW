@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     int attack, HP, DE, HPMax;
 
     Vector3 directionPlayer;
+    public Vector3 orientation;
     [SerializeField]
     public Transform provaMove;
     Rigidbody rb;
@@ -26,13 +27,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI coin;
     [SerializeField]
-    Slider healtPointsbar, darkEnergyBar;
+    Slider healtPointsBar, darkEnergyBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-        rb= GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
+        rb = GetComponentInChildren<Rigidbody>();
         movementSpeed = 250f;
         attack = 0;
         DE = 0;
@@ -62,9 +63,15 @@ public class Player : MonoBehaviour
         horizontalSpeed = Input.GetAxisRaw("Horizontal");
         verticalSpeed = Input.GetAxisRaw("Vertical");
 
-        directionPlayer = new Vector3(verticalSpeed * -1f, 0f ,horizontalSpeed).normalized;
+        directionPlayer = transform.forward * verticalSpeed - transform.right * horizontalSpeed;
         
-        if(Input.GetButton("Run"))
+        orientation = Camera.main.transform.forward;
+
+        rb.velocity = transform.TransformDirection(directionPlayer * movementSpeed * Time.fixedDeltaTime);
+
+
+
+        if (Input.GetButton("Run"))
         {
             isRunning = true;
             movementSpeed = 400f;
@@ -79,9 +86,9 @@ public class Player : MonoBehaviour
         if (directionPlayer != Vector3.zero)
         {     
             isMoving = true;
-            Quaternion toRotate = Quaternion.LookRotation(directionPlayer, Vector3.up);
-            transform.rotation = toRotate;
-            rb.velocity = transform.TransformDirection(Vector3.forward * movementSpeed * Time.fixedDeltaTime);
+            //Quaternion toRotate = Quaternion.LookRotation(directionPlayer, Vector3.up);
+            //transform.rotation = toRotate;
+            
         }
         else
         {
@@ -197,7 +204,7 @@ public class Player : MonoBehaviour
 
     void UpdateUI() //funzione per dare dei feedback di vita, monete e darkenergy al player
     {
-        healtPointsbar.value = HP;
+        healtPointsBar.value = HP;
         darkEnergyBar.value = DE;
         coin.text = nCoin.ToString();
     }
