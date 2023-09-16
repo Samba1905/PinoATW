@@ -1,9 +1,10 @@
 UI
-1. Modificare script opzioni per salvare e caricare preferenze giocatore (PlayerPref) FATTO
-2. Creare selezione personaggio inizio gioco
+1. Modificare script opzioni per salvare e caricare preferenze giocatore (JSON) FATTO
+2. Creare selezione personaggio inizio gioco (FATTO CIRCA)
 3. Creare multisalvataggio
 4. Creare menu selezione livelli
 5. Creare selezione difficoltà livello
+6. Creare la modifica dei comandi
 
 ---------------------------------------------------------------------------------------------------
 

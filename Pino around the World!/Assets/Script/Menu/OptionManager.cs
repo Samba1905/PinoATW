@@ -15,20 +15,16 @@ using UnityEngine.UI;
 
 public class OptionManager : MonoBehaviour
 {
-    #region Singleton
-    [HideInInspector] public bool destroyOnLoad;
-    private static OptionManager _main;
-    public static OptionManager Main { get { return _main; } }
-    #endregion
-
     [SerializeField]
     GameObject optionMenu, menuStartButtons, specificOptionMenu;
     public bool checkOptionMenu, checkSpecificOptionMenu;
     private bool SaveCheck = false;
 
+    public GameObject pauseMenuPanel, backMainMenuPanel, exitPanel;
+
     #region VideoSettings
     [SerializeField]
-    GameObject videoMenu, closeVideoMenu, applyChangeVideo;
+    GameObject videoMenu, applyChangeVideo;
     [SerializeField]
     Slider brightnessSlider;
     [SerializeField]
@@ -37,7 +33,7 @@ public class OptionManager : MonoBehaviour
     TMP_Dropdown resolutionDropDown, FPSDropDown;
     [SerializeField]
     PostProcessVolume postProcess;
-    private AutoExposure autoExposure = null;
+    AutoExposure autoExposure = null;
     [SerializeField]
     bool confirmedVideoChanges;
     #endregion
@@ -47,11 +43,11 @@ public class OptionManager : MonoBehaviour
     [SerializeField]
     Slider masterValue, musicValue, SFXValue;
     [SerializeField]
-    GameObject audioMenu, closeAudioMenu;
+    GameObject audioMenu;
     #endregion
     #region GameSettings
     [SerializeField]
-    GameObject gameMenu, closeGameMenu;
+    GameObject gameMenu;
     [SerializeField]
     TMP_Dropdown languageDropDown;
     [SerializeField]
@@ -61,29 +57,59 @@ public class OptionManager : MonoBehaviour
     #endregion
     #region ControlsSettings
     [SerializeField]
-    GameObject controlsMenu, closeControlsMenu;
+    GameObject controlsMenu;
     #endregion
     #region HelpSettings
     [SerializeField]
-    GameObject helpMenu, closeHelpMenu;
+    GameObject helpMenu;
     #endregion
 
     private void Awake()
     {
-        if (_main != null && _main != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _main = this;
-        }
+        optionMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[0];
+        if (GameObject.FindGameObjectWithTag("MenuStart")) menuStartButtons = GameObject.FindGameObjectWithTag("MenuStart");
+        else menuStartButtons = GameObject.FindGameObjectWithTag("Empty");
+        specificOptionMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[1];
+        videoMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[2];
+        applyChangeVideo = GameObject.FindGameObjectsWithTag("MenuOptions")[3];
+        audioMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[4];
+        gameMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[5];
+        controlsMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[6];
+        helpMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[7];
 
-        if (!destroyOnLoad)
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
-        if(SaveCheck)
+        if (GameObject.FindGameObjectWithTag("MenuPausa")) pauseMenuPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[0];
+        else pauseMenuPanel = GameObject.FindGameObjectWithTag("Empty");
+        if (GameObject.FindGameObjectWithTag("MenuPausa")) backMainMenuPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[1];
+        else backMainMenuPanel = GameObject.FindGameObjectWithTag("Empty");
+        if (GameObject.FindGameObjectWithTag("MenuPausa")) exitPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[2];
+        else exitPanel = GameObject.FindGameObjectWithTag("Empty");
+
+        brightnessSlider = Slider.FindObjectsOfType<Slider>()[3];
+        masterValue = Slider.FindObjectsOfType<Slider>()[2];
+        musicValue = Slider.FindObjectsOfType<Slider>()[1];
+        SFXValue = Slider.FindObjectsOfType<Slider>()[0];
+        vSyncToggle = Toggle.FindObjectsOfType<Toggle>()[1];
+        fullscreenToggle = Toggle.FindObjectsOfType<Toggle>()[2];
+        vibrationToggle = Toggle.FindObjectsOfType<Toggle>()[0];
+        resolutionDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[1];
+        FPSDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[2];
+        languageDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[0];
+
+        postProcess = GameObject.FindGameObjectWithTag("PostProcess").GetComponent<PostProcessVolume>();
+
+        optionMenu.SetActive(false);
+        specificOptionMenu.SetActive(false);
+        videoMenu.SetActive(false);
+        applyChangeVideo.SetActive(false);
+        audioMenu.SetActive(false);
+        gameMenu.SetActive(false);
+        controlsMenu.SetActive(false);
+        helpMenu.SetActive(false);
+        pauseMenuPanel.SetActive(false);
+        backMainMenuPanel.SetActive(false);
+        exitPanel.SetActive(false);
+
+        if (SaveCheck)
         {
             SaveOptions();
             SaveCheck = false;
@@ -153,6 +179,7 @@ public class OptionManager : MonoBehaviour
 
     public void BackToStartMenu()
     {
+        SaveOptions();
         optionMenu.SetActive(false);
         menuStartButtons.SetActive(true);
     }
@@ -242,6 +269,7 @@ public class OptionManager : MonoBehaviour
     //Chiude il menu del video
     public void CloseVideoMenu()
     {
+        LoadOptions();
         videoMenu.SetActive(false);
         specificOptionMenu.SetActive(false);
         optionMenu.SetActive(true);
@@ -260,6 +288,7 @@ public class OptionManager : MonoBehaviour
     //Chiude il menu del volume
     public void CloseAudioMenu()
     {
+        SaveOptions();
         audioMenu.SetActive(false);
         specificOptionMenu.SetActive(false);
         optionMenu.SetActive(true);
@@ -281,6 +310,7 @@ public class OptionManager : MonoBehaviour
     //Funzione per chiudere il menu game
     public void CloseGameMenu()
     {
+        SaveOptions();
         gameMenu.SetActive(false);
         specificOptionMenu.SetActive(false);
         optionMenu.SetActive(true);
@@ -330,6 +360,8 @@ public class OptionManager : MonoBehaviour
         options.audioMaster = masterValue.value;
         options.audioMusic = musicValue.value;
         options.audioSFX = SFXValue.value;
+        options.vibration = vibrationToggle.isOn;
+        options.language = languageDropDown.value;
 
         string json = JsonUtility.ToJson(options);
 
@@ -350,5 +382,7 @@ public class OptionManager : MonoBehaviour
         masterValue.value = options.audioMaster;
         musicValue.value = options.audioMusic;
         SFXValue.value = options.audioSFX;
+        vibrationToggle.isOn = options.vibration;
+        languageDropDown.value = options.language;
     }
 }

@@ -7,10 +7,10 @@ ScriptsOnlyBuild:
     - CactusAreaDmg
     - CameraManager
     - DarkEnergyPotion
+    - GameManager
     - HealthPotion
     - MainMenuManager
     - OptionManager
-    - PauseMenuManager
     - Player
     - PlayerMovement
     - ScoreManager
@@ -54,10 +54,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -145,28 +143,49 @@ ScriptsOnlyBuild:
     methodName: BackToStartMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: ConfirmVideoSettings
+    methodName: OpenHelpMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: CloseGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseVideoMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseControlsMenu
+    methodName: OpenControlsMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: OpenGameMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
+    methodName: OpenAudioMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
     methodName: OpenVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenHelpMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseControlsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseGameMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseAudioMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: OpenHelpMenu
+    methodName: CloseApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: ConfirmVideoSettings
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: BarbarianSel
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: BackFromChSel
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: NewGameButton
@@ -174,95 +193,80 @@ ScriptsOnlyBuild:
     fullTypeName: MainMenuManager
     methodName: QuitGame
   - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseApplyVideoSetting
+    fullTypeName: MainMenuManager
+    methodName: WarriorSel
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: MageSel
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: LoadGameButton
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: OpenControlsMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OpenApplyVideoSetting
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
     methodName: OptionMenuButton
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: CloseMainMenuPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: OpenAudioMenu
+    methodName: CloseGameMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseAudioMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: BackToStartMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OpenGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OptionMenuButton
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OpenVideoMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: ExitButton
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: CloseMainMenuPanel
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: MainMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OpenControlsMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
     methodName: CloseApplyVideoSetting
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: OpenAudioMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: MainMenu
+    methodName: ConfirmVideoSettings
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: OpenApplyVideoSetting
   - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: CloseExitPanel
-  - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseVideoMenu
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: CloseExitPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: ExitButton
+  - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: CloseGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: RetryButton
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: ResumeButton
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: OpenExitPanel
-  - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: ContinueButton
+    methodName: BackToStartMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: OpenHelpMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: ConfirmVideoSettings
+    methodName: OpenControlsMenu
   - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
+    fullTypeName: OptionManager
+    methodName: OpenGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenAudioMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: OpenExitPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: OpenMainMenuPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OptionMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
     methodName: RetryButton
   - assembly: Assembly-CSharp
-    fullTypeName: PauseMenuManager
-    methodName: OpenMainMenuPanel
+    fullTypeName: GameManager
+    methodName: ResumeButton
   sceneClasses:
     Assets/Scenes/FirstMap.unity:
     - Class: 1
@@ -332,59 +336,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3168}
     - Class: 114
-      Script: {instanceID: 3664}
+      Script: {instanceID: 3204}
     - Class: 114
-      Script: {instanceID: 3806}
+      Script: {instanceID: 3666}
     - Class: 114
-      Script: {instanceID: 3902}
+      Script: {instanceID: 3808}
     - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 4426}
+      Script: {instanceID: 4266}
     - Class: 114
-      Script: {instanceID: 5196}
+      Script: {instanceID: 4430}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 5200}
     - Class: 114
-      Script: {instanceID: 5480}
+      Script: {instanceID: 5404}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 5850}
+      Script: {instanceID: 5576}
     - Class: 114
-      Script: {instanceID: 5946}
+      Script: {instanceID: 5854}
     - Class: 114
-      Script: {instanceID: 6058}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 6304}
+      Script: {instanceID: 6062}
     - Class: 114
-      Script: {instanceID: 6636}
+      Script: {instanceID: 6308}
     - Class: 114
-      Script: {instanceID: 6814}
+      Script: {instanceID: 6640}
     - Class: 114
-      Script: {instanceID: 6876}
+      Script: {instanceID: 6818}
     - Class: 114
-      Script: {instanceID: 7216}
+      Script: {instanceID: 6880}
     - Class: 114
-      Script: {instanceID: 7648}
+      Script: {instanceID: 7220}
     - Class: 114
-      Script: {instanceID: 8390}
+      Script: {instanceID: 7652}
     - Class: 114
-      Script: {instanceID: 8462}
+      Script: {instanceID: 8396}
     - Class: 114
-      Script: {instanceID: 8470}
+      Script: {instanceID: 8468}
     - Class: 114
-      Script: {instanceID: 8500}
+      Script: {instanceID: 8476}
     - Class: 114
-      Script: {instanceID: 8706}
+      Script: {instanceID: 8506}
     - Class: 114
-      Script: {instanceID: 9004}
+      Script: {instanceID: 8712}
     - Class: 114
-      Script: {instanceID: 9344}
+      Script: {instanceID: 9010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -481,43 +485,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3168}
     - Class: 114
-      Script: {instanceID: 3664}
+      Script: {instanceID: 3666}
     - Class: 114
-      Script: {instanceID: 3902}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 4056}
+      Script: {instanceID: 4060}
     - Class: 114
-      Script: {instanceID: 4262}
+      Script: {instanceID: 4266}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4332}
     - Class: 114
-      Script: {instanceID: 4640}
+      Script: {instanceID: 4644}
     - Class: 114
-      Script: {instanceID: 4766}
+      Script: {instanceID: 4770}
     - Class: 114
-      Script: {instanceID: 5074}
+      Script: {instanceID: 5078}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 5404}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 5576}
     - Class: 114
-      Script: {instanceID: 5850}
+      Script: {instanceID: 5854}
     - Class: 114
-      Script: {instanceID: 5946}
+      Script: {instanceID: 5950}
     - Class: 114
-      Script: {instanceID: 6636}
+      Script: {instanceID: 6640}
     - Class: 114
-      Script: {instanceID: 6814}
+      Script: {instanceID: 6818}
     - Class: 114
-      Script: {instanceID: 7216}
+      Script: {instanceID: 7220}
     - Class: 114
-      Script: {instanceID: 7648}
+      Script: {instanceID: 7652}
     - Class: 114
-      Script: {instanceID: 8462}
+      Script: {instanceID: 8468}
     - Class: 114
-      Script: {instanceID: 8470}
+      Script: {instanceID: 8476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -531,8 +535,6 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
-      Script: {instanceID: 0}
-    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -797,6 +799,12 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
+      Hash: bc84cf9fb831e5e521007ea668f4a97b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -977,7 +985,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: df1d2d6df20400bc51db881978eac0c0
+      Hash: 4e5dd8c71634efe9553531ac7e15ee38
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OptionManager
@@ -1061,7 +1069,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: f9dffd28c435aa00ea8c55cddb577f77
+      Hash: a640998ac9834b83ab037aa7a476b821
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenuManager
@@ -1913,7 +1921,7 @@ ScriptsOnlyBuild:
     className: TeleType
   - hash:
       serializedVersion: 2
-      Hash: 6cb432a12dce9d8813c6e7af6a43c0dd
+      Hash: 79648fbb4658eaee8a968ab13f9c0c8c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreManager
@@ -1961,24 +1969,12 @@ ScriptsOnlyBuild:
     className: Benchmark01
   - hash:
       serializedVersion: 2
-      Hash: bc84cf9fb831e5e521007ea668f4a97b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenuManager
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 83ebb6521f5b1afc5358e0f5b6451065
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Singleton
   platform: 19
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/FirstMap.unity
-  playerPath: C:/Users/samba/OneDrive/Desktop/Prove/GIOCO/Pino around the World!.exe
+  playerPath: C:/Users/samba/OneDrive/Desktop/Prove/Pino around the World!.exe

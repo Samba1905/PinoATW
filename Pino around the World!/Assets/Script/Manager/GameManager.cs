@@ -1,37 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     #region Singleton
-    [HideInInspector] public bool destroyOnLoad;
-    private static GameManager _main;
-    public static GameManager Main { get { return _main; } }
+    private static GameManager _instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                Debug.Log("GameManager NULL");
+            }
+
+            return _instance;
+        }
+    }
     #endregion
     #region MenuPausa
-    [SerializeField] GameObject pauseMenuPanel, exitPanel, mainMenuPanel;
-    OptionManager oM;
+    public static OptionManager oM;
     bool checkPauseMenu;
     #endregion
+
+    public static bool WarriorCheck { get; set; }
+    public static bool MageCheck { get; set; }
+    public static bool BarbarianCheck { get; set; }
 
     private void Awake()
     {
         #region Singleton
-        if (_main != null && _main != this)
-        {
-            this.gameObject.SetActive(false);
-        }
-        else
-        {
-            _main = this;
-        }
+        if (_instance) Destroy(gameObject);
+        else _instance = this;
 
-        if (!destroyOnLoad)
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
+        DontDestroyOnLoad(this);
         #endregion
 
         Time.timeScale = 1.0f;
@@ -53,13 +58,13 @@ public class GameManager : MonoBehaviour
         if (!checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Apre il menu durante il gioco fermando il tempo
         {
             Time.timeScale = 0f;
-            pauseMenuPanel.SetActive(true);
+            oM.pauseMenuPanel.SetActive(true);
             checkPauseMenu = true;
         }
         else if (checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Chiude il menu durante il gioco riprendendo il tempo
         {
             Time.timeScale = 1f;
-            pauseMenuPanel.SetActive(false);
+            oM.pauseMenuPanel.SetActive(false);
             checkPauseMenu = false;
         }
     }
@@ -80,18 +85,18 @@ public class GameManager : MonoBehaviour
     public void ResumeButton() //Fa riprendere la partita e il tempo
     {
         Time.timeScale = 1f;
-        pauseMenuPanel.SetActive(false);
+        oM.pauseMenuPanel.SetActive(false);
         checkPauseMenu = false;
     }
     #endregion
     #region MainMenu
     public void OpenMainMenuPanel() //Apre il pannello di conferma per tornare al MainMenu
     {
-        mainMenuPanel.SetActive(true);
+        oM.backMainMenuPanel.SetActive(true);
     }
     public void CloseMainMenuPanel() //Chiude il pannello di conferma per tornare al MainMenu
     {
-        mainMenuPanel.SetActive(false);
+        oM.backMainMenuPanel.SetActive(false);
     }
     public void MainMenu() //Carica il MainMenu
     {
@@ -101,12 +106,12 @@ public class GameManager : MonoBehaviour
     #region Exit
     public void OpenExitPanel() //Apre il pannello di conferma per uscire dal gioco
     {
-        exitPanel.SetActive(true);
+        oM.exitPanel.SetActive(true);
     }
 
     public void CloseExitPanel() //Chiude il pannello di conferma per uscire dal gioco
     {
-        exitPanel.SetActive(false);
+        oM.exitPanel.SetActive(false);
     }
 
     public void ExitButton() //Chiude l'applicazione

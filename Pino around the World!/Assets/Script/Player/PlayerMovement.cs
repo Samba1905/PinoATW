@@ -16,19 +16,60 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalInput, verticalInput;
     bool isRunning;
+    public float timer;
 
     [SerializeField]
     float rotationSpeed;
     [SerializeField]
     float moveSpeed, walkSpeed, runSpeed;
+    [SerializeField]
+    float dashForce, dashUpwardForce;
+    [SerializeField]
+    float timerDash;
+    [SerializeField]
+    bool isDashing;
+
+    private void Awake()
+    {
+        if(GameManager.WarriorCheck)
+        {
+            GameObject.Find("Mage").SetActive(false);
+            GameObject.Find("Barbarian").SetActive(false);
+
+            Destroy(GameObject.Find("Mage"));
+            Destroy(GameObject.Find("Barbarian"));
+
+        }
+        else if(GameManager.MageCheck)
+        { 
+            GameObject.Find("Warrior").SetActive(false);
+            GameObject.Find("Barbarian").SetActive(false);
+
+            Destroy(GameObject.Find("Warrior"));
+            Destroy(GameObject.Find("Barbarian"));
+        }
+        else if(GameManager.BarbarianCheck)
+        {
+            GameObject.Find("Mage").SetActive(false);
+            GameObject.Find("Warrior").SetActive(false);
+
+            Destroy(GameObject.Find("Mage"));
+            Destroy(GameObject.Find("Warrior"));
+        }
+    }
 
     private void Start()
     {
         cam = Camera.main;
+        player = GetComponent<Transform>();
+        character = GameObject.FindWithTag("Character").GetComponent<Transform>();
+        orientation = GetComponentInChildren<Transform>().Find("Orientation");
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
+        timer += Time.deltaTime;
         InputPlayer();
     }
 
@@ -45,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Run")) isRunning = true;
         else isRunning = false;
 
-        AttackInput();
+        if (Input.GetButtonDown("Dash")) isDashing = true;
     }
     void MovementPlayer()
     {
@@ -68,10 +109,14 @@ public class PlayerMovement : MonoBehaviour
 
         //Movimento del player
         rb.velocity = (inputDir.normalized * moveSpeed * Time.fixedDeltaTime);
-    }  
 
-    void AttackInput()
+        //Dash
+        if (isDashing) Dash();
+    }
+
+    private void Dash()
     {
-
+        Vector3 dashDirection = orientation.forward * dashForce + orientation.up * dashUpwardForce;
+        rb.AddForce(dashDirection, ForceMode.Impulse);
     }
 }

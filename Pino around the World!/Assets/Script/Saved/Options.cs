@@ -8,4 +8,8 @@ public class Options
     #region Audio
     public float audioMaster, audioMusic, audioSFX;
     #endregion
+    #region
+    public bool vibration;
+    public int language;
+    #endregion
 }

@@ -11,6 +11,10 @@ TagManager:
   - DarkEnergyPotion
   - Enemy
   - MenuPausa
+  - Character
+  - MenuStart
+  - Empty
+  - MenuOptions
   layers:
   - Default
   - TransparentFX
