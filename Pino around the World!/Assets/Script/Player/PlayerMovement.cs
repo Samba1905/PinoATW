@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalInput, verticalInput;
     bool isRunning;
-    public float timer;
 
     [SerializeField]
     float rotationSpeed;
@@ -25,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float dashForce, dashUpwardForce;
     [SerializeField]
-    float timerDash;
+    float timerDash, timeDash;
     [SerializeField]
     bool isDashing;
 
@@ -69,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
         InputPlayer();
     }
 
@@ -80,13 +78,18 @@ public class PlayerMovement : MonoBehaviour
 
     void InputPlayer()
     {
+        //Input per movimento
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
 
+        //Input per corsa
         if (Input.GetButton("Run")) isRunning = true;
         else isRunning = false;
 
+        //Input per dash
         if (Input.GetButtonDown("Dash")) isDashing = true;
+
+
     }
     void MovementPlayer()
     {
@@ -111,12 +114,21 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = (inputDir.normalized * moveSpeed * Time.fixedDeltaTime);
 
         //Dash
-        if (isDashing) Dash();
+        if(isDashing)
+        {
+            Dash();
+            timerDash += Time.deltaTime;
+            if (timerDash > timeDash)
+            {
+                isDashing = false;
+                timerDash = 0f;
+            }
+        }
     }
 
     private void Dash()
     {
-        Vector3 dashDirection = orientation.forward * dashForce + orientation.up * dashUpwardForce;
+        Vector3 dashDirection = character.forward * dashForce + character.up * dashUpwardForce;
         rb.AddForce(dashDirection, ForceMode.Impulse);
     }
 }

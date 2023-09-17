@@ -53058,7 +53058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07263a9de3583b489cf36a578347423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oM: {fileID: 0}
 --- !u!4 &1420028293
 Transform:
   m_ObjectHideFlags: 0
@@ -76583,6 +76582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1763248753330536464, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3678620355593280971, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
       propertyPath: m_Name
       value: Player
@@ -76643,5 +76646,9 @@ PrefabInstance:
       propertyPath: healtPointsBar
       value: 
       objectReference: {fileID: 1079600607}
+    - target: {fileID: 4543003504639558782, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}

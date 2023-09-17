@@ -1,10 +1,11 @@
 UI
 1. Modificare script opzioni per salvare e caricare preferenze giocatore (JSON) FATTO
-2. Creare selezione personaggio inizio gioco (FATTO CIRCA)
+2. Creare selezione personaggio inizio gioco (FATTO)
 3. Creare multisalvataggio
 4. Creare menu selezione livelli
 5. Creare selezione difficoltà livello
 6. Creare la modifica dei comandi
+7. Creare e implementare i personaggi Mage e Barbarian
 
 ---------------------------------------------------------------------------------------------------
 
@@ -20,3 +21,9 @@ Gameplay
 
 Singleton
 1. Creare e sistemare tutti i Singleton
+
+---------------------------------------------------------------------------------------------------
+
+PostProcessing
+1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena
+2. Aggiungere profondità di gioco
