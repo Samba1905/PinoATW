@@ -1,0 +1,12 @@
+Player
+1. Movimento funzionante
+2. Rotazione funzionante
+3. Dash funzionante
+4. Attacchi da reimplementare
+5. Animazioni da reimplementare
+6. Controller da reimplementare
+7. Lanciare incantesimi da implementare
+8. Suoni da implementare
+9. Stamina per attacchi, corsa, parate e dash da implementare
+10. Macchina a stati da implementare
+11. Albero delle abilità e salvataggio di esso da implementare
