@@ -10,3 +10,4 @@ Player
 9. Stamina per attacchi, corsa, parate e dash da implementare
 10. Macchina a stati da implementare
 11. Albero delle abilità e salvataggio di esso da implementare
+12. Scudo implementato ma da integrare solo al guerriero

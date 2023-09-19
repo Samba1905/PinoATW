@@ -4,58 +4,35 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField, HideInInspector]
     Transform player;
-    [SerializeField]
+    [SerializeField, HideInInspector]
     Transform character;
-    [SerializeField]
+    [SerializeField, HideInInspector]
     Transform orientation;
-    [SerializeField]
+    [SerializeField, HideInInspector]
     Rigidbody rb;
     Camera cam;
 
+    #region Movement
     float horizontalInput, verticalInput;
     bool isRunning;
-
     [SerializeField]
     float rotationSpeed;
     [SerializeField]
     float moveSpeed, walkSpeed, runSpeed;
+    #endregion
+
+    #region Dash
     [SerializeField]
     float dashForce, dashUpwardForce;
     [SerializeField]
-    float timerDash, timeDash;
+    float timeDash;
+    [SerializeField, HideInInspector]
+    float timerDash;
     [SerializeField]
     bool isDashing;
-
-    private void Awake()
-    {
-        if(GameManager.WarriorCheck)
-        {
-            GameObject.Find("Mage").SetActive(false);
-            GameObject.Find("Barbarian").SetActive(false);
-
-            Destroy(GameObject.Find("Mage"));
-            Destroy(GameObject.Find("Barbarian"));
-
-        }
-        else if(GameManager.MageCheck)
-        { 
-            GameObject.Find("Warrior").SetActive(false);
-            GameObject.Find("Barbarian").SetActive(false);
-
-            Destroy(GameObject.Find("Warrior"));
-            Destroy(GameObject.Find("Barbarian"));
-        }
-        else if(GameManager.BarbarianCheck)
-        {
-            GameObject.Find("Mage").SetActive(false);
-            GameObject.Find("Warrior").SetActive(false);
-
-            Destroy(GameObject.Find("Mage"));
-            Destroy(GameObject.Find("Warrior"));
-        }
-    }
+    #endregion
 
     private void Start()
     {
@@ -88,8 +65,6 @@ public class PlayerMovement : MonoBehaviour
 
         //Input per dash
         if (Input.GetButtonDown("Dash")) isDashing = true;
-
-
     }
     void MovementPlayer()
     {
