@@ -1,13 +1,14 @@
 Player
-1. Movimento funzionante
-2. Rotazione funzionante
-3. Dash funzionante
-4. Attacchi da reimplementare
-5. Animazioni da reimplementare
-6. Controller da reimplementare
-7. Lanciare incantesimi da implementare
-8. Suoni da implementare
-9. Stamina per attacchi, corsa, parate e dash da implementare
-10. Macchina a stati da implementare
-11. Albero delle abilità e salvataggio di esso da implementare
-12. Scudo implementato ma da integrare solo al guerriero
+1. Movimento - OK
+2. Rotazione - OK
+3. Dash - OK
+4. Attacchi - FARE
+5. Animazioni - FARE
+6. Controller - FARE
+7. Lanciare incantesimi - FARE
+8. Suoni - FARE
+9. Stamina per attacchi, corsa, parate e dash - IN CORSO
+10. Macchina a stati - FARE
+11. Albero delle abilità e salvataggio di esso - FARE
+12. Possibilità di parare Warrior - FARE
+13. Spada del Warrior - FARE
