@@ -30,6 +30,14 @@ public class GameManager : MonoBehaviour
     public static bool MageCheck { get; set; }
     public static bool BarbarianCheck { get; set; }
 
+    public static bool PlayerStatus
+    { 
+        get
+        {
+            return true;
+        }
+    }
+
     private void Awake()
     {
         #region Singleton

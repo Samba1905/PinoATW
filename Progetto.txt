@@ -2,13 +2,19 @@ Player
 1. Movimento - OK
 2. Rotazione - OK
 3. Dash - OK
-4. Attacchi - FARE
-5. Animazioni - FARE
-6. Controller - FARE
-7. Lanciare incantesimi - FARE
-8. Suoni - FARE
-9. Stamina per attacchi, corsa, parate e dash - IN CORSO
-10. Macchina a stati - FARE
-11. Albero delle abilità e salvataggio di esso - FARE
-12. Possibilità di parare Warrior - FARE
-13. Spada del Warrior - FARE
+4. Animazioni - OK
+5. Controller animazioni - OK
+6. Suoni - FARE
+7. Stamina per corsa e dash - OK
+8. Macchina a stati - FARE
+9. Albero delle abilità e salvataggio di esso - FARE
+
+Warrior
+1. Attacchi - OK
+2. Stamina per attacchi e scudo - FARE
+3. Animazioni attacco - OK (migliorare)
+4. Animazioni scudo - FARE
+5. Lanciare incantesimi - FARE
+6. Suoni - FARE
+7. Script modalità scudo - FARE
+8. Script spada - FARE

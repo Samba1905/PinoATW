@@ -11,7 +11,7 @@ public class PlayerNew : MonoBehaviour
     float maxHP = 100f, minHP = 0f;
     float maxSTA = 100f, minSTA = 0f, overSTA = -25;
     float maxDE = 100f, minDE = 0f;
-    [SerializeField] bool recoverySTA, exhaustState;
+    [SerializeField] bool recoverySTA, exhaustState, deadState;
     public bool DANNO;
 
     PlayerMovement playerM;
@@ -130,16 +130,17 @@ public class PlayerNew : MonoBehaviour
 
     private void Update()
     {
-        UpdateSTA();
-        if (DANNO)
+        UpdateSTA(0f);
+        isDead();
+        if (DANNO) //per fare test
         {
-            UpdateHP(5, true);
+            UpdateHP(5, true); 
             DANNO = false;
         }
-        //Debug.Log(StaminaPoints);
+        Debug.Log(StaminaPoints);
     }
 
-    void UpdateSTA()
+    public void UpdateSTA(float riduzioneStamina) //Funzione per creare una meccanica di stamina
     {
         if (recoverySTA && !exhaustState) StaminaPoints += Time.deltaTime * 12.5f;
         else if (recoverySTA && exhaustState) StaminaPoints += Time.deltaTime * 7.5f;
@@ -156,9 +157,11 @@ public class PlayerNew : MonoBehaviour
             playerM.consumeDash = false;
             StaminaPoints -= 25f;
         }
+
+        StaminaPoints -= riduzioneStamina;
     }
 
-    public float UpdateHP(float value, bool damage)
+    public float UpdateHP(float value, bool damage) //Funzione per gestire la vita del player
     {
         if (damage)
         {
@@ -166,5 +169,15 @@ public class PlayerNew : MonoBehaviour
             return HealtsPoints -= value;
         }
         return HealtsPoints += value;
+    }
+
+    bool isDead() //Funzione per gestire lo stato morto del player
+    {
+        playerM.anim.SetBool("isDead", deadState);
+        if (HealtsPoints <= 0)
+        {
+            return deadState = true;
+        }           
+        return deadState = false;
     }
 }
