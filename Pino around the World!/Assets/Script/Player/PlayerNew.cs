@@ -11,7 +11,8 @@ public class PlayerNew : MonoBehaviour
     float maxHP = 100f, minHP = 0f;
     float maxSTA = 100f, minSTA = 0f, overSTA = -25;
     float maxDE = 100f, minDE = 0f;
-    [SerializeField] bool recoverySTA, exhaustState, deadState;
+    float timerInvulnerable;
+    [SerializeField] bool recoverySTA, exhaustState, deadState, vulnerable;
     public bool DANNO;
 
     PlayerMovement playerM;
@@ -125,6 +126,7 @@ public class PlayerNew : MonoBehaviour
         recoverySTA = true;
         HealtsPoints = maxHP;
         StaminaPoints = maxSTA;
+        vulnerable = true;
         playerM = GetComponent<PlayerMovement>();
     }
 
@@ -132,12 +134,13 @@ public class PlayerNew : MonoBehaviour
     {
         UpdateSTA(0f);
         isDead();
+        Timer();
+
         if (DANNO) //per fare test
         {
             UpdateHP(5, true); 
             DANNO = false;
-        }
-        Debug.Log(StaminaPoints);
+        }       
     }
 
     public void UpdateSTA(float riduzioneStamina) //Funzione per creare una meccanica di stamina
@@ -163,10 +166,15 @@ public class PlayerNew : MonoBehaviour
 
     public float UpdateHP(float value, bool damage) //Funzione per gestire la vita del player
     {
-        if (damage)
+        if (vulnerable)
         {
-            playerM.anim.SetTrigger("TakeDamage");
-            return HealtsPoints -= value;
+            if (damage)
+            {
+                playerM.anim.SetTrigger("TakeDamage");
+                timerInvulnerable = 1.5f;
+                InvulnerableStatus(true);
+                return HealtsPoints -= value;
+            }
         }
         return HealtsPoints += value;
     }
@@ -179,5 +187,17 @@ public class PlayerNew : MonoBehaviour
             return deadState = true;
         }           
         return deadState = false;
+    }
+
+    bool InvulnerableStatus(bool invulnerable) //Funzione per invulnerabilità
+    {
+        if (invulnerable) return vulnerable = false;
+        return vulnerable = true;
+    }
+
+    void Timer() //Timer per invulenrabilità
+    {
+        timerInvulnerable -= Time.deltaTime;
+        if (timerInvulnerable < 0) InvulnerableStatus(false);
     }
 }

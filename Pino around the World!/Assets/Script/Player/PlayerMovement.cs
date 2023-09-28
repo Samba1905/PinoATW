@@ -119,13 +119,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Dash()
+    private void Dash() //Funzione per fare il Dash
     {
         Vector3 dashDirection = character.forward * dashForce + character.up * dashUpwardForce;
         rb.AddForce(dashDirection, ForceMode.Impulse);
     }
 
-    void Animation()
+    void Animation() //Aggiornamento animazioni
     {
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isRunning", isRunning);
