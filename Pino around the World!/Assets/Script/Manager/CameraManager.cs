@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    Player player;
+    PlayerNew player;
     Camera mainCamera;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerNew>();
     }
 
     // Update is called once per frame

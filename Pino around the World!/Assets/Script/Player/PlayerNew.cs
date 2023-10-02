@@ -94,31 +94,7 @@ public class PlayerNew : MonoBehaviour
 
     private void Awake()
     {
-        if (GameManager.WarriorCheck)
-        {
-            GameObject.Find("Mage").SetActive(false);
-            GameObject.Find("Barbarian").SetActive(false);
-
-            Destroy(GameObject.Find("Mage"));
-            Destroy(GameObject.Find("Barbarian"));
-
-        }
-        else if (GameManager.MageCheck)
-        {
-            GameObject.Find("Warrior").SetActive(false);
-            GameObject.Find("Barbarian").SetActive(false);
-
-            Destroy(GameObject.Find("Warrior"));
-            Destroy(GameObject.Find("Barbarian"));
-        }
-        else if (GameManager.BarbarianCheck)
-        {
-            GameObject.Find("Mage").SetActive(false);
-            GameObject.Find("Warrior").SetActive(false);
-
-            Destroy(GameObject.Find("Mage"));
-            Destroy(GameObject.Find("Warrior"));
-        }
+        
     }
 
     private void Start()

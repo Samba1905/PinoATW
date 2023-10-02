@@ -1,0 +1,360 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.17f1 (3e8111cac19d) revision 4096273'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'it' Physical Memory: 16088 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+60303
+Successfully changed project path to: C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [27000] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2046261853 [EditorId] 2046261853 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [27000] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2046261853 [EditorId] 2046261853 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 102.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.17f1 (3e8111cac19d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/samba/GitFile/GitHubPATW/Pino around the World!/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.15.1165
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.008690 seconds.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 358 ms
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 91.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.977 seconds
+Domain Reload Profiling:
+	ReloadAssembly (977ms)
+		BeginReloadAssembly (64ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (822ms)
+			LoadAssemblies (63ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (108ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (631ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (442ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (92ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (63ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004499 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 88.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.969 seconds
+Domain Reload Profiling:
+	ReloadAssembly (969ms)
+		BeginReloadAssembly (84ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (789ms)
+			LoadAssemblies (67ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (214ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (414ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (89ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (217ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3963 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4417.
+Memory consumption went from 156.0 MB to 154.7 MB.
+Total: 2.737500 ms (FindLiveObjects: 0.196500 ms CreateObjectMapping: 0.090400 ms MarkObjects: 2.216100 ms  DeleteObjects: 0.233600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 406020.381401 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Deu.Png
+  artifactKey: Guid(c2657b9df8f9e48fb84c4417b47e5920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Deu.Png using Guid(c2657b9df8f9e48fb84c4417b47e5920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4cf96bba55b29df222e59d022057970') in 0.094365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Fra.Png
+  artifactKey: Guid(89f8acf856b2e4750a7749f92f308def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Fra.Png using Guid(89f8acf856b2e4750a7749f92f308def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a201b68884a3905b09072a19bab9df') in 0.023800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Prt.Png
+  artifactKey: Guid(2853eeb452a754777b2f240d217c9535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Prt.Png using Guid(2853eeb452a754777b2f240d217c9535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc7b2c8834976f6871138897f24749f') in 0.022281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ara.png
+  artifactKey: Guid(0eb007b6365974637817073c741a3815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ara.png using Guid(0eb007b6365974637817073c741a3815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1821d848513cc814cce58a4182a3139a') in 0.024956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Rus.Png
+  artifactKey: Guid(bdda05755eb8e4de788e752fda668fc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Rus.Png using Guid(bdda05755eb8e4de788e752fda668fc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc92a4dfbf44c7d2555fd29231d0ebc') in 0.020730 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Gre.Png
+  artifactKey: Guid(58d44bb8923a749139cf4f2b5dc80e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Gre.Png using Guid(58d44bb8923a749139cf4f2b5dc80e7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65b9a65453e6c7ceaf00b7d03acf3a35') in 0.019944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Eng.Png
+  artifactKey: Guid(a3196820b16eb4df588d8ef9f2671b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Eng.Png using Guid(a3196820b16eb4df588d8ef9f2671b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2715aa18e338f7acbfef5ab38ec1566') in 0.021245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Esp.Png
+  artifactKey: Guid(bd1697c1846d34643a6e91ac2cdf8e2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Esp.Png using Guid(bd1697c1846d34643a6e91ac2cdf8e2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c64428dad017b0fe5f5df8869212c5a4') in 0.021379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Swe.Png
+  artifactKey: Guid(4749db20949f14652b3636127b37c491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Swe.Png using Guid(4749db20949f14652b3636127b37c491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a610861425ced7ae02b020a1c9bf02c7') in 0.021401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Deu.png
+  artifactKey: Guid(bd74de257681043279e4b5473944dc3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Deu.png using Guid(bd74de257681043279e4b5473944dc3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35a08a5e7578adef494eea0b2a1da620') in 0.022911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Tur.Png
+  artifactKey: Guid(cdc2149857a074aacafa75873e375e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_Flag_Tur.Png using Guid(cdc2149857a074aacafa75873e375e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9d0eeb6b2bd5538289d0827deea9fc') in 0.019992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.093944 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Esp.Png
+  artifactKey: Guid(78352d6d5759645c79c90840e34c7b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Esp.Png using Guid(78352d6d5759645c79c90840e34c7b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '603eea5163819b667b569fe2f626f1cd') in 0.030527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Fra.Png
+  artifactKey: Guid(f697445a9b1fb473e937a4fec1fbdbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Fra.Png using Guid(f697445a9b1fb473e937a4fec1fbdbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7ce2e5de90e1a8bae415b4028d00cd') in 0.021547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ina.Png
+  artifactKey: Guid(79e75c80789824f99a1dfe1c4b6acbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ina.Png using Guid(79e75c80789824f99a1dfe1c4b6acbb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8a858deb51699575ad3b6e912bc83a') in 0.020763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Pol.Png
+  artifactKey: Guid(04ad3f2d3977143db892bcc3985e7d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Pol.Png using Guid(04ad3f2d3977143db892bcc3985e7d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db8fa04ece4e41665d8874cea6ad630c') in 0.021631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Pra.Png
+  artifactKey: Guid(88356b7eacd1940699896eb710886792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Pra.Png using Guid(88356b7eacd1940699896eb710886792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db326adf467c2b26cb0dac44bd3b013') in 0.023298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ita.Png
+  artifactKey: Guid(305be0ec96da6459cae821ac38f9e567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ita.Png using Guid(305be0ec96da6459cae821ac38f9e567) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47a8ad2e6f9e303dfecbefa8b75f3483') in 0.022678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Swe.Png
+  artifactKey: Guid(86efd7c210f8e497cb7c65d59a938432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Swe.Png using Guid(86efd7c210f8e497cb7c65d59a938432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a81bef213f04f9b4ba94e1752b41cd9e') in 0.023659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.216205 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Twn.Png
+  artifactKey: Guid(424836d0eb94944cdb96b2802be6fbf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Twn.Png using Guid(424836d0eb94944cdb96b2802be6fbf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad4c62206155d49c1c6895592c241cc') in 0.021486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Deu.png
+  artifactKey: Guid(fb0c9837a19b04074b2d971e891952fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Deu.png using Guid(fb0c9837a19b04074b2d971e891952fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cebea5396a79d302f06c576b14071310') in 0.023377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Esp.png
+  artifactKey: Guid(18482cef099ba4c6fbf3d0d9b169dec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Esp.png using Guid(18482cef099ba4c6fbf3d0d9b169dec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25fb88c86c4a44be3038c79e2eec78e9') in 0.021236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Rus.png
+  artifactKey: Guid(093252f25f1904b7a816373f44bc7301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Rus.png using Guid(093252f25f1904b7a816373f44bc7301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7959a93c3545c4e0594d6324b297a1cf') in 0.020769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Swe.png
+  artifactKey: Guid(e1da5e090506649098ba1870e5d1b668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Swe.png using Guid(e1da5e090506649098ba1870e5d1b668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c54fdc3ba6aa268bede096a9d2379e') in 0.025354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Ukr.png
+  artifactKey: Guid(2f4c97380d0be4f9aa3af475000b9054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Ukr.png using Guid(2f4c97380d0be4f9aa3af475000b9054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c455084ab75a069a7d29c4ff77232f3') in 0.022831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ukr.Png
+  artifactKey: Guid(ca50a09402afe4058a4d3267095049d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Large_Ukr.Png using Guid(ca50a09402afe4058a4d3267095049d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96440172e289f10f1a6382a1006d664f') in 0.023807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Ita.png
+  artifactKey: Guid(ff744dd0a72d241b3946fcce5733a216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Ita.png using Guid(ff744dd0a72d241b3946fcce5733a216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5657233eea958a9487d890c226b84c') in 0.022249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Tur.png
+  artifactKey: Guid(a3722465a62c44b77bef5f41147ebd54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Tur.png using Guid(a3722465a62c44b77bef5f41147ebd54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dde8f2f3dbc993d79e9be57bfedca52') in 0.020641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Jpn.png
+  artifactKey: Guid(67f6a783fcaae4fe6b192bb9c0b305bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Jpn.png using Guid(67f6a783fcaae4fe6b192bb9c0b305bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd33b29e4382e289cb92471e82b28ad') in 0.020791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Eng.png
+  artifactKey: Guid(09a17b3899e8141edb6e0745ab518a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Eng.png using Guid(09a17b3899e8141edb6e0745ab518a12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7bbbc92e6a15764285e9fd3031fc235') in 0.024401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Tha.png
+  artifactKey: Guid(02509a1b2f59d471ba36b57e913f87e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/GUI PRO Kit - Casual Game/ResourcesData/Sprite/Demo/Demo_CountryFlag/Icon_LanguageFlag_Small_Tha.png using Guid(02509a1b2f59d471ba36b57e913f87e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3b55709c5c54566fd1925fa8341e38') in 0.022461 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

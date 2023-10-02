@@ -130,5 +130,6 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isRunning", isRunning);
         anim.SetBool("isDashing", isDashing);
+        anim.SetBool("isDashing", isDashing);
     }
 }

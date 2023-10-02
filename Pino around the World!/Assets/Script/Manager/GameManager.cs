@@ -23,12 +23,60 @@ public class GameManager : MonoBehaviour
     #endregion
     #region MenuPausa
     public static OptionManager oM;
+    public GameObject options;
     bool checkPauseMenu;
     #endregion
 
-    public static bool WarriorCheck { get; set; }
-    public static bool MageCheck { get; set; }
-    public static bool BarbarianCheck { get; set; }
+    private static bool _level1;
+    private static bool _level2;
+    private static bool _level3;
+    private static bool _level4;
+    private static bool _level5;
+
+    public static bool Level1 { get { return _level1; } }
+    public static bool Level2 { get { return _level2; } }
+    public static bool Level3 { get { return _level3; } }
+    public static bool Level4 { get { return _level4; } }
+    public static bool Level5 { get { return _level5; } }
+
+
+    private static bool _save1;
+    private static bool _save2;
+    private static bool _save3;
+
+    public static bool SlotSave1 
+    { 
+        get
+        { 
+            return _save1;
+        }
+        set
+        {
+            _save1 = value;
+        }
+    }
+    public static bool SlotSave2 
+    { 
+        get 
+        { 
+            return _save2;
+        }
+        set
+        {
+            _save2 = value;
+        }
+    }
+    public static bool SlotSave3 
+    {
+        get
+        { 
+            return _save3;
+        }
+        set
+        {
+            _save3 = value;
+        }
+    }
 
     public static bool PlayerStatus
     { 
@@ -41,17 +89,23 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         #region Singleton
-        if (_instance) Destroy(gameObject);
+        if (_instance)
+        {
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
+        }
         else _instance = this;
 
         DontDestroyOnLoad(this);
         #endregion
 
+        if (GameObject.Find("OptionMenu")) options = GameObject.Find("OptionMenu");
+        else options = GameObject.FindGameObjectWithTag("Empty");
         Time.timeScale = 1.0f;
     }
 
     private void Start()
-    {
+    {        
         oM = FindObjectOfType<OptionManager>();
     }
 
@@ -60,6 +114,33 @@ public class GameManager : MonoBehaviour
         PauseMenuGame();
     }
 
+    #region Sezione salvataggi
+
+    public void CheckSlotsave1()
+    {
+        
+    }
+
+
+
+
+
+
+
+
+    #endregion
+    #region Gestione Livelli
+
+
+
+
+
+
+
+
+
+
+    #endregion
     #region MenuPausa
     void PauseMenuGame()
     {
@@ -77,6 +158,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    #region Options
+    public void OpenOptions()
+    {
+        options.SetActive(true);
+        oM.pauseMenuPanel.SetActive(false);
+    }
+
+    public void CloseOptions()
+    {
+        options.SetActive(false);
+        oM.pauseMenuPanel.SetActive(true);
+    }
+    #endregion
     #region Retry
     public void RetryButton()
     {
@@ -128,4 +222,5 @@ public class GameManager : MonoBehaviour
     }
     #endregion
     #endregion
+
 }

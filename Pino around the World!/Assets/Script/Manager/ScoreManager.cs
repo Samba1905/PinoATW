@@ -14,8 +14,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Main { get { return _main; } }
     #endregion
 
-    public bool levelEnd;
-    int enemyKilled, enemyCount, coinsCount;
+    public bool levelEnd, playerDeath;
+    int enemyKilled, enemyCount, coinsCount, coinsCollect;
     [SerializeField]
     TextMeshProUGUI timeText;
     [SerializeField]
@@ -24,12 +24,12 @@ public class ScoreManager : MonoBehaviour
     GameObject levelEndPanel;
     [SerializeField]
     TextMeshProUGUI gameOver, scoreVal, coinsVal, enemiesVal;
-    Player player;
 
     private void Awake()
     {
         if (_main != null && _main != this)
         {
+            gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
         else
@@ -48,7 +48,6 @@ public class ScoreManager : MonoBehaviour
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         coinsCount = GameObject.FindGameObjectsWithTag("TreasureChest").Length;
         levelEndPanel.SetActive(false);
-        player = FindObjectOfType<Player>();
     }
 
     void Update()
@@ -67,20 +66,22 @@ public class ScoreManager : MonoBehaviour
         {
             Time.timeScale = 0f;
             EnemiesCount();
+            MoneyCount();
             levelEndPanel.SetActive(true);
             gameOver.text = "Victory!";
             scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
-            coinsVal.text = $"{player.nCoin} / {coinsCount * 3} Coins!";
+            coinsVal.text = $"{coinsCount} / {coinsCollect} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
         }
-        if(player.isDeathUI)
+        if(playerDeath)//Funzione da riprogrammare
         {
             Time.timeScale = 0f;
             EnemiesCount();
+            MoneyCount();
             levelEndPanel.SetActive(true);
             gameOver.text = "Game Over!";
             scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
-            coinsVal.text = $"{player.nCoin} / {coinsCount * 3} Coins!";
+            coinsVal.text = $"{coinsCount} / {coinsCollect} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
         }
     }
@@ -89,5 +90,11 @@ public class ScoreManager : MonoBehaviour
     {
         enemyKilled = enemyCount - GameObject.FindGameObjectsWithTag("Enemy").Length;
         return enemyKilled;
+    }
+
+    public int MoneyCount()
+    {
+        coinsCollect = coinsCount - GameObject.FindGameObjectsWithTag("TreasureChest").Length;
+        return coinsCollect;
     }
 }

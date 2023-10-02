@@ -1,8 +1,8 @@
 UI
 1. Modificare script opzioni per salvare e caricare preferenze giocatore (JSON) (FATTO)
 2. Creare selezione personaggio inizio gioco (FATTO)
-3. Creare multisalvataggio
-4. Creare menu selezione livelli
+3. Creare multisalvataggio (IN CORSO)
+4. Creare menu selezione livelli (IN CORSO)
 5. Creare selezione difficoltà livello
 6. Creare la modifica dei comandi
 7. Creare e implementare i personaggi Mage e Barbarian
