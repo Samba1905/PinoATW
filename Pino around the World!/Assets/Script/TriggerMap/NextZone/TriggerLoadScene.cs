@@ -16,7 +16,6 @@ public class TriggerLoadScene : TriggerArea
         if(other.gameObject.tag == "Player")
         {
             SM.levelEnd = true;
-            //LoadNextScene(2);
         }
     }
 }

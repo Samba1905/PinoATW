@@ -389,6 +389,7 @@
 "Assets/Script/Player/PlayerNew.cs"
 "Assets/Script/Player/Sword.cs"
 "Assets/Script/Proj.cs"
+"Assets/Script/Saved/Game.cs"
 "Assets/Script/Saved/Options.cs"
 "Assets/Script/SparaCubi.cs"
 "Assets/Script/TriggerMap/NextZone/TriggerLoadScene.cs"

@@ -1,11 +1,12 @@
 UI
 1. Modificare script opzioni per salvare e caricare preferenze giocatore (JSON) (FATTO)
-2. Creare selezione personaggio inizio gioco (FATTO)
+2. Creare selezione personaggio inizio gioco (CAMBIATO IDEA)
 3. Creare multisalvataggio (IN CORSO)
-4. Creare menu selezione livelli (IN CORSO)
+4. Creare menu selezione livelli (FATTO)
 5. Creare selezione difficoltà livello
 6. Creare la modifica dei comandi
 7. Creare e implementare i personaggi Mage e Barbarian
+8. Strana interazione con la creazione di un account
 
 ---------------------------------------------------------------------------------------------------
 
@@ -15,7 +16,8 @@ Gameplay
 3. Implementare sistema spell personaggio
 4. Creare companion per storia
 5. Implementare tutto il sistema salvataggio progressi giocatore
-6. Creare sistema di stamina interno + UI
+6. Creare sistema di stamina interno (FATTO)
+7. Creare UI stamina
 
 ---------------------------------------------------------------------------------------------------
 
@@ -25,5 +27,5 @@ Singleton
 ---------------------------------------------------------------------------------------------------
 
 PostProcessing
-1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena
+1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena (FATTO)
 2. Aggiungere profondità di gioco

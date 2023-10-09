@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -16,6 +17,15 @@ public class PlayerNew : MonoBehaviour
     public bool DANNO;
 
     PlayerMovement playerM;
+
+    bool lvl1, lvl2, lvl3, lvl4, lvl5; //Prove
+
+
+    public bool Lvl1 { get { return lvl1; } }
+    public bool Lvl2 { get { return lvl2; } }
+    public bool Lvl3 { get { return lvl3; } }
+    public bool Lel4 { get { return lvl4; } }
+    public bool Lvl5 { get { return lvl5; } }
 
     float HealtsPoints
     {
@@ -94,7 +104,7 @@ public class PlayerNew : MonoBehaviour
 
     private void Awake()
     {
-        
+        if(File.Exists(Application.persistentDataPath + "/Slot1Data")) LoadLvl();
     }
 
     private void Start()
@@ -109,7 +119,7 @@ public class PlayerNew : MonoBehaviour
     private void Update()
     {
         UpdateSTA(0f);
-        isDead();
+        IsDead();
         Timer();
 
         if (DANNO) //per fare test
@@ -155,7 +165,7 @@ public class PlayerNew : MonoBehaviour
         return HealtsPoints += value;
     }
 
-    bool isDead() //Funzione per gestire lo stato morto del player
+    bool IsDead() //Funzione per gestire lo stato morto del player
     {
         playerM.anim.SetBool("isDead", deadState);
         if (HealtsPoints <= 0)
@@ -175,5 +185,18 @@ public class PlayerNew : MonoBehaviour
     {
         timerInvulnerable -= Time.deltaTime;
         if (timerInvulnerable < 0) InvulnerableStatus(false);
+    }
+
+    void LoadLvl()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot1Data");
+
+        Game game = JsonUtility.FromJson<Game>(json);
+
+        lvl1 = game.level1;
+        lvl2 = game.level2;
+        lvl3 = game.level3;
+        lvl4 = game.level4;
+        lvl5 = game.level5;
     }
 }

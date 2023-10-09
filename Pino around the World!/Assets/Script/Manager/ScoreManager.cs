@@ -25,6 +25,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI gameOver, scoreVal, coinsVal, enemiesVal;
 
+    GameManager gameManager;
+
     private void Awake()
     {
         if (_main != null && _main != this)
@@ -72,6 +74,17 @@ public class ScoreManager : MonoBehaviour
             scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
             coinsVal.text = $"{coinsCount} / {coinsCollect} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
+            gameManager.CheckLevelStatus();
+            switch((int)gameManager.currentSlot)
+            {
+                case 0:
+                    gameManager.SaveSlot1();
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+            }
         }
         if(playerDeath)//Funzione da riprogrammare
         {
@@ -86,13 +99,13 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public int EnemiesCount()
+    int EnemiesCount()
     {
         enemyKilled = enemyCount - GameObject.FindGameObjectsWithTag("Enemy").Length;
         return enemyKilled;
     }
 
-    public int MoneyCount()
+    int MoneyCount()
     {
         coinsCollect = coinsCount - GameObject.FindGameObjectsWithTag("TreasureChest").Length;
         return coinsCollect;

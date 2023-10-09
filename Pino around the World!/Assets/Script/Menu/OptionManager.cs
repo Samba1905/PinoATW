@@ -18,7 +18,6 @@ public class OptionManager : MonoBehaviour
     [SerializeField]
     GameObject optionMenu, menuStartButtons, specificOptionMenu;
     public bool checkOptionMenu, checkSpecificOptionMenu;
-    private bool SaveCheck = false;
 
     public GameObject pauseMenuPanel, backMainMenuPanel, exitPanel;
 
@@ -34,6 +33,7 @@ public class OptionManager : MonoBehaviour
     [SerializeField]
     PostProcessVolume postProcess;
     AutoExposure autoExposure = null;
+    Bloom bloom = null;
     [SerializeField]
     bool confirmedVideoChanges;
     #endregion
@@ -84,16 +84,18 @@ public class OptionManager : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("MenuPausa")) exitPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[2];
         else exitPanel = GameObject.FindGameObjectWithTag("Empty");
 
-        brightnessSlider = Slider.FindObjectsOfType<Slider>()[3];
-        masterValue = Slider.FindObjectsOfType<Slider>()[2];
-        musicValue = Slider.FindObjectsOfType<Slider>()[1];
-        SFXValue = Slider.FindObjectsOfType<Slider>()[0];
+        masterValue = Slider.FindObjectsOfType<Slider>()[0];
+        brightnessSlider = Slider.FindObjectsOfType<Slider>()[1];
+        SFXValue = Slider.FindObjectsOfType<Slider>()[2];
+        musicValue = Slider.FindObjectsOfType<Slider>()[3];
+
+        fullscreenToggle = Toggle.FindObjectsOfType<Toggle>()[0];
         vSyncToggle = Toggle.FindObjectsOfType<Toggle>()[1];
-        fullscreenToggle = Toggle.FindObjectsOfType<Toggle>()[2];
-        vibrationToggle = Toggle.FindObjectsOfType<Toggle>()[0];
-        resolutionDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[1];
-        FPSDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[2];
+        vibrationToggle = Toggle.FindObjectsOfType<Toggle>()[2];
+
         languageDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[0];
+        FPSDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[1];
+        resolutionDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[2];
 
         postProcess = GameObject.FindGameObjectWithTag("PostProcess").GetComponent<PostProcessVolume>();
 
@@ -109,23 +111,18 @@ public class OptionManager : MonoBehaviour
         backMainMenuPanel.SetActive(false);
         exitPanel.SetActive(false);
 
-        if (SaveCheck)
-        {
-            SaveOptions();
-            SaveCheck = false;
-        }
-        LoadOptions();
+        if(File.Exists(Application.persistentDataPath + "/OptionsData.json")) LoadOptions();
     }
 
     private void Start()
     {
         postProcess.profile.TryGetSettings(out autoExposure);
+        postProcess.profile.TryGetSettings(out bloom);
     }
 
     void LateUpdate()
     {
         CheckOptionsMenu();
-        PostProcessing();
         AudioChanger();
         GameChanger();
     }
@@ -189,6 +186,7 @@ public class OptionManager : MonoBehaviour
     {
         //Funzione per regolare la luminosita
         autoExposure.keyValue.value = brightnessSlider.value;
+        autoExposure.keyValue.value = Mathf.Clamp(autoExposure.keyValue.value, 0.5f, 1.5f);
     }
 
     public void VideoSettings()
@@ -260,6 +258,7 @@ public class OptionManager : MonoBehaviour
     {
         SaveOptions();
         VideoSettings();
+        PostProcessing();
         applyChangeVideo.SetActive(false);
         videoMenu.SetActive(false);
         specificOptionMenu.SetActive(false);
@@ -269,7 +268,7 @@ public class OptionManager : MonoBehaviour
     //Chiude il menu del video
     public void CloseVideoMenu()
     {
-        LoadOptions();
+        if (File.Exists(Application.persistentDataPath + "/OptionsData.json")) LoadOptions();
         videoMenu.SetActive(false);
         specificOptionMenu.SetActive(false);
         optionMenu.SetActive(true);

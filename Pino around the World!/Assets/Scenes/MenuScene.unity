@@ -529,15 +529,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4890150777134660866, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4890150777134660866, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4890150777134660866, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -27
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4890150777530177733, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -619,6 +619,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4890150778355017291, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4890150778575358603, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -634,6 +638,10 @@ PrefabInstance:
     - target: {fileID: 4890150778840565396, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890150778854622493, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4890150779183438303, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4695,7 +4703,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1711472399}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: BackFromGameSel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10293,6 +10301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuStartButtons: {fileID: 995008788}
   loadGameButton: {fileID: 1657730538}
+  currentSlotMM: 0
   levelSelMenu: {fileID: 1786087208}
   level1: {fileID: 1331929380}
   level2: {fileID: 2070425593}
@@ -10308,7 +10317,7 @@ MonoBehaviour:
   bSlot1: {fileID: 315123555}
   bSlot2: {fileID: 894819799}
   bSlot3: {fileID: 1845286080}
-  deletePanel: {fileID: 0}
+  deletePanel: {fileID: 1620840905}
   dbSlot1: {fileID: 1663753303}
   dbSlot2: {fileID: 1377330920}
   dbSlot3: {fileID: 1919877416}
@@ -10437,6 +10446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   options: {fileID: 0}
+  currentSlot: 0
 --- !u!4 &1747305937
 Transform:
   m_ObjectHideFlags: 0
@@ -12493,10 +12503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2243392204967068446, guid: 9c2b0abc46f55c44189e55569203fb78, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3549883276974598466, guid: 9c2b0abc46f55c44189e55569203fb78, type: 3}
       propertyPath: m_RootOrder
       value: 0

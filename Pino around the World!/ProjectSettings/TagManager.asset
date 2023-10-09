@@ -15,6 +15,7 @@ TagManager:
   - MenuStart
   - Empty
   - MenuOptions
+  - PostProcess
   layers:
   - Default
   - TransparentFX

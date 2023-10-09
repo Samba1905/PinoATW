@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3549883276974598466}
   - component: {fileID: 3549883276974598467}
-  - component: {fileID: 2243392204967068446}
   m_Layer: 11
   m_Name: PostProcess
   m_TagString: PostProcess
@@ -50,20 +49,3 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 1
---- !u!114 &2243392204967068446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3549883276974598524}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 15affe6fff5699443aa6b72f11ba2cab, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0

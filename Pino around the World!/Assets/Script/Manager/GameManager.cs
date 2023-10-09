@@ -1,5 +1,8 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,10 +25,19 @@ public class GameManager : MonoBehaviour
     }
     #endregion
     #region MenuPausa
-    public static OptionManager oM;
+    OptionManager oM;
+    PlayerNew player;
     public GameObject options;
     bool checkPauseMenu;
     #endregion
+    public SlotGame currentSlot;
+
+    public enum SlotGame
+    {
+        Slot1,
+        Slot2,
+        Slot3
+    }
 
     private static bool _level1;
     private static bool _level2;
@@ -33,12 +45,41 @@ public class GameManager : MonoBehaviour
     private static bool _level4;
     private static bool _level5;
 
-    public static bool Level1 { get { return _level1; } }
-    public static bool Level2 { get { return _level2; } }
-    public static bool Level3 { get { return _level3; } }
-    public static bool Level4 { get { return _level4; } }
-    public static bool Level5 { get { return _level5; } }
-
+    public static bool Level1
+    {
+        get
+        {
+            return _level1;
+        }
+    }
+    public static bool Level2
+    { 
+        get
+        {
+            return _level2;
+        }
+    }
+    public static bool Level3
+    {
+        get
+        {
+            return _level3;
+        }
+    }
+    public static bool Level4
+    {
+        get
+        {
+            return _level4;
+        }
+    }
+    public static bool Level5
+    {
+        get
+        {
+            return _level5;
+        }
+    }
 
     private static bool _save1;
     private static bool _save2;
@@ -79,11 +120,8 @@ public class GameManager : MonoBehaviour
     }
 
     public static bool PlayerStatus
-    { 
-        get
-        {
-            return true;
-        }
+    {
+        get ;
     }
 
     private void Awake()
@@ -107,6 +145,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {        
         oM = FindObjectOfType<OptionManager>();
+        player = FindObjectOfType<PlayerNew>();
     }
 
     private void LateUpdate()
@@ -115,14 +154,29 @@ public class GameManager : MonoBehaviour
     }
 
     #region Sezione salvataggi
-
-    public void CheckSlotsave1()
+    public void SaveSlot1()
     {
-        
+        Game game = new Game();
+
+        game.level1 = Level1;
+        game.level2 = Level2;
+        game.level3 = Level3;
+        game.level4 = Level4;
+        game.level5 = Level5;
+
+        string json = JsonUtility.ToJson(game);
+
+        File.WriteAllText(Application.persistentDataPath + "/Slot1Data.json", json);
     }
 
 
 
+
+
+    public void CheckSlotsave1()
+    {
+        CheckLevelStatus();
+    }
 
 
 
@@ -130,31 +184,32 @@ public class GameManager : MonoBehaviour
 
     #endregion
     #region Gestione Livelli
-
-
-
-
-
-
-
-
-
-
+    public void CheckLevelStatus()
+    {
+        _level1 = player.Lvl1;
+        _level2 = player.Lvl2;
+        _level3 = player.Lvl3;
+        _level4 = player.Lel4;
+        _level5 = player.Lvl5;
+    }
     #endregion
     #region MenuPausa
     void PauseMenuGame()
     {
-        if (!checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Apre il menu durante il gioco fermando il tempo
+        if (SceneManager.GetActiveScene().name != "MenuScene")
         {
-            Time.timeScale = 0f;
-            oM.pauseMenuPanel.SetActive(true);
-            checkPauseMenu = true;
-        }
-        else if (checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Chiude il menu durante il gioco riprendendo il tempo
-        {
-            Time.timeScale = 1f;
-            oM.pauseMenuPanel.SetActive(false);
-            checkPauseMenu = false;
+            if (!checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Apre il menu durante il gioco fermando il tempo
+            {
+                Time.timeScale = 0f;
+                oM.pauseMenuPanel.SetActive(true);
+                checkPauseMenu = true;
+            }
+            else if (checkPauseMenu && Input.GetButtonDown("Menu") && !oM.checkOptionMenu && !oM.checkSpecificOptionMenu) //Chiude il menu durante il gioco riprendendo il tempo
+            {
+                Time.timeScale = 1f;
+                oM.pauseMenuPanel.SetActive(false);
+                checkPauseMenu = false;
+            }
         }
     }
 
