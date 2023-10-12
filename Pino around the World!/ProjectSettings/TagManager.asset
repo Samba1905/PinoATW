@@ -16,6 +16,16 @@ TagManager:
   - Empty
   - MenuOptions
   - PostProcess
+  - Brightness
+  - SFXVolume
+  - MusicVolume
+  - MasterVolume
+  - FullScreen
+  - vSync
+  - FPS
+  - Resolution
+  - Language
+  - Vibration
   layers:
   - Default
   - TransparentFX

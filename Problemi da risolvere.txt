@@ -7,17 +7,21 @@ UI
 6. Creare la modifica dei comandi
 7. Creare e implementare i personaggi Mage e Barbarian
 8. Strana interazione con la creazione di un account
+9. Cambiare tutti gli accessi della UI da X to GameObject (FATTO)
+10. Dopo la build non apre gli SpecificOptions
+11. Non salva davvero
 
 ---------------------------------------------------------------------------------------------------
 
 Gameplay
 1. Migliorare Deficenza artificiale
-2. Migliorare sistema combattimento
+2. Migliorare sistema combattimento (FATTO)
 3. Implementare sistema spell personaggio
 4. Creare companion per storia
 5. Implementare tutto il sistema salvataggio progressi giocatore
 6. Creare sistema di stamina interno (FATTO)
 7. Creare UI stamina
+8. Animazione non sempre funzionale (RISOLTO)
 
 ---------------------------------------------------------------------------------------------------
 

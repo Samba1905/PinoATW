@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     Transform orientation;
     [SerializeField, HideInInspector]
     Rigidbody rb;
+    [SerializeField, HideInInspector]
+    PlayerNew playerN;
     Camera cam;
     public Animator anim;
 
@@ -21,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float rotationSpeed;
     [SerializeField]
-    float moveSpeed, walkSpeed, runSpeed;
+    float moveSpeed, walkSpeed, runSpeed, exhSpeed;
     Vector3 move;
     #endregion
 
@@ -45,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Transform>();
         character = GameObject.FindWithTag("Character").GetComponent<Transform>();
         orientation = GetComponentInChildren<Transform>().Find("Orientation");
+        playerN = GetComponent<PlayerNew>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -66,14 +69,24 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
 
         //Input per corsa
-        if (Input.GetButton("Run")) isRunning = true;
-        else isRunning = false;
+        if(!playerN.ExhaustState)
+        {
+            if (Input.GetButton("Run")) isRunning = true;
+            else isRunning = false;
+        }
+        else
+        {
+            consumeRun = false;
+        }
 
         //Input per dash
-        if (Input.GetButtonDown("Dash"))
+        if (!playerN.ExhaustState)
         {
-            consumeDash = true;
-            isDashing = true;
+            if (Input.GetButtonDown("Dash"))
+            {
+                consumeDash = true;
+                isDashing = true;
+            }
         }
 
         //Prova
@@ -99,7 +112,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Velocita di movimento
-        if (!isRunning) moveSpeed = walkSpeed;
+        if (playerN.ExhaustState) moveSpeed = exhSpeed;
+        else if (!isRunning) moveSpeed = walkSpeed;
         else if (isRunning) moveSpeed = runSpeed;
 
 

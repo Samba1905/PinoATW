@@ -12,7 +12,7 @@ Player
 Warrior
 1. Attacchi - OK
 2. Stamina per attacchi e scudo - FARE
-3. Animazioni attacco - OK (migliorare)
+3. Animazioni attacco - OK
 4. Animazioni scudo - FARE
 5. Lanciare incantesimi - FARE
 6. Suoni - FARE

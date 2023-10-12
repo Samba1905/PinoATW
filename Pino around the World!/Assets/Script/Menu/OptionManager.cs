@@ -16,14 +16,19 @@ using UnityEngine.UI;
 public class OptionManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject optionMenu, menuStartButtons, specificOptionMenu;
+    GameObject optionMenu, menuStartButtons, specificOptionMenu, exitPanel, backMainMenuPanel;
     public bool checkOptionMenu, checkSpecificOptionMenu;
 
-    public GameObject pauseMenuPanel, backMainMenuPanel, exitPanel;
+    GameManager gameManager;
+
+    public GameObject pauseMenuPanel;
 
     #region VideoSettings
+    [Header("Video")]
     [SerializeField]
-    GameObject videoMenu, applyChangeVideo;
+    GameObject videoMenu;
+    [SerializeField]
+    GameObject applyChangeVideo;
     [SerializeField]
     Slider brightnessSlider;
     [SerializeField]
@@ -38,6 +43,7 @@ public class OptionManager : MonoBehaviour
     bool confirmedVideoChanges;
     #endregion
     #region AudioSettings
+    [Header("Audio")]
     [SerializeField]
     AudioMixer audioMixer;
     [SerializeField]
@@ -46,6 +52,7 @@ public class OptionManager : MonoBehaviour
     GameObject audioMenu;
     #endregion
     #region GameSettings
+    [Header("Game")]
     [SerializeField]
     GameObject gameMenu;
     [SerializeField]
@@ -56,10 +63,12 @@ public class OptionManager : MonoBehaviour
     Gamepad gamepad;
     #endregion
     #region ControlsSettings
+    [Header("Controls")]
     [SerializeField]
     GameObject controlsMenu;
     #endregion
     #region HelpSettings
+    [Header("Help")]
     [SerializeField]
     GameObject helpMenu;
     #endregion
@@ -84,18 +93,18 @@ public class OptionManager : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("MenuPausa")) exitPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[2];
         else exitPanel = GameObject.FindGameObjectWithTag("Empty");
 
-        masterValue = Slider.FindObjectsOfType<Slider>()[0];
-        brightnessSlider = Slider.FindObjectsOfType<Slider>()[1];
-        SFXValue = Slider.FindObjectsOfType<Slider>()[2];
-        musicValue = Slider.FindObjectsOfType<Slider>()[3];
+        brightnessSlider = GameObject.FindGameObjectWithTag("Brightness").GetComponent<Slider>();
+        masterValue = GameObject.FindGameObjectWithTag("MasterVolume").GetComponent<Slider>();
+        SFXValue = GameObject.FindGameObjectWithTag("SFXVolume").GetComponent<Slider>();
+        musicValue = GameObject.FindGameObjectWithTag("MusicVolume").GetComponent<Slider>();
 
-        fullscreenToggle = Toggle.FindObjectsOfType<Toggle>()[0];
-        vSyncToggle = Toggle.FindObjectsOfType<Toggle>()[1];
-        vibrationToggle = Toggle.FindObjectsOfType<Toggle>()[2];
+        fullscreenToggle = GameObject.FindGameObjectWithTag("FullScreen").GetComponent<Toggle>();
+        vSyncToggle = GameObject.FindGameObjectWithTag("vSync").GetComponent<Toggle>();
+        vibrationToggle = GameObject.FindGameObjectWithTag("Vibration").GetComponent<Toggle>();
 
-        languageDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[0];
-        FPSDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[1];
-        resolutionDropDown = TMP_Dropdown.FindObjectsOfType<TMP_Dropdown>()[2];
+        languageDropDown = GameObject.FindGameObjectWithTag("Language").GetComponent<TMP_Dropdown>();
+        FPSDropDown = GameObject.FindGameObjectWithTag("FPS").GetComponent<TMP_Dropdown>();
+        resolutionDropDown = GameObject.FindGameObjectWithTag("Resolution").GetComponent<TMP_Dropdown>();
 
         postProcess = GameObject.FindGameObjectWithTag("PostProcess").GetComponent<PostProcessVolume>();
 
@@ -118,6 +127,7 @@ public class OptionManager : MonoBehaviour
     {
         postProcess.profile.TryGetSettings(out autoExposure);
         postProcess.profile.TryGetSettings(out bloom);
+        gameManager = GetComponent<GameManager>();
     }
 
     void LateUpdate()
@@ -137,6 +147,12 @@ public class OptionManager : MonoBehaviour
     {
         menuStartButtons.SetActive(false);
         optionMenu.SetActive(true);       
+    }
+
+    public void OptionMenuButtonGame()
+    {
+        optionMenu.SetActive(true);
+        pauseMenuPanel.SetActive(false);
     }
 
     public void OpenVideoMenu()
@@ -179,6 +195,12 @@ public class OptionManager : MonoBehaviour
         SaveOptions();
         optionMenu.SetActive(false);
         menuStartButtons.SetActive(true);
+    }
+
+    public void BackToOptionMenuGame()
+    {
+        optionMenu.SetActive(false);
+        pauseMenuPanel.SetActive(true);
     }
 
     #region OptionVideo
@@ -347,6 +369,51 @@ public class OptionManager : MonoBehaviour
         if (optionMenu.activeSelf) checkOptionMenu = true; else checkOptionMenu = false;
         if (specificOptionMenu.activeSelf) checkSpecificOptionMenu = true; else checkSpecificOptionMenu = false;
     }
+
+    public void ResumeButtonGM()
+    {
+        pauseMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    #region Retry
+    public void RetryButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Ricarica il livello attuale
+    }
+    #endregion
+
+    #region MainMenu
+    public void OpenMainMenuPanel() //Apre il pannello di conferma per tornare al MainMenu
+    {
+        backMainMenuPanel.SetActive(true);
+    }
+    public void CloseMainMenuPanel() //Chiude il pannello di conferma per tornare al MainMenu
+    {
+        backMainMenuPanel.SetActive(false);
+    }
+    public void MainMenu() //Carica il MainMenu
+    {
+        SceneManager.LoadScene(0);
+    }
+    #endregion
+
+    #region Exit
+    public void OpenExitPanel() //Apre il pannello di conferma per uscire dal gioco
+    {
+        exitPanel.SetActive(true);
+    }
+
+    public void CloseExitPanel() //Chiude il pannello di conferma per uscire dal gioco
+    {
+        exitPanel.SetActive(false);
+    }
+
+    public void ExitButton() //Chiude l'applicazione
+    {
+        Application.Quit();
+    }
+    #endregion
 
     void SaveOptions()
     {

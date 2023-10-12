@@ -59,8 +59,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -171,7 +173,7 @@ ScriptsOnlyBuild:
     methodName: OpenVideoMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: OpenHelpMenu
+    methodName: CloseHelpMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseControlsMenu
@@ -233,17 +235,17 @@ ScriptsOnlyBuild:
     fullTypeName: OptionManager
     methodName: OptionMenuButton
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
     methodName: CloseExitPanel
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
     methodName: ExitButton
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: CloseOptions
+    fullTypeName: OptionManager
+    methodName: BackToOptionMenuGame
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: CloseHelpMenu
+    methodName: OpenHelpMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: OpenControlsMenu
@@ -257,25 +259,49 @@ ScriptsOnlyBuild:
     fullTypeName: OptionManager
     methodName: OpenVideoMenu
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
     methodName: OpenExitPanel
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
     methodName: OpenMainMenuPanel
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: OpenOptions
+    fullTypeName: OptionManager
+    methodName: OptionMenuButtonGame
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
     methodName: RetryButton
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: ResumeButton
+    fullTypeName: OptionManager
+    methodName: ResumeButtonGM
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
+    methodName: CloseHelpMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseControlsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseAudioMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: ConfirmVideoSettings
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
     methodName: CloseMainMenuPanel
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
+    fullTypeName: OptionManager
     methodName: MainMenu
   sceneClasses:
     Assets/Scenes/FirstMap.unity:
@@ -896,7 +922,7 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8771204d6795df882f9c711e39d41a5c
+      Hash: c988245ec90a7dd211d9fa88b2dce7da
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1082,7 +1108,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 4e5dd8c71634efe9553531ac7e15ee38
+      Hash: 62906b283bd49d5bee5dfbc8eccfed83
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OptionManager
@@ -1634,7 +1660,7 @@ ScriptsOnlyBuild:
     className: Benchmark02
   - hash:
       serializedVersion: 2
-      Hash: 456d04eff5a361d720dfdf95db80562c
+      Hash: d9cff0c82f7eac1885c02e6ab66b3838
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Warrior
@@ -1958,7 +1984,7 @@ ScriptsOnlyBuild:
     className: CFXR_ParticleTextFontAsset
   - hash:
       serializedVersion: 2
-      Hash: ff4dcff69454fb8a1b4428b1cc5ad4f6
+      Hash: 836bba39bc91ee38af5443d20f05a12c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement

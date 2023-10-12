@@ -20324,18 +20324,26 @@ PrefabInstance:
     - target: {fileID: 7619391865891248649, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 7619391865891248649, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseMainMenuPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7619391865891248649, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7619391865958168564, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 7619391865958168564, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619391865958168564, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae0e50b1046abe4b8a6a9ac46b72dcd, type: 3}
@@ -31755,6 +31763,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4890150777635935161, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 4890150777635935161, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmVideoSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890150777712321018, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 4890150777712321018, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenApplyVideoSetting
+      objectReference: {fileID: 0}
     - target: {fileID: 4890150777762163512, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -31803,6 +31827,22 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4890150777920248271, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 4890150777920248271, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseVideoMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890150778139586402, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 4890150778139586402, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGameMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 4890150778224150953, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -31810,6 +31850,22 @@ PrefabInstance:
     - target: {fileID: 4890150778224150953, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890150778575358603, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 4890150778575358603, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseApplyVideoSetting
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890150778837475950, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 4890150778837475950, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseAudioMenu
       objectReference: {fileID: 0}
     - target: {fileID: 4890150778840565396, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -31930,6 +31986,22 @@ PrefabInstance:
     - target: {fileID: 4890150779245751283, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5413002026296252379, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 5413002026296252379, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseHelpMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5510960461550655226, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1573761526}
+    - target: {fileID: 5510960461550655226, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseControlsMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7fc05a57de43a468c72ce4bc604b04, type: 3}
@@ -53067,7 +53139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07263a9de3583b489cf36a578347423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 0}
+  currentSlot: 0
 --- !u!4 &1420028293
 Transform:
   m_ObjectHideFlags: 0
@@ -54671,22 +54743,18 @@ PrefabInstance:
     - target: {fileID: 1693962116998953587, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
-    - target: {fileID: 1693962116998953587, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenOptions
-      objectReference: {fileID: 0}
-    - target: {fileID: 1693962116998953587, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 1693962118599157526, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 1693962118599157526, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenMainMenuPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693962118599157526, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1693962118628605289, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_Pivot.x
@@ -54776,33 +54844,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenuPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 1693962118628605290, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1693962118793589865, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 1693962118793589865, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenExitPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 1693962118793589865, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1693962118930244988, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 1693962118930244988, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RetryButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1693962118930244988, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1693962119032599443, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 1693962119032599443, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeButton
+      value: ResumeButtonGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 1693962119032599443, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97d745ad44de3be4e853e4b0d700fed5, type: 3}
@@ -57535,37 +57611,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1573761526}
-    - target: {fileID: 2321207050053602876, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenVideoMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2321207050357391146, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1573761526}
-    - target: {fileID: 2321207050357391146, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenControlsMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2321207050407567488, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1573761526}
-    - target: {fileID: 2321207050407567488, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenAudioMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2321207050571717968, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 2321207050571717968, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseOptions
-      objectReference: {fileID: 0}
-    - target: {fileID: 2321207050571717968, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: BackToOptionMenuGame
       objectReference: {fileID: 0}
     - target: {fileID: 2321207051017441309, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -57579,10 +57639,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1573761526}
-    - target: {fileID: 2321207051570847045, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseHelpMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 2321207051847088321, guid: a6c5cca9ba238b54c9bd0d482bb65e17, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -58572,11 +58628,11 @@ MonoBehaviour:
   optionMenu: {fileID: 0}
   menuStartButtons: {fileID: 0}
   specificOptionMenu: {fileID: 0}
+  exitPanel: {fileID: 0}
+  backMainMenuPanel: {fileID: 0}
   checkOptionMenu: 0
   checkSpecificOptionMenu: 0
   pauseMenuPanel: {fileID: 0}
-  backMainMenuPanel: {fileID: 0}
-  exitPanel: {fileID: 0}
   videoMenu: {fileID: 0}
   applyChangeVideo: {fileID: 0}
   brightnessSlider: {fileID: 0}
@@ -59159,18 +59215,26 @@ PrefabInstance:
     - target: {fileID: 4387737370773027053, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 4387737370773027053, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4387737370773027053, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4387737371090507097, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1420028292}
+      objectReference: {fileID: 1573761526}
     - target: {fileID: 4387737371090507097, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseExitPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387737371090507097, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a3a4e42add70849a3993a43dc19965, type: 3}

@@ -7,6 +7,8 @@ public class Warrior : MonoBehaviour
 {
     float timerAttack, timerPush;
     float pushForce = 3f, pushUpwardForce;
+    [SerializeField]
+    float powerPush, powerPushTh;
     public bool firstAttack, secondAttack, thirdAttack, isAttacking;
     PlayerMovement playerM;
     PlayerNew player;
@@ -31,50 +33,63 @@ public class Warrior : MonoBehaviour
         timerPush += Time.deltaTime;
         playerM.anim.SetBool("isAttacking", isAttacking);
 
-        if(timerPush < 0.33f) rb.AddForce(warriorDirection, ForceMode.Impulse);
-
-        if(firstAttack && secondAttack && thirdAttack)
+        if (timerAttack > 1f)
         {
             firstAttack = false;
             secondAttack = false;
             thirdAttack = false;
             isAttacking = false;
-        }
-        else if (timerAttack > 0.75f)
-        {
-            firstAttack = false;
-            secondAttack = false;
-            thirdAttack = false;
-            isAttacking = false;
-        }
+            playerM.anim.SetBool("firstAttack", false);
+            playerM.anim.SetBool("secondAttack", false);
+            playerM.anim.SetBool("thirdAttack", false);
 
-        if(Input.GetButtonDown("Attack1") && firstAttack && secondAttack && timerAttack < 0.75f)
-        {
-            Debug.Log("Attacco2");
-            thirdAttack = true;
-            playerM.anim.SetTrigger("thirdAttack");
-            player.UpdateSTA(20f);
-            timerAttack = 0f;
-            timerPush = 0f;
         }
-        else if (Input.GetButtonDown("Attack1") && firstAttack && timerAttack < 0.75f)
+        if (!player.ExhaustState) //Condizione che impedisce di attaccare in caso di stato esausto
         {
-            Debug.Log("Attacco1");
-            rb.AddForce(warriorDirection, ForceMode.Impulse);
-            timerAttack = 0f;
-            secondAttack = true;
-            playerM.anim.SetTrigger("secondAttack");
-            player.UpdateSTA(5f);
+            if (Input.GetButtonDown("Attack1") && firstAttack && secondAttack && timerAttack < 1f)
+            {
+                thirdAttack = true;
+                playerM.anim.SetBool("thirdAttack", true);
+                timerAttack = 0f;
+                timerPush = 0f;
+            }
+            else if (Input.GetButtonDown("Attack1") && firstAttack && timerAttack < 1f)
+            {
+                secondAttack = true;
+                timerAttack = 0f;
+                playerM.anim.SetBool("secondAttack", true);
+            }
+            else if (Input.GetButtonDown("Attack1"))
+            {
+                firstAttack = true;
+                timerAttack = 0f;
+                isAttacking = true;
+                playerM.anim.SetBool("firstAttack", true);
+            }
         }
-        else if (Input.GetButtonDown("Attack1"))
-        {
-            Debug.Log("Attacco");
-            rb.AddForce(warriorDirection * 20f, ForceMode.Impulse);
-            timerAttack = 0f;
-            isAttacking = true;
-            firstAttack = true;
-            playerM.anim.SetTrigger("firstAttack");
-            player.UpdateSTA(5f);
-        }
+    }
+
+    void EvNormalAttack() //Funzione per attacco più immersivo richiamato da evento
+    {
+        Vector3 warriorDirection = transform.forward * pushForce + transform.up * pushUpwardForce;
+        rb.AddForce(warriorDirection * powerPush, ForceMode.Impulse);
+        player.UpdateSTA(7.5f);
+    }
+
+    void EvThirdAttack() //Funzione per terzo attacco più immersivo richiamato da evento
+    {
+        Vector3 warriorDirection = transform.forward * pushForce + transform.up * pushUpwardForce;
+        rb.AddForce(warriorDirection * powerPushTh, ForceMode.Impulse);
+        player.UpdateSTA(15f);
+    }
+
+    void EvResetAnim() //Funzione per reset attacchi richiamato da evento
+    {
+        firstAttack = false;
+        secondAttack = false;
+        thirdAttack = false;
+        playerM.anim.SetBool("firstAttack", false);
+        playerM.anim.SetBool("secondAttack", false);
+        playerM.anim.SetBool("thirdAttack", false);
     }
 }

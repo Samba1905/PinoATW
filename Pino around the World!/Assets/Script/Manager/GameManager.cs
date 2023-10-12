@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     #region MenuPausa
     OptionManager oM;
     PlayerNew player;
-    public GameObject options;
     bool checkPauseMenu;
     #endregion
     public SlotGame currentSlot;
@@ -129,28 +128,21 @@ public class GameManager : MonoBehaviour
         #region Singleton
         if (_instance)
         {
-            gameObject.SetActive(false);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         else _instance = this;
 
         DontDestroyOnLoad(this);
         #endregion
-
-        if (GameObject.Find("OptionMenu")) options = GameObject.Find("OptionMenu");
-        else options = GameObject.FindGameObjectWithTag("Empty");
         Time.timeScale = 1.0f;
-    }
-
-    private void Start()
-    {        
-        oM = FindObjectOfType<OptionManager>();
-        player = FindObjectOfType<PlayerNew>();
     }
 
     private void LateUpdate()
     {
         PauseMenuGame();
+        if (oM != FindObjectOfType<OptionManager>()) oM = FindObjectOfType<OptionManager>();
+        if (player != FindObjectOfType<PlayerMovement>()) player = FindObjectOfType<PlayerNew>();
+        if(checkPauseMenu) if (!oM.pauseMenuPanel.activeSelf) checkPauseMenu = false;
     }
 
     #region Sezione salvataggi
@@ -212,70 +204,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    #region Options
-    public void OpenOptions()
-    {
-        options.SetActive(true);
-        oM.pauseMenuPanel.SetActive(false);
-    }
-
-    public void CloseOptions()
-    {
-        options.SetActive(false);
-        oM.pauseMenuPanel.SetActive(true);
-    }
-    #endregion
-    #region Retry
-    public void RetryButton()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Ricarica il livello attuale
-    }
-    #endregion
-    #region CaricamentoNuovaScena
-    public void ContinueButton()
-    {
-        SceneManager.LoadScene(0); //Momentaneo
-    }
-    #endregion
-    #region Resume
-    public void ResumeButton() //Fa riprendere la partita e il tempo
-    {
-        Time.timeScale = 1f;
-        oM.pauseMenuPanel.SetActive(false);
-        checkPauseMenu = false;
-    }
-    #endregion
-    #region MainMenu
-    public void OpenMainMenuPanel() //Apre il pannello di conferma per tornare al MainMenu
-    {
-        oM.backMainMenuPanel.SetActive(true);
-    }
-    public void CloseMainMenuPanel() //Chiude il pannello di conferma per tornare al MainMenu
-    {
-        oM.backMainMenuPanel.SetActive(false);
-    }
-    public void MainMenu() //Carica il MainMenu
-    {
-        SceneManager.LoadScene(0);
-    }
-    #endregion
-    #region Exit
-    public void OpenExitPanel() //Apre il pannello di conferma per uscire dal gioco
-    {
-        oM.exitPanel.SetActive(true);
-    }
-
-    public void CloseExitPanel() //Chiude il pannello di conferma per uscire dal gioco
-    {
-        oM.exitPanel.SetActive(false);
-    }
-
-    public void ExitButton() //Chiude l'applicazione
-    {
-        Application.Quit();
-    }
-    #endregion
     #endregion
 
 }

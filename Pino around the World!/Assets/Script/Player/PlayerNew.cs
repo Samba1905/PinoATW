@@ -17,6 +17,7 @@ public class PlayerNew : MonoBehaviour
     public bool DANNO;
 
     PlayerMovement playerM;
+    Warrior warrior;
 
     bool lvl1, lvl2, lvl3, lvl4, lvl5; //Prove
 
@@ -79,6 +80,14 @@ public class PlayerNew : MonoBehaviour
         }
     }
 
+    public bool ExhaustState
+    {
+        get
+        {
+            return exhaustState;
+        }
+    }
+
     float DarkEnergyPoints
     {
         get 
@@ -114,6 +123,7 @@ public class PlayerNew : MonoBehaviour
         StaminaPoints = maxSTA;
         vulnerable = true;
         playerM = GetComponent<PlayerMovement>();
+        warrior = GetComponentInChildren<Warrior>();
     }
 
     private void Update()
@@ -121,6 +131,7 @@ public class PlayerNew : MonoBehaviour
         UpdateSTA(0f);
         IsDead();
         Timer();
+        Debug.Log(StaminaPoints);
 
         if (DANNO) //per fare test
         {
@@ -131,21 +142,24 @@ public class PlayerNew : MonoBehaviour
 
     public void UpdateSTA(float riduzioneStamina) //Funzione per creare una meccanica di stamina
     {
-        if (recoverySTA && !exhaustState) StaminaPoints += Time.deltaTime * 12.5f;
-        else if (recoverySTA && exhaustState) StaminaPoints += Time.deltaTime * 7.5f;
+        if (recoverySTA && !exhaustState) StaminaPoints += Time.deltaTime * 25f;
+        else if (recoverySTA && exhaustState) StaminaPoints += Time.deltaTime * 17.5f;
 
         if (playerM.consumeRun)
         {
             recoverySTA = false;
             StaminaPoints -= Time.deltaTime * 15f;
         }
-        else recoverySTA = true;
 
         if(playerM.consumeDash)
         {
             playerM.consumeDash = false;
-            StaminaPoints -= 25f;
+            StaminaPoints -= 22.5f;
         }
+
+        if (warrior.isAttacking) recoverySTA = false;
+
+        if (!warrior.isAttacking && !playerM.consumeRun) recoverySTA = true;
 
         StaminaPoints -= riduzioneStamina;
     }

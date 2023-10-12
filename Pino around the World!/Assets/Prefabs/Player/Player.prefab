@@ -118,11 +118,13 @@ MonoBehaviour:
   character: {fileID: 0}
   orientation: {fileID: 0}
   rb: {fileID: 0}
+  playerN: {fileID: 0}
   anim: {fileID: 0}
   rotationSpeed: 8
   moveSpeed: 0
   walkSpeed: 300
   runSpeed: 500
+  exhSpeed: 220
   dashForce: 20
   dashUpwardForce: 0
   timeDash: 0.15
@@ -617,6 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924fbac1bdf5d9d4c83105928653228f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerPush: 25
+  powerPushTh: 55
   firstAttack: 0
   secondAttack: 0
   thirdAttack: 0

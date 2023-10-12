@@ -259,7 +259,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionManager, Assembly-CSharp
-        m_MethodName: OpenHelpMenu
+        m_MethodName: CloseHelpMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 4890150777301979489}
   m_Layer: 5
   m_Name: vSyncToggle
-  m_TagString: Untagged
+  m_TagString: vSync
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 4890150777341893503}
   m_Layer: 5
   m_Name: VibrationToggle
-  m_TagString: Untagged
+  m_TagString: Vibration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 4890150777475233511}
   m_Layer: 5
   m_Name: ResolutionDropdown
-  m_TagString: Untagged
+  m_TagString: Resolution
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4221,7 +4221,7 @@ GameObject:
   - component: {fileID: 4890150778010961732}
   m_Layer: 5
   m_Name: MasterSlider
-  m_TagString: Untagged
+  m_TagString: MasterVolume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4600,7 +4600,7 @@ GameObject:
   - component: {fileID: 4890150778058012201}
   m_Layer: 5
   m_Name: FPSDropdown
-  m_TagString: Untagged
+  m_TagString: FPS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5933,7 +5933,7 @@ GameObject:
   - component: {fileID: 4890150778355017291}
   m_Layer: 5
   m_Name: BrightnessSlider
-  m_TagString: Untagged
+  m_TagString: Brightness
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6531,7 +6531,7 @@ GameObject:
   - component: {fileID: 4890150778406026829}
   m_Layer: 5
   m_Name: FullScreenToggle
-  m_TagString: Untagged
+  m_TagString: FullScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7535,7 +7535,7 @@ GameObject:
   - component: {fileID: 4890150778597689902}
   m_Layer: 5
   m_Name: LanguageDropdown
-  m_TagString: Untagged
+  m_TagString: Language
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9034,7 +9034,7 @@ GameObject:
   - component: {fileID: 4890150778854622495}
   m_Layer: 5
   m_Name: MusicSlider
-  m_TagString: Untagged
+  m_TagString: MusicVolume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9125,7 +9125,7 @@ GameObject:
   - component: {fileID: 4890150778861866840}
   m_Layer: 5
   m_Name: SFXSlider
-  m_TagString: Untagged
+  m_TagString: SFXVolume
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
