@@ -6,8 +6,9 @@ Player
 5. Controller animazioni - OK
 6. Suoni - FARE
 7. Stamina per corsa e dash - OK
-8. Macchina a stati - FARE
+8. Macchina a stati - FARE FORSE
 9. Albero delle abilità e salvataggio di esso - FARE
+10. Dash trasformatore - FARE
 
 Warrior
 1. Attacchi - OK
@@ -18,3 +19,19 @@ Warrior
 6. Suoni - FARE
 7. Script modalità scudo - FARE
 8. Script spada - FARE
+
+Mage
+1. Attacchi - FARE
+2. Stamina - FARE
+3. Animazioni - FARE
+4. Controller - FARE
+5. Suoni - FARE
+6. Script - FARE
+
+Barbarian
+1. Attacchi - FARE
+2. Stamina - FARE
+3. Animazioni - FARE
+4. Controller - FARE
+5. Suoni - FARE
+6. Script - FARE

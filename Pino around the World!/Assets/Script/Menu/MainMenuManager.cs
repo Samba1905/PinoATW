@@ -54,12 +54,12 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        LoadSlotDataText();
+        LoadSlotData();
+        LoadInteraction();
     }
 
     private void LateUpdate()
-    {
-        LoadInteraction();        
+    {    
         CamInteraction();
         DeleteButtonsInteraction();
         SlotGameTextInteraction();
@@ -95,24 +95,30 @@ public class MainMenuManager : MonoBehaviour
         tSlot3.text = slot3;
     }
 
-    void LoadSlotDataText()//Funzione per caricare i nomi correttamente
+    void LoadSlotData()//Funzione per caricare i nomi correttamente
     {
         if (File.Exists(Application.persistentDataPath + "/Slot1Data.json"))
         {
             slot1 = File.ReadAllText(Application.persistentDataPath + "/Slot1Data.json");
             Game game = JsonUtility.FromJson<Game>(slot1);
+
+            GameManager.SlotSave1 = game.GMSlot1;
             slot1 = game.slotName1;
         }
         if (File.Exists(Application.persistentDataPath + "/Slot2Data.json"))
         {
             slot2 = File.ReadAllText(Application.persistentDataPath + "/Slot2Data.json");
             Game game = JsonUtility.FromJson<Game>(slot2);
+
+            GameManager.SlotSave2 = game.GMSlot2;
             slot2 = game.slotName2;
         }
         if (File.Exists(Application.persistentDataPath + "/Slot3Data.json"))
         {
             slot3 = File.ReadAllText(Application.persistentDataPath + "/Slot3Data.json");
             Game game = JsonUtility.FromJson<Game>(slot3);
+
+            GameManager.SlotSave3 = game.GMSlot3;
             slot3 = game.slotName3;
         }
     }
@@ -127,13 +133,18 @@ public class MainMenuManager : MonoBehaviour
     public void BackFromGameSel() //Funzione per tornare al mainmenu dal multisalvataggio
     {
         gameSel = false;
+        bSlot1.interactable = true;
+        bSlot2.interactable = true;
+        bSlot3.interactable = true;
         menuStartButtons.gameObject.SetActive(true);
         gameSelMenu.SetActive(false);
     }
    
     public void LoadGameButton() //Funzione per far interagire gli slot con salvataggio
     {
-        levelSelMenu.SetActive(true);
+        menuStartButtons.SetActive(false);
+        gameSelMenu.SetActive(true);
+        gameSel = true;
         if(!GameManager.SlotSave1) bSlot1.interactable = false;
         else bSlot1.interactable = true;
         if(!GameManager.SlotSave2) bSlot2.interactable = false;
@@ -175,27 +186,34 @@ public class MainMenuManager : MonoBehaviour
                 GameManager.SlotSave1 = true;
 
                 game.slotName1 = slot1;
+                game.GMSlot1 = GameManager.SlotSave1;
                 slot1 = JsonUtility.ToJson(game);
                 File.WriteAllText(Application.persistentDataPath + "/Slot1Data.json", slot1);
 
                 SceneManager.LoadScene(1);
                 break;
+
             case (GameManager.SlotGame)1:
                 tSlot2.text = IF.text;
                 inputFieldPanel.gameObject.SetActive(false);
                 GameManager.SlotSave2 = true;
                 slot2 = IF.text;
+
+                game.GMSlot2 = GameManager.SlotSave2;
                 game.slotName2 = slot2;
                 slot2 = JsonUtility.ToJson(game);
                 File.WriteAllText(Application.persistentDataPath + "/Slot2Data.json", slot2);
 
                 SceneManager.LoadScene(1);
                 break;
+
             case (GameManager.SlotGame)2:
                 tSlot3.text = IF.text;
                 inputFieldPanel.gameObject.SetActive(false);
                 GameManager .SlotSave3 = true;
                 slot3 = IF.text;
+
+                game.GMSlot3 = GameManager.SlotSave3;
                 game .slotName3 = slot3;
                 slot3 = JsonUtility.ToJson(game);
                 File.WriteAllText(Application.persistentDataPath + "/Slot3Data.json", slot3);

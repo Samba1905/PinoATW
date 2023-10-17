@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7591876088233458958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7591876088233458959}
+  - component: {fileID: 7591876088233458956}
+  m_Layer: 0
+  m_Name: OptionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7591876088233458959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591876088233458958}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7591876088233458956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591876088233458958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8a0b7d8510e404c83f77ce0d229d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionMenu: {fileID: 0}
+  menuStartButtons: {fileID: 0}
+  specificOptionMenu: {fileID: 0}
+  exitPanel: {fileID: 0}
+  backMainMenuPanel: {fileID: 0}
+  checkOptionMenu: 0
+  checkSpecificOptionMenu: 0
+  pauseMenuPanel: {fileID: 0}
+  videoMenu: {fileID: 0}
+  applyChangeVideo: {fileID: 0}
+  brightnessSlider: {fileID: 0}
+  vSyncToggle: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
+  resolutionDropDown: {fileID: 0}
+  FPSDropDown: {fileID: 0}
+  postProcess: {fileID: 0}
+  confirmedVideoChanges: 0
+  audioMixer: {fileID: 24100000, guid: e676c7d4b3c85974da6543742106bb5f, type: 2}
+  masterValue: {fileID: 0}
+  musicValue: {fileID: 0}
+  SFXValue: {fileID: 0}
+  audioMenu: {fileID: 0}
+  gameMenu: {fileID: 0}
+  languageDropDown: {fileID: 0}
+  vibrationToggle: {fileID: 0}
+  vibrationCheck: 0
+  controlsMenu: {fileID: 0}
+  helpMenu: {fileID: 0}

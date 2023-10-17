@@ -161,19 +161,10 @@ public class GameManager : MonoBehaviour
         File.WriteAllText(Application.persistentDataPath + "/Slot1Data.json", json);
     }
 
-
-
-
-
     public void CheckSlotsave1()
     {
         CheckLevelStatus();
     }
-
-
-
-
-
     #endregion
     #region Gestione Livelli
     public void CheckLevelStatus()

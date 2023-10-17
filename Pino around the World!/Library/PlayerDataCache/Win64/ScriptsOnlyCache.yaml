@@ -59,10 +59,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -155,6 +153,30 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
+    methodName: CloseControlsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: ConfirmVideoSettings
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseAudioMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseHelpMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
     methodName: BackToStartMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
@@ -172,30 +194,6 @@ ScriptsOnlyBuild:
     fullTypeName: OptionManager
     methodName: OpenVideoMenu
   - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseHelpMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseControlsMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseAudioMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseApplyVideoSetting
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: ConfirmVideoSettings
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OpenApplyVideoSetting
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseVideoMenu
-  - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: OpenDeleteFile
   - assembly: Assembly-CSharp
@@ -207,6 +205,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: BackFromConfirmName
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: BackFromGameSelection
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: NewGameButton
@@ -236,6 +237,21 @@ ScriptsOnlyBuild:
     methodName: OptionMenuButton
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
+    methodName: CloseHelpMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: ConfirmVideoSettings
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: OpenApplyVideoSetting
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
+    methodName: CloseVideoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
     methodName: CloseExitPanel
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
@@ -260,6 +276,9 @@ ScriptsOnlyBuild:
     methodName: OpenVideoMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
+    methodName: CloseGameMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: OptionManager
     methodName: OpenExitPanel
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
@@ -275,28 +294,10 @@ ScriptsOnlyBuild:
     methodName: ResumeButtonGM
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: CloseHelpMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
     methodName: CloseControlsMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
-    methodName: CloseGameMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
     methodName: CloseAudioMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseApplyVideoSetting
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: ConfirmVideoSettings
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: OpenApplyVideoSetting
-  - assembly: Assembly-CSharp
-    fullTypeName: OptionManager
-    methodName: CloseVideoMenu
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseMainMenuPanel

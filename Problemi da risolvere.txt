@@ -1,15 +1,16 @@
 UI
 1. Modificare script opzioni per salvare e caricare preferenze giocatore (JSON) (FATTO)
 2. Creare selezione personaggio inizio gioco (CAMBIATO IDEA)
-3. Creare multisalvataggio (IN CORSO)
+3. Creare multisalvataggio (FATTO)
 4. Creare menu selezione livelli (FATTO)
-5. Creare selezione difficoltà livello
+5. Creare selezione difficoltà livello (FATTO SOLO UI, COLLEGARE SAVE)
 6. Creare la modifica dei comandi
 7. Creare e implementare i personaggi Mage e Barbarian
-8. Strana interazione con la creazione di un account
+8. Strana interazione con la creazione di un account (IL TESTO STRANO MA NON GRAVE)
 9. Cambiare tutti gli accessi della UI da X to GameObject (FATTO)
-10. Dopo la build non apre gli SpecificOptions
-11. Non salva davvero
+10. Dopo la build non apre gli SpecificOptions (RISOLTO)
+11. Non salva davvero (RISOLTO)
+12. Illuminazione nel menu buggata quando si muove la telecamera (GLITCH DI ILLUMINAZIONE)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ Gameplay
 2. Migliorare sistema combattimento (FATTO)
 3. Implementare sistema spell personaggio
 4. Creare companion per storia
-5. Implementare tutto il sistema salvataggio progressi giocatore
+5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE)
 6. Creare sistema di stamina interno (FATTO)
 7. Creare UI stamina
 8. Animazione non sempre funzionale (RISOLTO)
@@ -31,5 +32,5 @@ Singleton
 ---------------------------------------------------------------------------------------------------
 
 PostProcessing
-1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena (FATTO)
+1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena (RISOLTO)
 2. Aggiungere profondità di gioco

@@ -75,22 +75,24 @@ public class OptionManager : MonoBehaviour
 
     private void Awake()
     {
-        optionMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[0];
+        optionMenu = GameObject.Find("OptionMenu");
         if (GameObject.FindGameObjectWithTag("MenuStart")) menuStartButtons = GameObject.FindGameObjectWithTag("MenuStart");
         else menuStartButtons = GameObject.FindGameObjectWithTag("Empty");
-        specificOptionMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[1];
-        videoMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[2];
-        applyChangeVideo = GameObject.FindGameObjectsWithTag("MenuOptions")[3];
-        audioMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[4];
-        gameMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[5];
-        controlsMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[6];
-        helpMenu = GameObject.FindGameObjectsWithTag("MenuOptions")[7];
+        specificOptionMenu = GameObject.Find("SpecificOptionMenu"); ;
+        videoMenu = GameObject.Find("VideoSettings");
+        applyChangeVideo = GameObject.Find("ApplyConfirmVideo"); ;
+        audioMenu = GameObject.Find("AudioSettings"); ;
+        gameMenu = GameObject.Find("GameSettings"); ;
+        controlsMenu = GameObject.Find("ControlsSettings"); ;
+        helpMenu = GameObject.Find("HelpSettings"); ;
 
-        if (GameObject.FindGameObjectWithTag("MenuPausa")) pauseMenuPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[0];
+
+
+        if (GameObject.FindGameObjectWithTag("MenuPausa")) pauseMenuPanel = GameObject.Find("PauseMenuPanel");
         else pauseMenuPanel = GameObject.FindGameObjectWithTag("Empty");
-        if (GameObject.FindGameObjectWithTag("MenuPausa")) backMainMenuPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[1];
+        if (GameObject.FindGameObjectWithTag("MenuPausa")) backMainMenuPanel = GameObject.Find("BackMainMenuPanel");
         else backMainMenuPanel = GameObject.FindGameObjectWithTag("Empty");
-        if (GameObject.FindGameObjectWithTag("MenuPausa")) exitPanel = GameObject.FindGameObjectsWithTag("MenuPausa")[2];
+        if (GameObject.FindGameObjectWithTag("MenuPausa")) exitPanel = GameObject.Find("ExitPanelGame");
         else exitPanel = GameObject.FindGameObjectWithTag("Empty");
 
         brightnessSlider = GameObject.FindGameObjectWithTag("Brightness").GetComponent<Slider>();
@@ -348,7 +350,7 @@ public class OptionManager : MonoBehaviour
     {        
         controlsMenu.SetActive(false);
         specificOptionMenu.SetActive(false);
-        optionMenu.SetActive(true);        
+        optionMenu.SetActive(true);
     }
     #endregion
     #region HelpMenu
