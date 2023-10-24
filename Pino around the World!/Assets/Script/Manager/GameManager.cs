@@ -160,10 +160,70 @@ public class GameManager : MonoBehaviour
 
         File.WriteAllText(Application.persistentDataPath + "/Slot1Data.json", json);
     }
-
-    public void CheckSlotsave1()
+    public void SaveSlot2()
     {
-        CheckLevelStatus();
+        Game game = new Game();
+
+        game.level1 = Level1;
+        game.level2 = Level2;
+        game.level3 = Level3;
+        game.level4 = Level4;
+        game.level5 = Level5;
+
+        string json = JsonUtility.ToJson(game);
+
+        File.WriteAllText(Application.persistentDataPath + "/Slot2Data.json", json);
+    }
+    public void SaveSlot3()
+    {
+        Game game = new Game();
+
+        game.level1 = Level1;
+        game.level2 = Level2;
+        game.level3 = Level3;
+        game.level4 = Level4;
+        game.level5 = Level5;
+
+        string json = JsonUtility.ToJson(game);
+
+        File.WriteAllText(Application.persistentDataPath + "/Slot3Data.json", json);
+    }
+
+    public void LoadSlot1()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "Slot1Data.json");
+
+        Game game = JsonUtility.FromJson<Game>(json);
+
+        _level1 = game.level1;
+        _level2 = game.level2;
+        _level3 = game.level3;
+        _level4 = game.level4;
+        _level5 = game.level5;
+    }
+    public void LoadSlot2()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "Slot2Data.json");
+
+        Game game = JsonUtility.FromJson<Game>(json);
+
+        _level1 = game.level1;
+        _level2 = game.level2;
+        _level3 = game.level3;
+        _level4 = game.level4;
+        _level5 = game.level5;
+    }
+    public void LoadSlot3()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "Slot3Data.json");
+
+        Game game = JsonUtility.FromJson<Game>(json);
+
+        _level1 = game.level1;
+        _level2 = game.level2;
+        _level3 = game.level3;
+        _level4 = game.level4;
+        _level5 = game.level5;
     }
     #endregion
     #region Gestione Livelli
@@ -172,7 +232,7 @@ public class GameManager : MonoBehaviour
         _level1 = player.Lvl1;
         _level2 = player.Lvl2;
         _level3 = player.Lvl3;
-        _level4 = player.Lel4;
+        _level4 = player.Lvl4;
         _level5 = player.Lvl5;
     }
     #endregion

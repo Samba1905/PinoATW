@@ -78,7 +78,6 @@
     <Compile Include="Assets\Script\SparaCubi.cs" />
     <Compile Include="Assets\Script\Menu\MainMenuManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\Script\TriggerMap\NextZone\TriggerLoadScene.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Script\Enemies\Enemies.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />

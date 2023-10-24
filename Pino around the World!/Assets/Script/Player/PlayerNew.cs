@@ -18,14 +18,18 @@ public class PlayerNew : MonoBehaviour
 
     PlayerMovement playerM;
     Warrior warrior;
+    Mage mage;
+    Barbarian barbarian;
+    [SerializeField]
+    TriggerArea triggerArea;
+    public GameManager.SlotGame SG;
 
-    bool lvl1, lvl2, lvl3, lvl4, lvl5; //Prove
-
+    bool lvl1, lvl2, lvl3, lvl4, lvl5;
 
     public bool Lvl1 { get { return lvl1; } }
     public bool Lvl2 { get { return lvl2; } }
     public bool Lvl3 { get { return lvl3; } }
-    public bool Lel4 { get { return lvl4; } }
+    public bool Lvl4 { get { return lvl4; } }
     public bool Lvl5 { get { return lvl5; } }
 
     float HealtsPoints
@@ -113,7 +117,18 @@ public class PlayerNew : MonoBehaviour
 
     private void Awake()
     {
-        if(File.Exists(Application.persistentDataPath + "/Slot1Data")) LoadLvl();
+        switch(SG)
+        {
+            case GameManager.SlotGame.Slot1:
+                if (File.Exists(Application.persistentDataPath + "/Slot1Data")) LoadLvl1();
+                break;
+            case GameManager.SlotGame.Slot2:
+                if (File.Exists(Application.persistentDataPath + "/Slot2Data")) LoadLvl2();
+                break;
+            case GameManager.SlotGame.Slot3:
+                if (File.Exists(Application.persistentDataPath + "/Slot3Data")) LoadLvl3();
+                break;
+        }
     }
 
     private void Start()
@@ -124,6 +139,7 @@ public class PlayerNew : MonoBehaviour
         vulnerable = true;
         playerM = GetComponent<PlayerMovement>();
         warrior = GetComponentInChildren<Warrior>();
+        if (GameObject.FindGameObjectWithTag("TriggerScene")) triggerArea = GameObject.Find("TriggerArea").GetComponent<TriggerArea>();
     }
 
     private void Update()
@@ -131,13 +147,39 @@ public class PlayerNew : MonoBehaviour
         UpdateSTA(0f);
         IsDead();
         Timer();
-        Debug.Log(StaminaPoints);
 
         if (DANNO) //per fare test
         {
-            UpdateHP(5, true); 
+            UpdateHP(5, true);
             DANNO = false;
-        }       
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("TriggerScene"))
+        {
+            switch(triggerArea.currentLevel)
+            {
+                case TriggerArea.LevelComplete._tutorial:
+                    break;
+                case TriggerArea.LevelComplete._level1:
+                    lvl1 = true;
+                    break;
+                case TriggerArea.LevelComplete._level2:
+                    lvl2 = true;
+                    break;
+                case TriggerArea.LevelComplete._level3:
+                    lvl3 = true;
+                    break;
+                case TriggerArea.LevelComplete._level4:
+                    lvl4 = true;
+                    break;
+                case TriggerArea.LevelComplete._level5:
+                    lvl5 = true;
+                    break;
+            }
+        }
     }
 
     public void UpdateSTA(float riduzioneStamina) //Funzione per creare una meccanica di stamina
@@ -201,9 +243,35 @@ public class PlayerNew : MonoBehaviour
         if (timerInvulnerable < 0) InvulnerableStatus(false);
     }
 
-    void LoadLvl()
+    void LoadLvl1()
     {
         string json = File.ReadAllText(Application.persistentDataPath + "/Slot1Data");
+
+        Game game = JsonUtility.FromJson<Game>(json);
+
+        lvl1 = game.level1;
+        lvl2 = game.level2;
+        lvl3 = game.level3;
+        lvl4 = game.level4;
+        lvl5 = game.level5;
+    }
+
+    void LoadLvl2()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot2Data");
+
+        Game game = JsonUtility.FromJson<Game>(json);
+
+        lvl1 = game.level1;
+        lvl2 = game.level2;
+        lvl3 = game.level3;
+        lvl4 = game.level4;
+        lvl5 = game.level5;
+    }
+
+    void LoadLvl3()
+    {
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot3Data");
 
         Game game = JsonUtility.FromJson<Game>(json);
 

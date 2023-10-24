@@ -3,14 +3,15 @@ UI
 2. Creare selezione personaggio inizio gioco (CAMBIATO IDEA)
 3. Creare multisalvataggio (FATTO)
 4. Creare menu selezione livelli (FATTO)
-5. Creare selezione difficoltà livello (FATTO SOLO UI, COLLEGARE SAVE)
-6. Creare la modifica dei comandi
+5. Creare selezione difficoltà livello
+6. Creare la modifica dei comandi (COMPLESSO PIU AVANTI)
 7. Creare e implementare i personaggi Mage e Barbarian
-8. Strana interazione con la creazione di un account (IL TESTO STRANO MA NON GRAVE)
+8. Strana interazione con la creazione di un account (IL TESTO STRANO MA NON GRAVE ACCETTABILE)
 9. Cambiare tutti gli accessi della UI da X to GameObject (FATTO)
 10. Dopo la build non apre gli SpecificOptions (RISOLTO)
 11. Non salva davvero (RISOLTO)
 12. Illuminazione nel menu buggata quando si muove la telecamera (GLITCH DI ILLUMINAZIONE)
+13. MainMenu non carica salvataggio per errore con GameManager.SlotDatax
 
 ---------------------------------------------------------------------------------------------------
 
@@ -18,16 +19,17 @@ Gameplay
 1. Migliorare Deficenza artificiale
 2. Migliorare sistema combattimento (FATTO)
 3. Implementare sistema spell personaggio
-4. Creare companion per storia
-5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE)
+4. Creare companion per storia (RIPENSATO, FORSE NO)
+5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE, ERRORI CARICAMENTO MENUMAIN)
 6. Creare sistema di stamina interno (FATTO)
 7. Creare UI stamina
 8. Animazione non sempre funzionale (RISOLTO)
+9. TriggerArea Enum non interagisce correttamente con il player (RISOLTO)
 
 ---------------------------------------------------------------------------------------------------
 
 Singleton
-1. Creare e sistemare tutti i Singleton
+1. Creare e sistemare tutti i Singleton (PARE FATTO DA TESTARE BENE)
 
 ---------------------------------------------------------------------------------------------------
 

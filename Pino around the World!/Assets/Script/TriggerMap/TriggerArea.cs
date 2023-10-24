@@ -5,8 +5,56 @@ using UnityEngine.SceneManagement;
 
 public class TriggerArea : MonoBehaviour
 {
-    public void LoadNextScene(int scene)
+    ScoreManager SM;
+    public enum LevelComplete
     {
-        SceneManager.LoadScene(scene);
+        _null,
+        _tutorial,
+        _level1,
+        _level2, 
+        _level3, 
+        _level4, 
+        _level5
+    }
+
+    public LevelComplete currentLevel;
+
+    private void Start()
+    {
+        SM = FindObjectOfType<ScoreManager>();
+        CurrentLevel();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            SM.levelEnd = true;
+        }
+    }
+
+    public void CurrentLevel()
+    {
+        switch(SceneManager.GetActiveScene().name)
+        {
+            case "FirstMap":
+                currentLevel = LevelComplete._level1;
+                break;
+            case "SecondMap":
+                currentLevel = LevelComplete._level2;
+                break;
+            case "ThirdMap":
+                currentLevel = LevelComplete._level3;
+                break;
+            case "Fourh":
+                currentLevel = LevelComplete._level4;
+                break;
+            case "Five":
+                currentLevel = LevelComplete._level5;
+                break;
+            default:
+                currentLevel = LevelComplete._null;
+                break;
+        }
     }
 }

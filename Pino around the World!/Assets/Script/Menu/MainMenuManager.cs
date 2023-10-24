@@ -13,6 +13,7 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField]
     Button loadGameButton;
     public GameManager.SlotGame currentSlotMM;
+    GameManager gameManager;
 
     [Header("LevelsComponets")]
     [SerializeField]
@@ -54,6 +55,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GetComponent<GameManager>();
         LoadSlotData();
         LoadInteraction();
     }
@@ -299,7 +301,9 @@ public class MainMenuManager : MonoBehaviour
             currentSlotMM = (GameManager.SlotGame)0;
         }
         else if(GameManager.SlotSave1)
-        { 
+        {
+            currentSlotMM = (GameManager.SlotGame)0;
+            gameManager.LoadSlot1();
             LevelProgress();
             gameSelMenu.SetActive(false);
             levelSelMenu.gameObject.SetActive(true);
@@ -315,6 +319,8 @@ public class MainMenuManager : MonoBehaviour
         }
         else if (GameManager.SlotSave2)
         {
+            currentSlotMM = (GameManager.SlotGame)1;
+            gameManager.LoadSlot2();
             LevelProgress();
             gameSelMenu.SetActive(false);
             levelSelMenu.gameObject.SetActive(true);
@@ -330,6 +336,8 @@ public class MainMenuManager : MonoBehaviour
         }
         else if (GameManager.SlotSave3)
         {
+            currentSlotMM = (GameManager.SlotGame)2;
+            gameManager.LoadSlot3();
             LevelProgress();
             gameSelMenu.SetActive(false);
             levelSelMenu.gameObject.SetActive(true);

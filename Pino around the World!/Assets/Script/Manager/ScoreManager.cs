@@ -26,6 +26,7 @@ public class ScoreManager : MonoBehaviour
     TextMeshProUGUI gameOver, scoreVal, coinsVal, enemiesVal;
 
     GameManager gameManager;
+    public GameManager.SlotGame slotGameSM;
 
     private void Awake()
     {
@@ -75,14 +76,16 @@ public class ScoreManager : MonoBehaviour
             coinsVal.text = $"{coinsCount} / {coinsCollect} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
             gameManager.CheckLevelStatus();
-            switch((int)gameManager.currentSlot)
+            switch(slotGameSM)
             {
-                case 0:
+                case (GameManager.SlotGame)0:
                     gameManager.SaveSlot1();
                     break;
-                case 1:
+                case (GameManager.SlotGame)1:
+                    gameManager.SaveSlot2();
                     break;
-                case 2:
+                case (GameManager.SlotGame)2:
+                    gameManager.SaveSlot3();
                     break;
             }
         }
