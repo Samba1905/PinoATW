@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -45,6 +46,19 @@ public class MainMenuManager : MonoBehaviour
 
     string slot1, slot2, slot3;
 
+    LevelSel selectionLvl;
+
+    protected enum LevelSel
+    {
+        _null,
+        tutorial,
+        level1,
+        level2,
+        level3,
+        level4,
+        level5
+    }
+
     private void Awake()
     {
         menuStartButtons.gameObject.SetActive(true);
@@ -55,7 +69,7 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GetComponent<GameManager>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         LoadSlotData();
         LoadInteraction();
     }
@@ -270,9 +284,31 @@ public class MainMenuManager : MonoBehaviour
         BackFromGameSel();
     }
 
-    void GameSelection()
+    void GameSelection(Enum lvlSel)
     {
-
+        selectionLvl = (LevelSel)lvlSel;
+        switch(lvlSel)
+        {
+            case LevelSel.level1:
+                SceneManager.LoadScene("FirstMap");
+                break;
+            case LevelSel.level2:
+                SceneManager.LoadScene("SecondMap");
+                break;
+            case LevelSel.level3:
+                SceneManager.LoadScene("ThirdMap");
+                break;
+            case LevelSel.level4:
+                SceneManager.LoadScene("");
+                break;
+            case LevelSel.level5:
+                SceneManager.LoadScene("");
+                break;
+            case LevelSel._null:
+                Debug.Log("LevelSel Null");
+                break;
+        }
+        
     }
 
     public void BackFromGameSelection()
@@ -342,5 +378,26 @@ public class MainMenuManager : MonoBehaviour
             gameSelMenu.SetActive(false);
             levelSelMenu.gameObject.SetActive(true);
         }
+    }
+
+    public void Level1()
+    {
+        GameSelection(LevelSel.level1);
+    }
+    public void Level2()
+    {
+        if(GameManager.Level1) GameSelection(LevelSel.level2);
+    }
+    public void Level3()
+    {
+        if(GameManager.Level2) GameSelection(LevelSel.level3);
+    }
+    public void Level4()
+    {
+        if(GameManager.Level3) GameSelection(LevelSel.level4);
+    }
+    public void Level5()
+    {
+        if(GameManager.Level4) GameSelection(LevelSel.level5);
     }
 }

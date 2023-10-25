@@ -8,12 +8,6 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    #region Singleton
-    [HideInInspector] public bool destroyOnLoad;
-    private static ScoreManager _main;
-    public static ScoreManager Main { get { return _main; } }
-    #endregion
-
     public bool levelEnd, playerDeath;
     int enemyKilled, enemyCount, coinsCount, coinsCollect;
     [SerializeField]
@@ -30,26 +24,18 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        if (_main != null && _main != this)
-        {
-            gameObject.SetActive(false);
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _main = this;
-        }
-
-        if (!destroyOnLoad)
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
+        if (enemyCount == 0) enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        if (coinsCount == 0) coinsCount = GameObject.FindGameObjectsWithTag("TreasureChest").Length;
+        if (timeText != GameObject.Find("TimeLevel")) timeText = GameObject.Find("TimeLevel").GetComponent<TextMeshProUGUI>();
+        if (gameOver != GameObject.Find("GameOver")) gameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
+        if (scoreVal != GameObject.Find("ScoreVal")) scoreVal = GameObject.Find("ScoreVal").GetComponent<TextMeshProUGUI>();
+        if (coinsVal != GameObject.Find("CoinsVal")) coinsVal = GameObject.Find("CoinsVal").GetComponent<TextMeshProUGUI>();
+        if (enemiesVal != GameObject.Find("EnemyVal")) enemiesVal = GameObject.Find("EnemyVal").GetComponent<TextMeshProUGUI>();
+        if (levelEnd != GameObject.Find("LevelEndPanel")) levelEnd = GameObject.Find("LevelEndPanel");
     }
     void Start()
     {
         levelEnd = false;
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        coinsCount = GameObject.FindGameObjectsWithTag("TreasureChest").Length;
         levelEndPanel.SetActive(false);
     }
 
@@ -97,7 +83,7 @@ public class ScoreManager : MonoBehaviour
             levelEndPanel.SetActive(true);
             gameOver.text = "Game Over!";
             scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
-            coinsVal.text = $"{coinsCount} / {coinsCollect} Coins!";
+            coinsVal.text = $"{coinsCollect} / {coinsCount} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
         }
     }

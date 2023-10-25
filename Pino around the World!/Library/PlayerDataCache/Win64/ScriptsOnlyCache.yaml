@@ -198,10 +198,16 @@ ScriptsOnlyBuild:
     methodName: OpenDeleteFile
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
+    methodName: Level3
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
     methodName: ConfirmText
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: Slot1
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: Level4
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: BackFromConfirmName
@@ -219,7 +225,13 @@ ScriptsOnlyBuild:
     methodName: QuitGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
+    methodName: Level1
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
     methodName: DeleteFile2
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: Level5
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuManager
     methodName: BackFromDeleteFile
@@ -241,6 +253,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: OptionMenuButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuManager
+    methodName: Level2
   - assembly: Assembly-CSharp
     fullTypeName: OptionManager
     methodName: CloseHelpMenu

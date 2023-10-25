@@ -19,8 +19,6 @@ public class OptionManager : MonoBehaviour
     GameObject optionMenu, menuStartButtons, specificOptionMenu, exitPanel, backMainMenuPanel;
     public bool checkOptionMenu, checkSpecificOptionMenu;
 
-    GameManager gameManager;
-
     public GameObject pauseMenuPanel;
 
     #region VideoSettings
@@ -129,7 +127,6 @@ public class OptionManager : MonoBehaviour
     {
         postProcess.profile.TryGetSettings(out autoExposure);
         postProcess.profile.TryGetSettings(out bloom);
-        gameManager = GetComponent<GameManager>();
     }
 
     void LateUpdate()

@@ -11,7 +11,7 @@ UI
 10. Dopo la build non apre gli SpecificOptions (RISOLTO)
 11. Non salva davvero (RISOLTO)
 12. Illuminazione nel menu buggata quando si muove la telecamera (GLITCH DI ILLUMINAZIONE)
-13. MainMenu non carica salvataggio per errore con GameManager.SlotDatax
+13. MainMenu non carica salvataggio per errore con GameManager.SlotDatax (RISOLTO)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -29,10 +29,10 @@ Gameplay
 ---------------------------------------------------------------------------------------------------
 
 Singleton
-1. Creare e sistemare tutti i Singleton (PARE FATTO DA TESTARE BENE)
+1. Creare e sistemare tutti i Singleton (FORSE SOLO GAMEMANAGER RIMASTO)
 
 ---------------------------------------------------------------------------------------------------
 
 PostProcessing
 1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena (RISOLTO)
-2. Aggiungere profondità di gioco
+2. Aggiungere profondità di gioco (CON CALMA CON LE SCENE)

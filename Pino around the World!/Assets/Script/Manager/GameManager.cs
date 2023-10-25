@@ -191,7 +191,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadSlot1()
     {
-        string json = File.ReadAllText(Application.persistentDataPath + "Slot1Data.json");
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot1Data.json");
 
         Game game = JsonUtility.FromJson<Game>(json);
 
@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadSlot2()
     {
-        string json = File.ReadAllText(Application.persistentDataPath + "Slot2Data.json");
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot2Data.json");
 
         Game game = JsonUtility.FromJson<Game>(json);
 
@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadSlot3()
     {
-        string json = File.ReadAllText(Application.persistentDataPath + "Slot3Data.json");
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot3Data.json");
 
         Game game = JsonUtility.FromJson<Game>(json);
 
