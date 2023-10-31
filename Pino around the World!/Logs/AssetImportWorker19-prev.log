@@ -1,0 +1,349 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.17f1 (3e8111cac19d) revision 4096273'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'it' Physical Memory: 16088 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker19
+-projectPath
+C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+-logFile
+Logs/AssetImportWorker19.log
+-srvPort
+59504
+Successfully changed project path to: C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [12952] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2473620631 [EditorId] 2473620631 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [12952] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2473620631 [EditorId] 2473620631 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 101.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.17f1 (3e8111cac19d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/samba/GitFile/GitHubPATW/Pino around the World!/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6010 MB
+    Driver:   31.0.15.4592
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56688
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.006708 seconds.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 264 ms
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 86.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.764 seconds
+Domain Reload Profiling:
+	ReloadAssembly (764ms)
+		BeginReloadAssembly (49ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (638ms)
+			LoadAssemblies (48ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (73ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (510ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (326ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (86ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (66ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005585 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 94.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.013 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1014ms)
+		BeginReloadAssembly (76ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (858ms)
+			LoadAssemblies (60ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (191ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (485ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (94ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (261ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3963 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4417.
+Memory consumption went from 156.0 MB to 154.6 MB.
+Total: 2.740900 ms (FindLiveObjects: 0.197500 ms CreateObjectMapping: 0.096300 ms MarkObjects: 2.204800 ms  DeleteObjects: 0.241500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4039.897691 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_02A.prefab
+  artifactKey: Guid(98bd1645b1b8d7a4d93c120852cde4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_02A.prefab using Guid(98bd1645b1b8d7a4d93c120852cde4a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad8191592ef9958e59aaf631919a77d5') in 0.116696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_04A.prefab
+  artifactKey: Guid(4ba060a5d7981e541ba81f2dd0e96bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_04A.prefab using Guid(4ba060a5d7981e541ba81f2dd0e96bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abae1cb2acc1fdb0e3718501920b1d7c') in 0.025038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_01A.prefab
+  artifactKey: Guid(0e3de1693bf3e3a4c81779bb12633908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_01A.prefab using Guid(0e3de1693bf3e3a4c81779bb12633908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '311fbaa4da8a01f273f395e6aef68e8d') in 0.016078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_03A.prefab
+  artifactKey: Guid(072fc000066065241bbe53d0fce35fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_03A.prefab using Guid(072fc000066065241bbe53d0fce35fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3f1319cf40c241a5f4471306677bb05') in 0.019468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_03A.prefab
+  artifactKey: Guid(8d791b47a0bfcbe4f9a45c9867fbca4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_03A.prefab using Guid(8d791b47a0bfcbe4f9a45c9867fbca4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0cc2234dc5f7e5a1d1e904c84eddd95') in 0.020366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Stone_Slab_01A.prefab
+  artifactKey: Guid(7a1ba496be1afb54e929ae8dafda3ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Stone_Slab_01A.prefab using Guid(7a1ba496be1afb54e929ae8dafda3ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cda28b1204cd6df38cc1c91536caeed') in 0.014226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_01A.prefab
+  artifactKey: Guid(27cf8fcce199b284291e36c407c78ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_01A.prefab using Guid(27cf8fcce199b284291e36c407c78ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0eb213b0ab02ebea6602adf7968e286') in 0.021328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.446713 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab
+  artifactKey: Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab using Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec46ebe9be6a262f2c9b157f441b7b7b') in 0.014364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_07A.prefab
+  artifactKey: Guid(ef026dd1709640842b399870075f1474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_07A.prefab using Guid(ef026dd1709640842b399870075f1474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dd790908ee7d060c3d08833ba83368b') in 0.025830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_04A.prefab
+  artifactKey: Guid(4ba060a5d7981e541ba81f2dd0e96bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_04A.prefab using Guid(4ba060a5d7981e541ba81f2dd0e96bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf56efa6fde11f3f1f74752e16ee5d5') in 0.012953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_01A.prefab
+  artifactKey: Guid(0e3de1693bf3e3a4c81779bb12633908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_01A.prefab using Guid(0e3de1693bf3e3a4c81779bb12633908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4029795120dcefb08c2a666a4305987e') in 0.015491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_03A.prefab
+  artifactKey: Guid(c8b1da0fbab714f47847c30e2149442d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_03A.prefab using Guid(c8b1da0fbab714f47847c30e2149442d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2e71b4a12971e5fefc3eabf897f97f7') in 0.018000 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Stone_Slab_01A.prefab
+  artifactKey: Guid(7a1ba496be1afb54e929ae8dafda3ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Stone_Slab_01A.prefab using Guid(7a1ba496be1afb54e929ae8dafda3ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb38a0d4eddcd60a3056cd90a5262612') in 0.029037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.699136 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab
+  artifactKey: Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab using Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135a5ef3a6849bb0e58f1da5299cf91a') in 0.013180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_02A.prefab
+  artifactKey: Guid(c50c2430bda2db5498adb34b279a4c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_02A.prefab using Guid(c50c2430bda2db5498adb34b279a4c01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fff9c684d8c1b3d422174f3c5ae81cc1') in 0.025036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_01A.prefab
+  artifactKey: Guid(0e3de1693bf3e3a4c81779bb12633908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_01A.prefab using Guid(0e3de1693bf3e3a4c81779bb12633908) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63017acb821dccecfac6d18e9859c45d') in 0.025128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_02A.prefab
+  artifactKey: Guid(c27ead8d057c46847adb147c2e1ff641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_02A.prefab using Guid(c27ead8d057c46847adb147c2e1ff641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca31ff1f61b0c43add1c8a3a4a3103cb') in 0.011341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.576830 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab
+  artifactKey: Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab using Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919bb23fcfaadcf80cd96c080834b9b1') in 0.021090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_05A.prefab
+  artifactKey: Guid(1c06eb4e970a3ed43872bf78aae3379f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_05A.prefab using Guid(1c06eb4e970a3ed43872bf78aae3379f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc174783d08fd472da3d298312587d43') in 0.026015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_03A.prefab
+  artifactKey: Guid(c8b1da0fbab714f47847c30e2149442d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_03A.prefab using Guid(c8b1da0fbab714f47847c30e2149442d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0893555b518cd7cfafc706aab38de7e4') in 0.013305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Stone_Slab_01A.prefab
+  artifactKey: Guid(7a1ba496be1afb54e929ae8dafda3ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Stone_Slab_01A.prefab using Guid(7a1ba496be1afb54e929ae8dafda3ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7c93aea512f653ab39ed1b5b208bad5') in 0.015379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.690148 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab
+  artifactKey: Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab using Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec12f50c8b1e004e454dfc24fda9d012') in 0.039569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_04A.prefab
+  artifactKey: Guid(e231d7402b790274eb6c0bfbca2323fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_04A.prefab using Guid(e231d7402b790274eb6c0bfbca2323fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e090959b65cbf319d75b3b51ba1ab42e') in 0.018642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_03A.prefab
+  artifactKey: Guid(8d791b47a0bfcbe4f9a45c9867fbca4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Small_03A.prefab using Guid(8d791b47a0bfcbe4f9a45c9867fbca4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc2d9dee788e1596492e42547647a5a') in 0.011341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_01A.prefab
+  artifactKey: Guid(27cf8fcce199b284291e36c407c78ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_01A.prefab using Guid(27cf8fcce199b284291e36c407c78ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3baba948221a928aef4f81d1270dfb7') in 0.011956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.054496 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab
+  artifactKey: Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Large_04A.prefab using Guid(dfba2029821729e49af979214c5837ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6198bbea3088f4030c0fc7cc9f47c73') in 0.025798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_04A.prefab
+  artifactKey: Guid(e231d7402b790274eb6c0bfbca2323fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_04A.prefab using Guid(e231d7402b790274eb6c0bfbca2323fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4e01c3df348ef56f8e61cca6311476c') in 0.024147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_06A.prefab
+  artifactKey: Guid(a81763150bed0ad459b6743638ad5be4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Rocks/TFF_Rock_Medium_06A.prefab using Guid(a81763150bed0ad459b6743638ad5be4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd561a7578d25ddf9e57a2a8742b6b86') in 0.024709 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -31,8 +31,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4531469089676599796}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,88 +108,13 @@ LODGroup:
   m_GameObject: {fileID: 5658917810312865958}
   serializedVersion: 2
   m_LocalReferencePoint: {x: -0.09187263, y: 4.6652155, z: 0.20132905}
-  m_Size: 11.346241
+  m_Size: 2.5
   m_FadeMode: 1
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.069
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 5658917810315130470}
-  - screenRelativeHeight: 0.0047892244
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 4531469089678500628}
   m_Enabled: 1
---- !u!1001 &4531469089676213108
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 5658917810312836230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_Name
-      value: TFF_Pine_Tree_05A_LOD_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
---- !u!4 &4531469089676599796 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-  m_PrefabInstance: {fileID: 4531469089676213108}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &4531469089678500628 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300000, guid: 76472f8f80e355c418227d62fbec9140, type: 3}
-  m_PrefabInstance: {fileID: 4531469089676213108}
-  m_PrefabAsset: {fileID: 0}

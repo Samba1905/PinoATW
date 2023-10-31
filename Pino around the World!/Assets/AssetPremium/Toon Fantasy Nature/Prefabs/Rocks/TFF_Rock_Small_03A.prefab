@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6450864058120382851}
   - component: {fileID: 6450864058121709987}
   - component: {fileID: 6450864058122677091}
+  - component: {fileID: -6200607065114002238}
   m_Layer: 0
   m_Name: TFF_Rock_Small_03A
   m_TagString: Untagged
@@ -83,3 +84,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!205 &-6200607065114002238
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450864058120680867}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 2.5
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.069
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6450864058122677091}
+  m_Enabled: 1

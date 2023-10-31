@@ -1,0 +1,397 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.17f1 (3e8111cac19d) revision 4096273'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'it' Physical Memory: 16088 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker10
+-projectPath
+C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+-logFile
+Logs/AssetImportWorker10.log
+-srvPort
+53666
+Successfully changed project path to: C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [2648] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 3799287748 [EditorId] 3799287748 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [2648] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 3799287748 [EditorId] 3799287748 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 87.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.17f1 (3e8111cac19d)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/samba/GitFile/GitHubPATW/Pino around the World!/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6010 MB
+    Driver:   31.0.15.4592
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.005834 seconds.
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 244 ms
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 88.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.758 seconds
+Domain Reload Profiling:
+	ReloadAssembly (759ms)
+		BeginReloadAssembly (52ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (629ms)
+			LoadAssemblies (51ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (76ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (495ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (310ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (89ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (63ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004443 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 85.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.924 seconds
+Domain Reload Profiling:
+	ReloadAssembly (924ms)
+		BeginReloadAssembly (78ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (761ms)
+			LoadAssemblies (61ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (201ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (415ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (86ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (223ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3963 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4417.
+Memory consumption went from 155.8 MB to 154.5 MB.
+Total: 2.649900 ms (FindLiveObjects: 0.200500 ms CreateObjectMapping: 0.096200 ms MarkObjects: 2.122300 ms  DeleteObjects: 0.230300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 159462.633339 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Trees/TFF_Tree_Trunk_02B.prefab
+  artifactKey: Guid(69db326dee905724397191ba790a17b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Trees/TFF_Tree_Trunk_02B.prefab using Guid(69db326dee905724397191ba790a17b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd0ebc01ef4a5ca6677666af283fee64') in 0.119415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.229200 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Trees/TFF_Tree_Trunk_03A.prefab
+  artifactKey: Guid(9a6719df8ee17c04cb3902b0992f0af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Trees/TFF_Tree_Trunk_03A.prefab using Guid(9a6719df8ee17c04cb3902b0992f0af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '670441c75cf8138781cc33a34dc3bd4b') in 0.024618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 84.071637 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Aspen_Tree_02A.prefab
+  artifactKey: Guid(d01c5ee066e724849b1cbfbe205cac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Aspen_Tree_02A.prefab using Guid(d01c5ee066e724849b1cbfbe205cac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2070ade3cb3601840ad6bebb861817b9') in 0.069807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Birch_Tree_01A.prefab
+  artifactKey: Guid(4adf2cf200a359b4287225ed1a49ef66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Birch_Tree_01A.prefab using Guid(4adf2cf200a359b4287225ed1a49ef66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de7eb917a21a64a43b633da3f6811318') in 0.026650 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Pine_Tree_03A.prefab
+  artifactKey: Guid(3e1f780ebf2fcdc45b98f031eff012d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Pine_Tree_03A.prefab using Guid(3e1f780ebf2fcdc45b98f031eff012d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a09b7cc589473c7b62d84bbeacb8b3') in 0.027896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Oak_Tree_01A.prefab
+  artifactKey: Guid(08247b667d61ebe4181b8c710324afda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Oak_Tree_01A.prefab using Guid(08247b667d61ebe4181b8c710324afda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66f502806916c14bdf48c665ef2688d1') in 0.032898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Birch_Tree_02A.prefab
+  artifactKey: Guid(c46dfb5e20aaa6a4a90d681d8f8919e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Birch_Tree_02A.prefab using Guid(c46dfb5e20aaa6a4a90d681d8f8919e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4288d9ebd5afea0170fc65a0c193cbe') in 0.032209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Pine_Tree_01A.prefab
+  artifactKey: Guid(5e0367c19cefc664aaf01d1928f2a1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Pine_Tree_01A.prefab using Guid(5e0367c19cefc664aaf01d1928f2a1e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '048674a08d993ce85c3fa64d45825ae1') in 0.025743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Birch_Tree_04A.prefab
+  artifactKey: Guid(1f77b3b5850d91841a4d29872fabba46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Birch_Tree_04A.prefab using Guid(1f77b3b5850d91841a4d29872fabba46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2acb057a321aeab141e7eebab2728ce') in 0.024837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Pine_Tree_04A.prefab
+  artifactKey: Guid(22c9f6739c85d5d4781dc466b9ecf794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Board_Pine_Tree_04A.prefab using Guid(22c9f6739c85d5d4781dc466b9ecf794) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4862f66b4b29c5d84e45257d71dcb8b') in 0.027698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Fallen_Leaves_01A.prefab
+  artifactKey: Guid(db9bf5007821ebd45bd5723b3377c267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Decals/TFF_Fallen_Leaves_01A.prefab using Guid(db9bf5007821ebd45bd5723b3377c267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6451cc4e629f68c87529d69e20bee26') in 0.031199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.837861 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_01A.prefab
+  artifactKey: Guid(0a8a5a4f192beac46979c9f3196b2a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_01A.prefab using Guid(0a8a5a4f192beac46979c9f3196b2a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e43272b5e16570b523fa4b8ca87539') in 0.023269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_11A.prefab
+  artifactKey: Guid(dd954abcf0380a746823203d37d515f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_11A.prefab using Guid(dd954abcf0380a746823203d37d515f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c492f4fc1a79018b0e4e9ddcc03f2721') in 0.020186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_10A.prefab
+  artifactKey: Guid(bb61352eae54f8b46a4c995d380a8332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_10A.prefab using Guid(bb61352eae54f8b46a4c995d380a8332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3c2d0a28d720e08c860c5788febc5ae') in 0.022132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_05A.prefab
+  artifactKey: Guid(68996d72962cf0242a06ab68e4089b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_05A.prefab using Guid(68996d72962cf0242a06ab68e4089b71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6307be3935aa52a5bd852cc62ba4da46') in 0.027739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_16A.prefab
+  artifactKey: Guid(9a1d18c67e4dfce46ae05354694fef60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_16A.prefab using Guid(9a1d18c67e4dfce46ae05354694fef60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb820f9745e028ca2eaf9fe9b42af059') in 0.018446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_12A.prefab
+  artifactKey: Guid(24c35ff368c83c04c8b948624c030c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_12A.prefab using Guid(24c35ff368c83c04c8b948624c030c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '280d6f9cd059cf7b60848c3ad0f29829') in 0.020765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.023454 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Glowing_Lilly_01C.prefab
+  artifactKey: Guid(b5f4f1ffaeb822f4091036b64e5863a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Glowing_Lilly_01C.prefab using Guid(b5f4f1ffaeb822f4091036b64e5863a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58424945f7005033b014fe04b145258f') in 0.026809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Lotus_Flower_01C.prefab
+  artifactKey: Guid(c6a0ec5015e99b0458357fc2520a2273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Lotus_Flower_01C.prefab using Guid(c6a0ec5015e99b0458357fc2520a2273) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0539bb94ab0aa34a7ad0de2bc3f3bc2') in 0.023557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Lotus_Flower_01B.prefab
+  artifactKey: Guid(7c732be736cc4f74a892bc3bb349eecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Lotus_Flower_01B.prefab using Guid(7c732be736cc4f74a892bc3bb349eecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d440d42c8d40658b0b9e3eaca60ab31') in 0.020223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Water_LillY_Leaf_02A.prefab
+  artifactKey: Guid(db2008e20eb21ff47a5fff043312cd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Water Plants/TFF_Water_LillY_Leaf_02A.prefab using Guid(db2008e20eb21ff47a5fff043312cd06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e28ad174613be783252a21475ca096f8') in 0.021746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.590167 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_01A.prefab
+  artifactKey: Guid(0a8a5a4f192beac46979c9f3196b2a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_01A.prefab using Guid(0a8a5a4f192beac46979c9f3196b2a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a00610773413069490207f64150a2c7c') in 0.031618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_07A.prefab
+  artifactKey: Guid(b6ccecde8f0e4a246afefe6c42ffc0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_07A.prefab using Guid(b6ccecde8f0e4a246afefe6c42ffc0ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34e36be2b858e3049bf2eae735ac3ff2') in 0.025253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_13A.prefab
+  artifactKey: Guid(0689c1df15dc9d640812e74f1fa4d426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_13A.prefab using Guid(0689c1df15dc9d640812e74f1fa4d426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd79357ee4422894469045d6b9c315fed') in 0.027103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_12A.prefab
+  artifactKey: Guid(24c35ff368c83c04c8b948624c030c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Mushrooms/TFF_Mushrooms_12A.prefab using Guid(24c35ff368c83c04c8b948624c030c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73c34c6e4a4f54e03c14b2d37689367') in 0.014933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 486.332213 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Fern_02B.prefab
+  artifactKey: Guid(8ec4a3e59fe27b148af42d59d1267c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Fern_02B.prefab using Guid(8ec4a3e59fe27b148af42d59d1267c74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1663eace8152ffd821e39e283b62ec89') in 0.018505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 65.910565 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Nettle_02A.prefab
+  artifactKey: Guid(c3d81f6ebd492e9489a5b6dc0c2ae66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Nettle_02A.prefab using Guid(c3d81f6ebd492e9489a5b6dc0c2ae66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6019e90a56bb91799841d5062c1ca765') in 0.039568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Plant_01A.prefab
+  artifactKey: Guid(365ce1cd9ae5cdf42b1921338f666453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Plant_01A.prefab using Guid(365ce1cd9ae5cdf42b1921338f666453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ab197d3a2a24da295ae9b0afd6a673b') in 0.023213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.696758 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Nettle_02A.prefab
+  artifactKey: Guid(c3d81f6ebd492e9489a5b6dc0c2ae66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Nettle_02A.prefab using Guid(c3d81f6ebd492e9489a5b6dc0c2ae66a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b82f33e497add55d6971435cf3f7575') in 0.019894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Plant_01B.prefab
+  artifactKey: Guid(404caa2ae26534f4ca9d84018528e833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Plant_01B.prefab using Guid(404caa2ae26534f4ca9d84018528e833) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692722ded210a11723820e95c79356d2') in 0.011418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.194053 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Reed_02A.prefab
+  artifactKey: Guid(71b9031b0ddd957409e8afd6ab919208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Reed_02A.prefab using Guid(71b9031b0ddd957409e8afd6ab919208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceeafdd08398121b62ec0a23b9b6ba6f') in 0.020837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Reed_03A.prefab
+  artifactKey: Guid(e769abb834733e84eaa63a53112e20fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Reed_03A.prefab using Guid(e769abb834733e84eaa63a53112e20fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82719deb7b963d739a20a44766ca2beb') in 0.019115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.477398 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Plant_02B.prefab
+  artifactKey: Guid(aa4ee739471ca404b889f15074696523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Plant_02B.prefab using Guid(aa4ee739471ca404b889f15074696523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f517732a55b68b4731486da54c45af6') in 0.026869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002891 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Vine_01A.prefab
+  artifactKey: Guid(a6c60c0997c5bb841a509898782a3e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Vine_01A.prefab using Guid(a6c60c0997c5bb841a509898782a3e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5486acad23d3b77cfca1a961c7d9811') in 0.024505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Reed_02A.prefab
+  artifactKey: Guid(71b9031b0ddd957409e8afd6ab919208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Reed_02A.prefab using Guid(71b9031b0ddd957409e8afd6ab919208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e57cce2589cad985bb0d08bbacbbac5') in 0.017139 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Vine_01B.prefab
+  artifactKey: Guid(326ec3fc70e4fe040a4654a84973a008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Plants/TFF_Vine_01B.prefab using Guid(326ec3fc70e4fe040a4654a84973a008) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0181731c5282cab4df87e0f5e0eebb40') in 0.026524 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

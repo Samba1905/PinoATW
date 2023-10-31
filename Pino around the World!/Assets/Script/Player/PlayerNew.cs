@@ -5,6 +5,7 @@ using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class PlayerNew : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class PlayerNew : MonoBehaviour
     float maxDE = 100f, minDE = 0f;
     float timerInvulnerable;
     [SerializeField] bool recoverySTA, exhaustState, deadState, vulnerable;
+    [Header("UI")]
+    [SerializeField] Image STABColor;
+    [SerializeField] Slider HPB, STAB, DEB;
     public bool DANNO;
 
     PlayerMovement playerM;
@@ -147,6 +151,7 @@ public class PlayerNew : MonoBehaviour
         UpdateSTA(0f);
         IsDead();
         Timer();
+        UIPlayer();
 
         if (DANNO) //per fare test
         {
@@ -241,6 +246,21 @@ public class PlayerNew : MonoBehaviour
     {
         timerInvulnerable -= Time.deltaTime;
         if (timerInvulnerable < 0) InvulnerableStatus(false);
+    }
+
+    void UIPlayer()
+    {
+        HPB.value = HealtsPoints;
+        STAB.value = StaminaPoints;
+        DEB.value = DarkEnergyPoints;
+        if (!exhaustState)
+        {
+            byte nMin = 100;
+            byte nMax = 255;
+            byte alpha = 255;
+            Debug.Log(alpha);
+            STABColor.color = new Color32(255, 255, 255, alpha);
+        }
     }
 
     void LoadLvl1()

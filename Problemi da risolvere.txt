@@ -36,3 +36,8 @@ Singleton
 PostProcessing
 1. Autoexposure si bugga e diventa tutto nero a volte o in riavvio scena (RISOLTO)
 2. Aggiungere profondità di gioco (CON CALMA CON LE SCENE)
+
+---------------------------------------------------------------------------------------------------
+
+Ottimizzazione
+1. Aggiungere LOD agli oggetti (FATTO)
