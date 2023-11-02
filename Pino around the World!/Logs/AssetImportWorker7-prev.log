@@ -15,7 +15,7 @@ C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-59504
+53666
 Successfully changed project path to: C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19260] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2357600462 [EditorId] 2357600462 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [20440] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 798183582 [EditorId] 798183582 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19260] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2357600462 [EditorId] 2357600462 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20440] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 798183582 [EditorId] 798183582 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 123.87 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 80.82 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.17f1 (3e8111cac19d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -75,46 +75,46 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.011408 seconds.
+Registered in 0.006031 seconds.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 405 ms
+Android Extension - Scanning For ADB Devices 237 ms
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 135.86 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 83.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.118 seconds
+- Completed reload, in  0.737 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1119ms)
-		BeginReloadAssembly (82ms)
+	ReloadAssembly (738ms)
+		BeginReloadAssembly (54ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (911ms)
-			LoadAssemblies (80ms)
+		EndReloadAssembly (602ms)
+			LoadAssemblies (53ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (82ms)
+			SetupTypeCache (75ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (18ms)
-			SetupLoadedEditorAssemblies (768ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (470ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (482ms)
+				InitializePlatformSupportModulesInManaged (300ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (136ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (95ms)
-				ProcessInitializeOnLoadMethodAttributes (53ms)
+				RefreshPlugins (84ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (57ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005874 seconds.
+Registered in 0.003635 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -123,46 +123,46 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 84.44 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 81.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.055 seconds
+- Completed reload, in  0.868 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1056ms)
-		BeginReloadAssembly (122ms)
+	ReloadAssembly (869ms)
+		BeginReloadAssembly (73ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (792ms)
-			LoadAssemblies (108ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (717ms)
+			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (220ms)
+			SetupTypeCache (187ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (401ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (381ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (84ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (214ms)
-				ProcessInitializeOnLoadMethodAttributes (15ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (82ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (203ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3963 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4417.
-Memory consumption went from 156.1 MB to 154.8 MB.
-Total: 2.949800 ms (FindLiveObjects: 0.196600 ms CreateObjectMapping: 0.095300 ms MarkObjects: 2.416600 ms  DeleteObjects: 0.240400 ms)
+Memory consumption went from 155.8 MB to 154.5 MB.
+Total: 2.744800 ms (FindLiveObjects: 0.211600 ms CreateObjectMapping: 0.099600 ms MarkObjects: 2.197600 ms  DeleteObjects: 0.235100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -176,137 +176,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2928.222402 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/TFF_Tree_Log_03A.fbx
-  artifactKey: Guid(0a15779f3e9a2534384bb350d7ffbbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/TFF_Tree_Log_03A.fbx using Guid(0a15779f3e9a2534384bb350d7ffbbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a007d5688ec64b492b4d0b123130eb19') in 0.172390 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 87.704860 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Atlas_1A_D.mat
-  artifactKey: Guid(abf70ed82fc2ebf4c9b510478b549045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Atlas_1A_D.mat using Guid(abf70ed82fc2ebf4c9b510478b549045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ec4f19fa9a41b64693f0b772602c69') in 0.040199 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002777 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Flower_Patch_01D.mat
-  artifactKey: Guid(92accb8e7887fee428fc5051c1e370ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Flower_Patch_01D.mat using Guid(92accb8e7887fee428fc5051c1e370ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc4713acaa8180d17f28e990780a7212') in 0.017878 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Water_01B.mat
-  artifactKey: Guid(ff0ea142b71068047a83c9d9a03da1de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Water_01B.mat using Guid(ff0ea142b71068047a83c9d9a03da1de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0453107dac78d3c6b88105b6d2789e') in 0.071133 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Water_01A.mat
-  artifactKey: Guid(c46a2b5fa5a09bb4888f9e49d427998d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Water_01A.mat using Guid(c46a2b5fa5a09bb4888f9e49d427998d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d25dc311702c38b2972b8fd567a5fce') in 0.030669 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Flower_Patch_01A.mat
-  artifactKey: Guid(f33739e7534aaaf4e8051fe2902951ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Flower_Patch_01A.mat using Guid(f33739e7534aaaf4e8051fe2902951ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '894a999a2dfe9ffb548105afe3cb8b43') in 0.019747 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_02D.mat
-  artifactKey: Guid(8e9de7817eb5f6b44a14ac9c2cc20b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_02D.mat using Guid(8e9de7817eb5f6b44a14ac9c2cc20b26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ee7f01078f8cd31fc4c5a9e73534ff6') in 0.016247 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_02C.mat
-  artifactKey: Guid(8744c0b47ee9c014b9f9724943c67618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_02C.mat using Guid(8744c0b47ee9c014b9f9724943c67618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '444b03d54e2051ea3347a2f2c9260950') in 0.014893 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Flower_Patch_01E.mat
-  artifactKey: Guid(8fd27bdaa55f67f45a05b1c2d5aa0e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Flower_Patch_01E.mat using Guid(8fd27bdaa55f67f45a05b1c2d5aa0e8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0829b812e767d8c4bed90da73f3e02fb') in 0.021000 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Atlas_Billboards_1A_D.mat
-  artifactKey: Guid(a643c52af26b89549a2d7dec7a3b5e6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Atlas_Billboards_1A_D.mat using Guid(a643c52af26b89549a2d7dec7a3b5e6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b257fbf0015e53856c6304ea98b6d0d') in 0.028912 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_01B.mat
-  artifactKey: Guid(7c7a6fcf27667bd408e4a8e2356e183d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_01B.mat using Guid(7c7a6fcf27667bd408e4a8e2356e183d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fdf85976d37b23291e92c6ccf5fc496') in 0.015303 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_02B.mat
-  artifactKey: Guid(8cf2bc36191a8274cb511c25b62d0f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Toon Fantasy Nature/Models/Materials/TFF_Grass_Patch_02B.mat using Guid(8cf2bc36191a8274cb511c25b62d0f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac7b7e67410483bfed1981e376bd221f') in 0.015340 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008580 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for UWP target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.968 seconds
-Domain Reload Profiling:
-	ReloadAssembly (968ms)
-		BeginReloadAssembly (128ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (755ms)
-			LoadAssemblies (84ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (231ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (347ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (224ms)
-				ProcessInitializeOnLoadMethodAttributes (25ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3904 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (1.3 MB). Loaded Objects now: 4464.
-Memory consumption went from 154.6 MB to 153.3 MB.
-Total: 5.184000 ms (FindLiveObjects: 0.302000 ms CreateObjectMapping: 0.207700 ms MarkObjects: 4.230000 ms  DeleteObjects: 0.442500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 159324.139503 seconds.
+  path: Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Trees/TFF_Tree_Fallen_01B.prefab
+  artifactKey: Guid(982ea807dc0abc042978ef6107384b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Toon Fantasy Nature/Prefabs/Vegetation/Trees/TFF_Tree_Fallen_01B.prefab using Guid(982ea807dc0abc042978ef6107384b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b30d8f480f37ce9574e3a807bb4ad5') in 0.138131 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0

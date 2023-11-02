@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("GameManager NULL");
             }
-
             return _instance;
         }
     }

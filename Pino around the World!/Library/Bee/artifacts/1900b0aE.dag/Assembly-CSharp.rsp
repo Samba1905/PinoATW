@@ -378,6 +378,7 @@
 "Assets/Script/Manager/CameraManager.cs"
 "Assets/Script/Manager/ControlsOptionManager.cs"
 "Assets/Script/Manager/GameManager.cs"
+"Assets/Script/Manager/PoolManager.cs"
 "Assets/Script/Manager/ScoreManager.cs"
 "Assets/Script/Menu/MainMenuManager.cs"
 "Assets/Script/Menu/OptionManager.cs"

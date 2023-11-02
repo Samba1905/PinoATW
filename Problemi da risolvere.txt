@@ -12,6 +12,7 @@ UI
 11. Non salva davvero (RISOLTO)
 12. Illuminazione nel menu buggata quando si muove la telecamera (GLITCH DI ILLUMINAZIONE)
 13. MainMenu non carica salvataggio per errore con GameManager.SlotDatax (RISOLTO)
+14. Glitch Json quando crei nome
 
 ---------------------------------------------------------------------------------------------------
 

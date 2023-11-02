@@ -14,16 +14,22 @@ public class PlayerNew : MonoBehaviour
     float maxSTA = 100f, minSTA = 0f, overSTA = -25;
     float maxDE = 100f, minDE = 0f;
     float timerInvulnerable;
+    float timerUI, timerPG;
+    int changeUI, changePG;
+    Color32 fullColor255, transparent195, transparent135, transparent75;
     [SerializeField] bool recoverySTA, exhaustState, deadState, vulnerable;
     [Header("UI")]
     [SerializeField] Image STABColor;
     [SerializeField] Slider HPB, STAB, DEB;
+
+    [Header("Danno per prove")]
     public bool DANNO;
 
     PlayerMovement playerM;
     Warrior warrior;
     Mage mage;
     Barbarian barbarian;
+    [Header("Altro")]
     [SerializeField]
     TriggerArea triggerArea;
     public GameManager.SlotGame SG;
@@ -119,6 +125,17 @@ public class PlayerNew : MonoBehaviour
         }
     }
 
+    private Material _matW, _matM, _matB;
+
+    private enum Character
+    {
+        Warrior,
+        Mage,
+        Barbarian
+    }
+
+    private Character _actuallyCH;
+
     private void Awake()
     {
         switch(SG)
@@ -144,6 +161,10 @@ public class PlayerNew : MonoBehaviour
         playerM = GetComponent<PlayerMovement>();
         warrior = GetComponentInChildren<Warrior>();
         if (GameObject.FindGameObjectWithTag("TriggerScene")) triggerArea = GameObject.Find("TriggerArea").GetComponent<TriggerArea>();
+        fullColor255 = new Color32(255, 255, 255, 255);
+        transparent195 = new Color32(255, 255, 255, 195);
+        transparent135 = new Color32(255, 255, 255, 135);
+        transparent75 = new Color32(255, 255, 255, 75);
     }
 
     private void Update()
@@ -226,6 +247,41 @@ public class PlayerNew : MonoBehaviour
         return HealtsPoints += value;
     }
 
+    void FeedbackDamage()
+    {
+        timerPG += Time.deltaTime;
+        if(!vulnerable)
+        {
+            if(timerPG > 0.75f)
+            {
+                changePG++;
+                switch(changePG)
+                {
+                    case 0:
+
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        changePG = 0;
+                        goto case 1;
+                }
+            }
+
+
+
+
+        }
+        else
+        {
+
+        }
+    }
+
     bool IsDead() //Funzione per gestire lo stato morto del player
     {
         playerM.anim.SetBool("isDead", deadState);
@@ -253,13 +309,40 @@ public class PlayerNew : MonoBehaviour
         HPB.value = HealtsPoints;
         STAB.value = StaminaPoints;
         DEB.value = DarkEnergyPoints;
-        if (!exhaustState)
+        timerUI += Time.deltaTime;
+        if (exhaustState) //Rende la barra stamina lampeggiante quando il personaggio è stanco
         {
-            byte nMin = 100;
-            byte nMax = 255;
-            byte alpha = 255;
-            Debug.Log(alpha);
-            STABColor.color = new Color32(255, 255, 255, alpha);
+            if (timerUI > 0.08f)
+            {
+                changeUI++;
+                switch (changeUI)
+                {
+                    case 0:
+                        STABColor.color = fullColor255;
+                        timerUI = 0f;
+                        break;
+                    case 1:
+                        STABColor.color = transparent195;
+                        timerUI = 0f;
+                        break;
+                    case 2:
+                        STABColor.color = transparent135;
+                        timerUI = 0f;
+                        break;
+                    case 3:
+                        STABColor.color = transparent75;
+                        timerUI = 0f;
+                        break;
+                    case 4:
+                        changeUI = 0;
+                        goto case 1;
+                }
+            }
+        }
+        else
+        {
+            changeUI = 0;
+            STABColor.color = fullColor255;
         }
     }
 
