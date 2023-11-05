@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     Camera cam;
     public Animator anim;
 
+    int actuallyCh;
+    public PlayerNew.Character presentCh;
+
     #region Movement
     float horizontalInput, verticalInput;
     bool isRunning, isWalking;
@@ -49,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         orientation = GetComponentInChildren<Transform>().Find("Orientation");
         playerN = GetComponent<PlayerNew>();
         rb = GetComponent<Rigidbody>();
+        actuallyCh = 0;
     }
 
     private void Update()
@@ -127,6 +131,8 @@ public class PlayerMovement : MonoBehaviour
             timerDash += Time.deltaTime;
             if (timerDash > timeDash)
             {
+                actuallyCh++;
+                ChangeCh();
                 isDashing = false;
                 timerDash = 0f;
             }
@@ -137,6 +143,25 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 dashDirection = character.forward * dashForce + character.up * dashUpwardForce;
         rb.AddForce(dashDirection, ForceMode.Impulse);
+    }
+
+    private void ChangeCh()
+    {
+        switch(actuallyCh)
+        {
+            case 0:
+                presentCh = PlayerNew.Character.Warrior;
+                break;
+            case 1:
+                presentCh = PlayerNew.Character.Mage;
+                break;
+            case 2:
+                presentCh = PlayerNew.Character.Barbarian;
+                break;
+            case 3:
+                actuallyCh = 0;
+                goto case 0;
+        }
     }
 
     void Animation() //Aggiornamento animazioni

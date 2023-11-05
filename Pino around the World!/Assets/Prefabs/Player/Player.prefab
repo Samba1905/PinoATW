@@ -101,7 +101,16 @@ MonoBehaviour:
   exhaustState: 0
   deadState: 0
   vulnerable: 0
+  STABColor: {fileID: 0}
+  HPB: {fileID: 0}
+  STAB: {fileID: 0}
+  DEB: {fileID: 0}
   DANNO: 0
+  triggerArea: {fileID: 0}
+  SG: 0
+  _matW: {fileID: 0}
+  _matM: {fileID: 0}
+  _matB: {fileID: 0}
 --- !u!114 &3678620355593280974
 MonoBehaviour:
   m_ObjectHideFlags: 0

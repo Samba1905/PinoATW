@@ -45105,17 +45105,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a8891e8a0172a42859fb2c9cb4aae8, type: 3}
---- !u!114 &1233998788 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2127836157348785438, guid: dbd153970649f9c4493155385c900236, type: 3}
-  m_PrefabInstance: {fileID: 2127836158280662746}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1234354959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73195,14 +73184,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1763248753330536464, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3629430038333456061, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 7ae657f480278664f9415c5a52cd21f5, type: 2}
     - target: {fileID: 3678620355593280971, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
       propertyPath: m_Name
       value: Player
@@ -73251,26 +73232,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3678620355593280973, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: coin
-      value: 
-      objectReference: {fileID: 1233998788}
-    - target: {fileID: 3678620355593280973, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: darkEnergyBar
-      value: 
-      objectReference: {fileID: 882814745}
-    - target: {fileID: 3678620355593280973, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: healtPointsBar
-      value: 
-      objectReference: {fileID: 1079600607}
-    - target: {fileID: 4543003504639558782, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7670842716423226084, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7670842716423226084, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
       propertyPath: DEB
       value: 
@@ -73280,15 +73241,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1079600607}
     - target: {fileID: 7670842716423226084, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: HPV
-      value: 
-      objectReference: {fileID: 1079600607}
-    - target: {fileID: 7670842716423226084, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
       propertyPath: STAB
-      value: 
-      objectReference: {fileID: 1184401117}
-    - target: {fileID: 7670842716423226084, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
-      propertyPath: STAV
       value: 
       objectReference: {fileID: 1184401117}
     - target: {fileID: 7670842716423226084, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}

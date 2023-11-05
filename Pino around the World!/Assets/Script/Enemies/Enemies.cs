@@ -16,14 +16,14 @@ public class Enemies : MonoBehaviour
     protected bool canDamage;
     GameObject target;
     protected Animator anim;
-    protected Player player;
+    protected PlayerNew player;
     protected ScoreManager SM;
 
     Color colorDmg;
 
     private void Awake()
     {
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerNew>();
         colorDmg = Color.red;
     }
 
@@ -69,7 +69,7 @@ public class Enemies : MonoBehaviour
 
     private void OnDisable()
     {
-        player.DarkEnergyPlus(2);
+        //player.DarkEnergyPlus(2);
     }
 }
 

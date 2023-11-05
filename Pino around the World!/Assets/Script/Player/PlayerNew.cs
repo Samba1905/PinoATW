@@ -17,6 +17,7 @@ public class PlayerNew : MonoBehaviour
     float timerUI, timerPG;
     int changeUI, changePG;
     Color32 fullColor255, transparent195, transparent135, transparent75;
+    Color32 chColorDmg190, chColorDmg125, chColorDmg60, chColorRed;
     [SerializeField] bool recoverySTA, exhaustState, deadState, vulnerable;
     [Header("UI")]
     [SerializeField] Image STABColor;
@@ -29,6 +30,7 @@ public class PlayerNew : MonoBehaviour
     Warrior warrior;
     Mage mage;
     Barbarian barbarian;
+    GameObject w, m, b;
     [Header("Altro")]
     [SerializeField]
     TriggerArea triggerArea;
@@ -125,16 +127,15 @@ public class PlayerNew : MonoBehaviour
         }
     }
 
+    [SerializeField]
     private Material _matW, _matM, _matB;
 
-    private enum Character
+    public enum Character
     {
         Warrior,
         Mage,
         Barbarian
     }
-
-    private Character _actuallyCH;
 
     private void Awake()
     {
@@ -150,6 +151,17 @@ public class PlayerNew : MonoBehaviour
                 if (File.Exists(Application.persistentDataPath + "/Slot3Data")) LoadLvl3();
                 break;
         }
+
+        _matW = GameObject.Find("Toon Paladin").GetComponent<Renderer>().material;
+        _matM = GameObject.Find("Toon Wizard").GetComponent<Renderer>().material;
+        _matB = GameObject.Find("Toon Barbarian").GetComponent<Renderer>().material;
+        warrior = GetComponentInChildren<Warrior>();
+        mage = GetComponentInChildren<Mage>();
+        barbarian = GetComponentInChildren<Barbarian>();
+        w = GameObject.Find("Warrior");
+        m = GameObject.Find("Mage");
+        b = GameObject.Find("Barbarian");
+
     }
 
     private void Start()
@@ -159,12 +171,18 @@ public class PlayerNew : MonoBehaviour
         StaminaPoints = maxSTA;
         vulnerable = true;
         playerM = GetComponent<PlayerMovement>();
-        warrior = GetComponentInChildren<Warrior>();
         if (GameObject.FindGameObjectWithTag("TriggerScene")) triggerArea = GameObject.Find("TriggerArea").GetComponent<TriggerArea>();
+        m.SetActive(false);
+        b.SetActive(false);
         fullColor255 = new Color32(255, 255, 255, 255);
         transparent195 = new Color32(255, 255, 255, 195);
         transparent135 = new Color32(255, 255, 255, 135);
         transparent75 = new Color32(255, 255, 255, 75);
+        chColorDmg190 = new Color32(255, 190, 190, 255);
+        chColorDmg125 = new Color32(255, 125, 125, 255);
+        chColorDmg60 = new Color32(255, 60, 60, 255);
+        chColorRed = new Color32(255, 0, 0, 255);
+
     }
 
     private void Update()
@@ -173,6 +191,8 @@ public class PlayerNew : MonoBehaviour
         IsDead();
         Timer();
         UIPlayer();
+        FeedbackDamage();
+        ChangeClass();
 
         if (DANNO) //per fare test
         {
@@ -252,33 +272,52 @@ public class PlayerNew : MonoBehaviour
         timerPG += Time.deltaTime;
         if(!vulnerable)
         {
-            if(timerPG > 0.75f)
+            if(timerPG > 0.05f)
             {
                 changePG++;
                 switch(changePG)
                 {
                     case 0:
-
+                        _matW.color = fullColor255;
+                        _matM.color = fullColor255;
+                        _matB.color = fullColor255;
+                        timerPG = 0;
                         break;
                     case 1:
+                        _matW.color = chColorDmg190;
+                        _matM.color= chColorDmg190;
+                        _matB.color= chColorDmg190;
+                        timerPG = 0;
                         break;
                     case 2:
+                        _matW.color = chColorDmg125;
+                        _matM.color = chColorDmg125;
+                        _matB.color = chColorDmg125;
+                        timerPG = 0;
                         break;
                     case 3:
+                        _matW.color = chColorDmg60;
+                        _matM.color = chColorDmg60;
+                        _matB.color = chColorDmg60;
+                        timerPG = 0;
                         break;
                     case 4:
+                        _matW.color = chColorRed;
+                        _matM.color = chColorRed;
+                        _matB.color = chColorRed;
+                        timerPG = 0;
+                        break;
+                    case 5:
                         changePG = 0;
-                        goto case 1;
+                        goto case 0;
                 }
             }
-
-
-
-
         }
         else
         {
-
+            _matW.color = fullColor255;
+            _matM.color = fullColor255;
+            _matB.color = fullColor255;
         }
     }
 
@@ -296,6 +335,28 @@ public class PlayerNew : MonoBehaviour
     {
         if (invulnerable) return vulnerable = false;
         return vulnerable = true;
+    }
+
+    void ChangeClass()
+    {
+        switch(playerM.presentCh)
+        {
+            case (Character)0:
+                w.SetActive(true);
+                m.SetActive(false);
+                b.SetActive(false);
+                break;
+            case (Character)1:
+                w.SetActive(false);
+                m.SetActive(true);
+                b.SetActive(false);
+                break;
+            case (Character)2:
+                w.SetActive(false);
+                m.SetActive(false);
+                b.SetActive(true);
+                break;
+        }
     }
 
     void Timer() //Timer per invulenrabilità
