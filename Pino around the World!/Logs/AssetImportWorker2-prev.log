@@ -15,7 +15,7 @@ C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-55436
+54740
 Successfully changed project path to: C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [16140] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 1683647119 [EditorId] 1683647119 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [30580] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2280410365 [EditorId] 2280410365 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [16140] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 1683647119 [EditorId] 1683647119 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [30580] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2280410365 [EditorId] 2280410365 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 105.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 82.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.17f1 (3e8111cac19d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -75,46 +75,46 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.008521 seconds.
+Registered in 0.006130 seconds.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 350 ms
+Android Extension - Scanning For ADB Devices 255 ms
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 82.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 87.21 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.216 seconds
+- Completed reload, in  0.756 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1216ms)
-		BeginReloadAssembly (57ms)
+	ReloadAssembly (756ms)
+		BeginReloadAssembly (51ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (916ms)
-			LoadAssemblies (57ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (623ms)
+			LoadAssemblies (50ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (258ms)
+			SetupTypeCache (75ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (20ms)
-			SetupLoadedEditorAssemblies (597ms)
+			RebuildScriptCaches (16ms)
+			SetupLoadedEditorAssemblies (496ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (421ms)
+				InitializePlatformSupportModulesInManaged (317ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
+				RefreshPlugins (87ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (57ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
+				ProcessInitializeOnLoadAttributes (61ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006027 seconds.
+Registered in 0.004668 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -123,46 +123,46 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 82.22 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 83.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.071 seconds
+- Completed reload, in  0.896 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1072ms)
-		BeginReloadAssembly (87ms)
+	ReloadAssembly (897ms)
+		BeginReloadAssembly (68ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (897ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (749ms)
+			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (325ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (414ms)
+			SetupTypeCache (203ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (375ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (17ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (229ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
+				RefreshPlugins (84ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (194ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3964 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4418.
-Memory consumption went from 155.8 MB to 154.5 MB.
-Total: 4.134000 ms (FindLiveObjects: 0.370100 ms CreateObjectMapping: 0.220100 ms MarkObjects: 3.160700 ms  DeleteObjects: 0.381200 ms)
+Unloading 3955 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4409.
+Memory consumption went from 155.6 MB to 154.3 MB.
+Total: 2.890900 ms (FindLiveObjects: 0.193500 ms CreateObjectMapping: 0.095300 ms MarkObjects: 2.359100 ms  DeleteObjects: 0.242000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -176,10 +176,178 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 334574.519932 seconds.
-  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 05 Mega Toon Series/FBX/Boximon Prawn.FBX
-  artifactKey: Guid(87971b8c906e2194fa2aef3f7dc19f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 05 Mega Toon Series/FBX/Boximon Prawn.FBX using Guid(87971b8c906e2194fa2aef3f7dc19f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b9b5df5562c99563c190a6ce096d68') in 0.153209 seconds 
+  Time since last request: 229918.304431 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 01 Mega Toon Series/Prefabs/Boximon Cactus 1.prefab
+  artifactKey: Guid(be788cb7bdd3bbc40b2e52a8ffedb76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 01 Mega Toon Series/Prefabs/Boximon Cactus 1.prefab using Guid(be788cb7bdd3bbc40b2e52a8ffedb76a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56f2e84a86443628222b48795e95cb5') in 0.100742 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.957831 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 02 Mega Toon Series/Prefabs
+  artifactKey: Guid(2982e748b88c86741b6ae083b91cdca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 02 Mega Toon Series/Prefabs using Guid(2982e748b88c86741b6ae083b91cdca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee330cc9ef3806bfecbfd4065ecc9b3') in 0.003421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.118210 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 02 Mega Toon Series/Prefabs/Boximon Buck.prefab
+  artifactKey: Guid(e37be5b93b304834fb57fc21a33b5f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 02 Mega Toon Series/Prefabs/Boximon Buck.prefab using Guid(e37be5b93b304834fb57fc21a33b5f33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e74f7ac3de1cddd749ab2183b1a356a') in 0.034008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 02 Mega Toon Series/Prefabs/Boximon Swine.prefab
+  artifactKey: Guid(c5a6dd58456ca8641b8f2b7326727a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 02 Mega Toon Series/Prefabs/Boximon Swine.prefab using Guid(c5a6dd58456ca8641b8f2b7326727a4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd5691df7b4cbeebd9818baebe2d817') in 0.021022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.889753 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Beary.prefab
+  artifactKey: Guid(53d56a96b3527de43ab6dc9ed962ce7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Beary.prefab using Guid(53d56a96b3527de43ab6dc9ed962ce7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d078379f00da16c74243b3445a853ee') in 0.018154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.276193 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a790e2c5e9a21d9ab3cec45773ec06b') in 0.014461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.856058 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '555f408d9f870b7f157f2e0c576f72b1') in 0.008898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.741748 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11344aef633a0137cc6b397ff71a24f') in 0.008153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.548991 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec3693c8495c234c2e1b6622bba4c103') in 0.015602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 106.859190 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b90f065fd2a08da883745cea1d154c') in 0.008750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 297.355672 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3dd6d812dad159782b2ebec1bf588e') in 0.010150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.414939 seconds.
+  path: Assets/Prefabs/Boximon/Boximon Cactus.prefab
+  artifactKey: Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Boximon/Boximon Cactus.prefab using Guid(b8d2ef18ccdc2464daff48de5840fa61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8ca3a9a9c62f0994c2c3203cd96f53') in 0.010136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.026166 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Meshtint Free Boximon Fiery Mega Toon Series/READ ME
+  artifactKey: Guid(bfe1ca756e561424e8242dad746fdf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Meshtint Free Boximon Fiery Mega Toon Series/READ ME using Guid(bfe1ca756e561424e8242dad746fdf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89770fb7f562c2adbe55fdce0828068f') in 0.008653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.671535 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Meshtint Free Boximon Fiery Mega Toon Series/READ ME/Meshtint Mega Toon Series Read Me .pdf
+  artifactKey: Guid(ddde52446d457424d902f7392bf009e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Meshtint Free Boximon Fiery Mega Toon Series/READ ME/Meshtint Mega Toon Series Read Me .pdf using Guid(ddde52446d457424d902f7392bf009e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '660eeec4088de05ae67fbdc22ccd6941') in 0.013773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.590077 seconds.
+  path: Assets/Controller/Enemies
+  artifactKey: Guid(575b6a16d844cf9438f9e84ec95b52b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controller/Enemies using Guid(575b6a16d844cf9438f9e84ec95b52b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ab3025b5b5b3455776895d5d22ca1af') in 0.008655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.453113 seconds.
+  path: Assets/Controller/Enemies/Cactus.controller
+  artifactKey: Guid(8b82afbbc9878a0479e57f096b3bbbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Controller/Enemies/Cactus.controller using Guid(8b82afbbc9878a0479e57f096b3bbbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de3f488b02e311b74dc47b85a6f36c7f') in 0.011512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.313722 seconds.
+  path: Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 08 Mega Toon Series/FBX/Boximon Horus Wings.FBX
+  artifactKey: Guid(2b9e807ed2218974181003fc35863138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Boximons Ultimate Pack 01 Toon Series/Boximon Pack 08 Mega Toon Series/FBX/Boximon Horus Wings.FBX using Guid(2b9e807ed2218974181003fc35863138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28c6bac128005c1a4e0482a00e664a23') in 0.048093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002230 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egg@Shake.FBX
+  artifactKey: Guid(b028fedc8c47e2a40ae5b6803edc4ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egg@Shake.FBX using Guid(b028fedc8c47e2a40ae5b6803edc4ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9780b8a91f65008ffd8a2edd3b15ab5f') in 0.024881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Idle.FBX
+  artifactKey: Guid(8bce2f3fd56d99641a0c4a3b790457de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Idle.FBX using Guid(8bce2f3fd56d99641a0c4a3b790457de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7bfc0cbb273344f2a98c70c7272cc5c') in 0.029516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Jump In Place.FBX
+  artifactKey: Guid(87352c0dbd471c04085c4bd843ba7261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Jump In Place.FBX using Guid(87352c0dbd471c04085c4bd843ba7261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c23ad72f2b4d25dade4c812c4ffb7b76') in 0.032283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet@Jump Forward W Root.FBX
+  artifactKey: Guid(16660cc5c2dff884baa6457da6979ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet@Jump Forward W Root.FBX using Guid(16660cc5c2dff884baa6457da6979ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23fd045e04186ce695867fa5f78ac16e') in 0.028786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet@Jump Forward In Place.FBX
+  artifactKey: Guid(d0b1be89acf01434d94dc9304eed5d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet@Jump Forward In Place.FBX using Guid(d0b1be89acf01434d94dc9304eed5d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029c37859f233dd9c04aed5a50950df7') in 0.027265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet.FBX
+  artifactKey: Guid(1e89d6c99d8be84499e1fc1147e6b9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet.FBX using Guid(1e89d6c99d8be84499e1fc1147e6b9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3704905383b280152c581b9d0717d453') in 0.028774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet@Head Attack.FBX
+  artifactKey: Guid(986b83a15a4702841acd4597f6435aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Egg and Egglet Mega Toon Series/FBX/Egglet@Head Attack.FBX using Guid(986b83a15a4702841acd4597f6435aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '947d126a4bb1b91dd9e971b23e35c558') in 0.027699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.494828 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Jump W Root.FBX
+  artifactKey: Guid(edbc32d9d070fd1449a1555bf7e46b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Jump W Root.FBX using Guid(edbc32d9d070fd1449a1555bf7e46b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f816e4209cc5a55efd92756d573418c') in 0.027249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Run Forward In Place.FBX
+  artifactKey: Guid(4653ea7bcdf24ac4e86bc19782cfdaaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Run Forward In Place.FBX using Guid(4653ea7bcdf24ac4e86bc19782cfdaaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18ab1745b5f4d22cbaefdde163c666e0') in 0.029392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Right Claw Attack.FBX
+  artifactKey: Guid(526706f16cf773640a367d510f10031d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Right Claw Attack.FBX using Guid(526706f16cf773640a367d510f10031d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca0bf1fdb10c180c217d0c4565dacfc') in 0.028394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Turn Right.FBX
+  artifactKey: Guid(66d6686650440e44e9eb01642308bf90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shade Mega Toon Series/FBX/Shade@Turn Right.FBX using Guid(66d6686650440e44e9eb01642308bf90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5ecc79da8205abfc9ee3c92bb4ed3b') in 0.033023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.165048 seconds.
+  path: Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shadow Mega Toon Series/FBX/Shadow@Right Slash Attack.FBX
+  artifactKey: Guid(edf6294f2741a594191865d314874151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/Egg Shade Shadow Evolution Pack Mega Toon Series/Shadow Mega Toon Series/FBX/Shadow@Right Slash Attack.FBX using Guid(edf6294f2741a594191865d314874151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c2617ec3b5a7b710676bda18e117aa6') in 0.030832 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

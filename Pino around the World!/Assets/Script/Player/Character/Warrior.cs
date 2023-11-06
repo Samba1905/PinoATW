@@ -9,7 +9,9 @@ public class Warrior : MonoBehaviour
     float pushForce = 3f, pushUpwardForce;
     [SerializeField]
     float powerPush, powerPushTh;
-    public bool firstAttack, secondAttack, thirdAttack, isAttacking;
+    public bool firstAttack, secondAttack, thirdAttack, isAttacking, isShielding;
+    float _damage = 1;
+    public float Damage { get { return _damage; } }
     PlayerMovement playerM;
     PlayerNew player;
     Rigidbody rb;
@@ -23,7 +25,8 @@ public class Warrior : MonoBehaviour
 
     private void Update()
     {
-        AttackMode();        
+        AttackMode();
+        ShieldMode();
     }
 
     void AttackMode()
@@ -65,6 +68,23 @@ public class Warrior : MonoBehaviour
                 timerAttack = 0f;
                 isAttacking = true;
                 playerM.anim.SetBool("firstAttack", true);
+            }
+        }
+    }
+
+    void ShieldMode()
+    {
+        if (!player.ExhaustState)
+        {
+            if (Input.GetButton("Attack2"))
+            {
+                isShielding = true;
+                playerM.anim.SetBool("isShielding", true);
+            }
+            else
+            {
+                isShielding = false;
+                playerM.anim.SetBool("isShielding", false);
             }
         }
     }

@@ -12,7 +12,7 @@ UI
 11. Non salva davvero (RISOLTO)
 12. Illuminazione nel menu buggata quando si muove la telecamera (GLITCH DI ILLUMINAZIONE)
 13. MainMenu non carica salvataggio per errore con GameManager.SlotDatax (RISOLTO)
-14. Glitch Json quando crei nome
+14. Glitch Json quando crei nome (INSERIRE DISSOLVENZA)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -23,14 +23,14 @@ Gameplay
 4. Creare companion per storia (RIPENSATO, FORSE NO)
 5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE, ERRORI CARICAMENTO MENUMAIN)
 6. Creare sistema di stamina interno (FATTO)
-7. Creare UI stamina
+7. Creare UI stamina (FATTO)
 8. Animazione non sempre funzionale (RISOLTO)
 9. TriggerArea Enum non interagisce correttamente con il player (RISOLTO)
 
 ---------------------------------------------------------------------------------------------------
 
 Singleton
-1. Creare e sistemare tutti i Singleton (FORSE SOLO GAMEMANAGER RIMASTO)
+1. Creare e sistemare tutti i Singleton (FATTO)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -42,3 +42,4 @@ PostProcessing
 
 Ottimizzazione
 1. Aggiungere LOD agli oggetti (FATTO)
+2. Aggiungere Occlusion Culling (FATTO)

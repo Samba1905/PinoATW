@@ -6,9 +6,9 @@ Player
 5. Controller animazioni - OK
 6. Suoni - FARE
 7. Stamina per corsa e dash - OK
-8. Macchina a stati - FARE FORSE
+8. Macchina a stati - DICIAMO FATTO
 9. Albero delle abilità e salvataggio di esso - FARE
-10. Dash trasformatore - FARE
+10. Dash trasformatore - OK
 
 Warrior
 1. Attacchi - OK

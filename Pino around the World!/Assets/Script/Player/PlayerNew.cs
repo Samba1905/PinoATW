@@ -247,14 +247,16 @@ public class PlayerNew : MonoBehaviour
 
         if (warrior.isAttacking) recoverySTA = false;
 
-        if (!warrior.isAttacking && !playerM.consumeRun) recoverySTA = true;
+        if (warrior.isShielding) recoverySTA = false;
+
+        if (!warrior.isAttacking && !playerM.consumeRun && !warrior.isShielding) recoverySTA = true;
 
         StaminaPoints -= riduzioneStamina;
     }
 
     public float UpdateHP(float value, bool damage) //Funzione per gestire la vita del player
     {
-        if (vulnerable)
+        if (vulnerable && !warrior.isShielding)
         {
             if (damage)
             {
@@ -264,6 +266,12 @@ public class PlayerNew : MonoBehaviour
                 return HealtsPoints -= value;
             }
         }
+        if(damage && warrior.isShielding)
+        {
+            UpdateSTA(15);
+            return 0;
+        }
+        if (damage) return 0;
         return HealtsPoints += value;
     }
 
