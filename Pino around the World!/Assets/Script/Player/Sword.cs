@@ -11,20 +11,12 @@ public class Sword : MonoBehaviour
         warrior = GetComponentInParent<Warrior>();
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy") && warrior.isAttacking)
+        if (other.gameObject.CompareTag("Enemy") && warrior.isAttacking && warrior.doDamage)
         {
             other.gameObject.GetComponent<Enemy>().LoseHP(warrior.Damage);
+            warrior.doDamage = false;
         }
-    }
-
-    void Damage()
-    {
-        //enemy.LoseHP(warrior.Damage);
-
-
     }
 }

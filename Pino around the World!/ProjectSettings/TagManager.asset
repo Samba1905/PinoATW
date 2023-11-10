@@ -26,6 +26,7 @@ TagManager:
   - Resolution
   - Language
   - Vibration
+  - Target
   layers:
   - Default
   - TransparentFX

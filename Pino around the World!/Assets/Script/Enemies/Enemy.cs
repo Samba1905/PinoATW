@@ -10,16 +10,17 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     float speed, timer, timerImmune;
     [SerializeField]
-    bool isDeath, immune;
+    bool isDeath;
     Animator anim;
+    PlayerNew player;
 
-    float currentHP
+    public float CurrentHP
     {
         get
         {
             return _healtsPoints;
         }
-        set
+        private set
         {
             if (value > maxHP)
             {
@@ -41,30 +42,19 @@ public class Enemy : MonoBehaviour
         _healtsPoints = maxHP;
         isDeath = false;
         anim = GetComponent<Animator>();
+        player = GameObject.Find("Player").GetComponent<PlayerNew>();
     }
 
     private void Update()
     {
         isDead();
         AnimUpdate();
-        loseImmune();
     }
 
     bool isDead()
     {
-        if (currentHP == minHP) return isDeath = true;
+        if (CurrentHP == minHP) return isDeath = true;
         return isDeath = false;
-    }
-
-    bool loseImmune()
-    {
-        if (immune)
-        {
-            timerImmune += Time.deltaTime;
-            if (timerImmune > 0.5f) return immune = false;
-            return immune = true;
-        }
-        return immune = false;
     }
 
     void AnimUpdate()
@@ -73,18 +63,15 @@ public class Enemy : MonoBehaviour
         {
             anim.SetBool("isDeath", true);
             timer += Time.deltaTime;
+            player.UpdateDarkEnergy(10f, false);
             if(timer > 5f) gameObject.SetActive(false);
         }
     }
 
     public void LoseHP(float dmg)
     {
-        if(!immune)
-        {
-            currentHP -= dmg;
-            anim.SetTrigger("takeDmg");
-            immune = true;
-            Debug.Log("Danno");
-        }            
+        CurrentHP -= dmg;
+        anim.SetTrigger("takeDmg");
+        Debug.Log("Danno");
     }
 }

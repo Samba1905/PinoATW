@@ -15,7 +15,7 @@ C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-54740
+50971
 Successfully changed project path to: C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/samba/GitFile/GitHubPATW/Pino around the World!
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11572] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 3449613574 [EditorId] 3449613574 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [33084] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 1767020108 [EditorId] 1767020108 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11572] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 3449613574 [EditorId] 3449613574 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [33084] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 1767020108 [EditorId] 1767020108 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 96.81 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 109.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.17f1 (3e8111cac19d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56048
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
@@ -75,46 +75,46 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.006106 seconds.
+Registered in 0.005868 seconds.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 240 ms
+Android Extension - Scanning For ADB Devices 246 ms
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 80.16 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 89.64 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.758 seconds
+- Completed reload, in  0.761 seconds
 Domain Reload Profiling:
-	ReloadAssembly (758ms)
-		BeginReloadAssembly (55ms)
+	ReloadAssembly (762ms)
+		BeginReloadAssembly (51ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (625ms)
-			LoadAssemblies (54ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (632ms)
+			LoadAssemblies (50ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (76ms)
+			SetupTypeCache (75ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (481ms)
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (501ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (318ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (80ms)
+				InitializePlatformSupportModulesInManaged (313ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (90ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (55ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
+				ProcessInitializeOnLoadAttributes (64ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003959 seconds.
+Registered in 0.004462 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\samba\GitFile\GitHubPATW\Pino around the World!\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -123,46 +123,46 @@ Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 82.32 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 89.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.930 seconds
+- Completed reload, in  0.940 seconds
 Domain Reload Profiling:
-	ReloadAssembly (931ms)
-		BeginReloadAssembly (88ms)
+	ReloadAssembly (940ms)
+		BeginReloadAssembly (79ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (751ms)
-			LoadAssemblies (76ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (194ms)
+			SetupTypeCache (203ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (396ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (417ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
+				InitializePlatformSupportModulesInManaged (19ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
-				BeforeProcessingInitializeOnLoad (63ms)
-				ProcessInitializeOnLoadAttributes (213ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (90ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (221ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3955 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 42 unused Assets / (1.3 MB). Loaded Objects now: 4409.
-Memory consumption went from 155.6 MB to 154.3 MB.
-Total: 3.626600 ms (FindLiveObjects: 0.325000 ms CreateObjectMapping: 0.117100 ms MarkObjects: 2.899800 ms  DeleteObjects: 0.283200 ms)
+Memory consumption went from 155.7 MB to 154.4 MB.
+Total: 2.866800 ms (FindLiveObjects: 0.226200 ms CreateObjectMapping: 0.109200 ms MarkObjects: 2.250200 ms  DeleteObjects: 0.280500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -174,6 +174,108 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 91592.427907 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions/CFXR Explosion 3 Bigger.prefab
+  artifactKey: Guid(6ba1454cd4061fa449ba3e22578c5d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Explosions/CFXR Explosion 3 Bigger.prefab using Guid(6ba1454cd4061fa449ba3e22578c5d5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95609b9a0de68428817dc7f1c30241f7') in 0.211317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 77.483014 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electric Barrier Simple (HDR).prefab
+  artifactKey: Guid(e2bcbfe255630d940a1c29c71f4af76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electric Barrier Simple (HDR).prefab using Guid(e2bcbfe255630d940a1c29c71f4af76f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2357641f1e076512224221e758fb5ac7') in 0.040857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electrified 2.prefab
+  artifactKey: Guid(98557619806f23c499c9cdb620a31541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electrified 2.prefab using Guid(98557619806f23c499c9cdb620a31541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70444c3ac331747392274b6e4b78d3d4') in 0.052387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Lightning Strike + Impact.prefab
+  artifactKey: Guid(334ccdade87a4194b9f1855c484967dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Lightning Strike + Impact.prefab using Guid(334ccdade87a4194b9f1855c484967dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '514337f2e120e92b179693f1566247fe') in 0.086102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electric Surface 2.prefab
+  artifactKey: Guid(963a931d78086b84596ab31e3952a6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electric Surface 2.prefab using Guid(963a931d78086b84596ab31e3952a6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc122e1a0887360a8077af107e39aaf') in 0.023574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electrified 1.prefab
+  artifactKey: Guid(0ac8609ed2d2b7a42bd4238838aeeb86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Electric/CFXR Electrified 1.prefab using Guid(0ac8609ed2d2b7a42bd4238838aeeb86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ade9c8401a660430b3f1b6484ea99e') in 0.065300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.002727 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Lines Poof.prefab
+  artifactKey: Guid(836f721988a69e64b8c023130a7268dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Lines Poof.prefab using Guid(836f721988a69e64b8c023130a7268dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e55fc13d0bfc7fd0333c4c337d5b7cf') in 0.022569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Poof Circle Flat.prefab
+  artifactKey: Guid(b4f04d135faa2bc42b6a131603b9e813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Poof Circle Flat.prefab using Guid(b4f04d135faa2bc42b6a131603b9e813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed61276af667d586fe3887f6f68ae91') in 0.044884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Source Spiral 3D.prefab
+  artifactKey: Guid(d618707dc03cd0649a29d9fd2964a3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Source Spiral 3D.prefab using Guid(d618707dc03cd0649a29d9fd2964a3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a182085e50370214e7cd89069a506b') in 0.017955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Poof Alt.prefab
+  artifactKey: Guid(f0ad7a5f1c59e164aa62b3689281c0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Poof Alt.prefab using Guid(f0ad7a5f1c59e164aa62b3689281c0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4397107fa36de0e7dfac6a11621dbeb5') in 0.020138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Poof.prefab
+  artifactKey: Guid(b2f0b8902a31c8a46a1c4bb24ed9ea36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Smoke Poof.prefab using Guid(b2f0b8902a31c8a46a1c4bb24ed9ea36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c107b22f6891bb18e68ca65f42da1956') in 0.017229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Magical Source.prefab
+  artifactKey: Guid(a8cb176ac2d6504459d1fb8e59257cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/CFXR Magical Source.prefab using Guid(a8cb176ac2d6504459d1fb8e59257cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91200d5ba986d18801afdf80cc285bf7') in 0.042101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.713508 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/Variants/CFXR Magic Poof + Text Pop.prefab
+  artifactKey: Guid(6f105a576857cfa4da8f9a65ac1f80fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/Variants/CFXR Magic Poof + Text Pop.prefab using Guid(6f105a576857cfa4da8f9a65ac1f80fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19723ea6504f27104d1d847f834159bf') in 0.029012 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/Variants/CFXR Portal (Green).prefab
+  artifactKey: Guid(8a03586d3c44e31468456d6ca89e1142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Misc/Variants/CFXR Portal (Green).prefab using Guid(8a03586d3c44e31468456d6ca89e1142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d849f28766550994c864620cd01cc85') in 0.107463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.336704 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fire Ring.prefab
+  artifactKey: Guid(768e051a05ce8a641a55162ac081181a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fire Ring.prefab using Guid(768e051a05ce8a641a55162ac081181a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dab42443a01bbd3b948dd8773ddb330d') in 0.018997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fireball.prefab
+  artifactKey: Guid(ae7fcf8e2f10ecc46b81d336f61a285f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fireball.prefab using Guid(ae7fcf8e2f10ecc46b81d336f61a285f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db134b0c0c69b025b4365d2273fdc220') in 0.099931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fireball + Fire Trail.prefab
+  artifactKey: Guid(93493751bafa07b4ebec5bc245d5d2b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetPremium/JMO Assets/Cartoon FX Remaster/CFXR Prefabs/Fire/CFXR Fireball + Fire Trail.prefab using Guid(93493751bafa07b4ebec5bc245d5d2b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6049e63faf2ee51eabfc155c726adc00') in 0.024243 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

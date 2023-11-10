@@ -26,6 +26,10 @@ public class PlayerNew : MonoBehaviour
     [Header("Danno per prove")]
     public bool DANNO;
 
+    [Header("Posizioni per Spell")]
+    public Vector3 mousePos, worldPos;
+    GameObject target;
+
     PlayerMovement playerM;
     Warrior warrior;
     Mage mage;
@@ -34,7 +38,7 @@ public class PlayerNew : MonoBehaviour
     [Header("Altro")]
     [SerializeField]
     TriggerArea triggerArea;
-    public GameManager.SlotGame SG;
+    GameManager.SlotGame SG; //Era pubblico in caso di prob
 
     bool lvl1, lvl2, lvl3, lvl4, lvl5;
 
@@ -44,13 +48,13 @@ public class PlayerNew : MonoBehaviour
     public bool Lvl4 { get { return lvl4; } }
     public bool Lvl5 { get { return lvl5; } }
 
-    float HealtsPoints
+    public float HealtsPoints
     {
         get
         {
             return _healtsPoints;
         }
-        set
+        private set
         {
             if (value > maxHP)
             {
@@ -67,13 +71,13 @@ public class PlayerNew : MonoBehaviour
         }
     }
 
-    float StaminaPoints
+    public float StaminaPoints
     {
         get
         {
             return _staminaPoints;
         }
-        set
+        private set
         {
             if(value > maxSTA)
             { 
@@ -104,15 +108,15 @@ public class PlayerNew : MonoBehaviour
         }
     }
 
-    float DarkEnergyPoints
+    public float DarkEnergyPoints
     {
         get 
         { 
             return _darkEnergyPoints;
         }
-        set
+        private set
         { 
-            if(value < maxDE)
+            if(value > maxDE)
             {
                 _darkEnergyPoints = maxDE;
             }
@@ -161,7 +165,6 @@ public class PlayerNew : MonoBehaviour
         w = GameObject.Find("Warrior");
         m = GameObject.Find("Mage");
         b = GameObject.Find("Barbarian");
-
     }
 
     private void Start()
@@ -171,6 +174,7 @@ public class PlayerNew : MonoBehaviour
         StaminaPoints = maxSTA;
         vulnerable = true;
         playerM = GetComponent<PlayerMovement>();
+        target = GameObject.FindGameObjectWithTag("Target");
         if (GameObject.FindGameObjectWithTag("TriggerScene")) triggerArea = GameObject.Find("TriggerArea").GetComponent<TriggerArea>();
         m.SetActive(false);
         b.SetActive(false);
@@ -183,6 +187,7 @@ public class PlayerNew : MonoBehaviour
         chColorDmg60 = new Color32(255, 60, 60, 255);
         chColorRed = new Color32(255, 0, 0, 255);
 
+        DarkEnergyPoints = maxDE;
     }
 
     private void Update()
@@ -193,6 +198,7 @@ public class PlayerNew : MonoBehaviour
         UIPlayer();
         FeedbackDamage();
         ChangeClass();
+        TargetPosition();
 
         if (DANNO) //per fare test
         {
@@ -273,6 +279,12 @@ public class PlayerNew : MonoBehaviour
         }
         if (damage) return 0;
         return HealtsPoints += value;
+    }
+
+    public float UpdateDarkEnergy(float value, bool consume)
+    {
+        if (consume) return DarkEnergyPoints -= value;
+        return DarkEnergyPoints += value;
     }
 
     void FeedbackDamage()
@@ -413,6 +425,16 @@ public class PlayerNew : MonoBehaviour
             changeUI = 0;
             STABColor.color = fullColor255;
         }
+    }
+
+    void TargetPosition()
+    {
+        mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane + 1;
+
+        worldPos = Camera.main.WorldToScreenPoint(mousePos);
+
+        //target.transform.position = worldPos;
     }
 
     void LoadLvl1()

@@ -9,24 +9,27 @@ public class Warrior : MonoBehaviour
     float pushForce = 3f, pushUpwardForce;
     [SerializeField]
     float powerPush, powerPushTh;
-    public bool firstAttack, secondAttack, thirdAttack, isAttacking, isShielding;
+    public bool firstAttack, secondAttack, thirdAttack, isAttacking, isShielding, doDamage;
     float _damage = 1;
     public float Damage { get { return _damage; } }
     PlayerMovement playerM;
     PlayerNew player;
     Rigidbody rb;
+    PoolManager poolManager;
 
     private void Start()
     {
         rb = GetComponentInParent<Rigidbody>();
         playerM = GetComponentInParent<PlayerMovement>();
         player = GetComponentInParent<PlayerNew>();
+        poolManager = FindObjectOfType<PoolManager>();
     }
 
     private void Update()
     {
         AttackMode();
         ShieldMode();
+        SpellCast();
     }
 
     void AttackMode()
@@ -52,6 +55,7 @@ public class Warrior : MonoBehaviour
             if (Input.GetButtonDown("Attack1") && firstAttack && secondAttack && timerAttack < 1f)
             {
                 thirdAttack = true;
+                doDamage = true;
                 playerM.anim.SetBool("thirdAttack", true);
                 timerAttack = 0f;
                 timerPush = 0f;
@@ -59,12 +63,14 @@ public class Warrior : MonoBehaviour
             else if (Input.GetButtonDown("Attack1") && firstAttack && timerAttack < 1f)
             {
                 secondAttack = true;
+                doDamage = true;
                 timerAttack = 0f;
                 playerM.anim.SetBool("secondAttack", true);
             }
             else if (Input.GetButtonDown("Attack1"))
             {
                 firstAttack = true;
+                doDamage = true;
                 timerAttack = 0f;
                 isAttacking = true;
                 playerM.anim.SetBool("firstAttack", true);
@@ -88,6 +94,26 @@ public class Warrior : MonoBehaviour
             }
         }
     }
+
+    void SpellCast()
+    {
+        if(Input.GetButtonDown("Attack3"))
+        {
+            playerM.anim.SetBool("isCasting", true);
+            if (player.DarkEnergyPoints >= 25f)
+            {
+                poolManager.LightningCall();
+                player.UpdateDarkEnergy(25f, true);
+                Debug.Log(player.DarkEnergyPoints);
+            }
+            else Debug.Log("Fallimento");
+        }
+        else
+        {
+            playerM.anim.SetBool("isCasting", false);
+        }
+    }
+
 
     void EvNormalAttack() //Funzione per attacco più immersivo richiamato da evento
     {

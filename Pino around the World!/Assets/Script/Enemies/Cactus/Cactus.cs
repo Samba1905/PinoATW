@@ -6,11 +6,13 @@ public class Cactus : MonoBehaviour
 {
     int rotationCount;
     float timer, dmgPlayer, damageCactus;
+    Enemy enemy;
     Animator anim;
 
     private void Start()
     {
         anim = GetComponentInParent<Animator>();
+        enemy = GetComponent<Enemy>();
         damageCactus = 7.5f;
     }
     private void OnTriggerStay(Collider other)
@@ -19,7 +21,7 @@ public class Cactus : MonoBehaviour
         {
             anim.SetBool("Attack", true);
             dmgPlayer += Time.deltaTime;
-            if (dmgPlayer > 2.5f && timer == 0f)
+            if (dmgPlayer > 1.75f && timer == 0f && enemy.CurrentHP != 0)
             {
                 other.gameObject.GetComponentInParent<PlayerNew>().UpdateHP(damageCactus, true);
                 dmgPlayer = 0f;
