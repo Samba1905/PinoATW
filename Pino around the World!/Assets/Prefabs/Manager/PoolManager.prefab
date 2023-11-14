@@ -44,3 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef456adca9185d4c9cb5d5b954a271d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  container: {fileID: 0}
+  containerProj: {fileID: 0}
+  _lightning: {fileID: 13301048646092075, guid: fc00828c038d8cf46af3d7c93de75c0c, type: 3}
+  _projectile: {fileID: 149480, guid: 808302400462fb2479b99c3a1832334d, type: 3}
+  listLightning: []
+  listProjectile: []

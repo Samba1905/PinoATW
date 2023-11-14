@@ -26,13 +26,14 @@ Gameplay
 7. Creare UI stamina (FATTO)
 8. Animazione non sempre funzionale (RISOLTO)
 9. TriggerArea Enum non interagisce correttamente con il player (RISOLTO)
-10. Creare sto fulmine
+10. Creare sto fulmine (FATTO MA NON DOVE VOGLIO IO)
 
 ---------------------------------------------------------------------------------------------------
 
 Singleton
 1. Creare e sistemare tutti i Singleton (FATTO)
-2. PoolManager da capire meglio
+2. PoolManager da capire meglio (FATTO)
+3. PoolManager e variabili di accesso
 
 ---------------------------------------------------------------------------------------------------
 

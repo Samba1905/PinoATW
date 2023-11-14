@@ -34,7 +34,8 @@ public class PlayerNew : MonoBehaviour
     Warrior warrior;
     Mage mage;
     Barbarian barbarian;
-    GameObject w, m, b;
+    [HideInInspector]
+    public GameObject w, m, b;
     [Header("Altro")]
     [SerializeField]
     TriggerArea triggerArea;
@@ -266,7 +267,7 @@ public class PlayerNew : MonoBehaviour
         {
             if (damage)
             {
-                playerM.anim.SetTrigger("TakeDamage");
+                playerM.animW.SetTrigger("TakeDamage");
                 timerInvulnerable = 1.5f;
                 InvulnerableStatus(true);
                 return HealtsPoints -= value;
@@ -343,7 +344,7 @@ public class PlayerNew : MonoBehaviour
 
     bool IsDead() //Funzione per gestire lo stato morto del player
     {
-        playerM.anim.SetBool("isDead", deadState);
+        playerM.animW.SetBool("isDead", deadState);
         if (HealtsPoints <= 0)
         {
             return deadState = true;

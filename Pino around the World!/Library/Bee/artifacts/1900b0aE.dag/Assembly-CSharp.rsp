@@ -376,6 +376,7 @@
 "Assets/Script/Menu/OptionManager.cs"
 "Assets/Script/Player/Character/Barbarian.cs"
 "Assets/Script/Player/Character/Mage.cs"
+"Assets/Script/Player/Character/ProjectileMage.cs"
 "Assets/Script/Player/Character/Warrior.cs"
 "Assets/Script/Player/PlayerMovement.cs"
 "Assets/Script/Player/PlayerNew.cs"

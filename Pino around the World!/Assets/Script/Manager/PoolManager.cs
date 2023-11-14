@@ -22,14 +22,11 @@ public class PoolManager : MonoBehaviour
     #endregion
 
     [SerializeField]
-    GameObject container;
+    GameObject container, containerProj;
     [SerializeField]
-    GameObject _lightning;
+    GameObject _lightning, _projectile;
     [SerializeField]
-    List<GameObject> listLightning;
-
-
-
+    List<GameObject> listLightning, listProjectile;
 
     private void Awake()
     {
@@ -46,11 +43,11 @@ public class PoolManager : MonoBehaviour
 
     private void Start()
     {
-        container = GameObject.FindGameObjectWithTag("Target");
-        listLightning = GeneratePrefab(3);
+        listLightning = GeneratePrefabLight(3);
+        listProjectile = GeneratePrefabProj(10);
     }
 
-    List<GameObject> GeneratePrefab(int quantity) //Genera il numero di oggetti in una lista
+    List<GameObject> GeneratePrefabLight(int quantity) //Genera il numero di fulmini per il warrior in una lista
     {
         for(int i = 0; i < quantity; i++)
         {
@@ -60,6 +57,19 @@ public class PoolManager : MonoBehaviour
             listLightning.Add(lightning);
         }
         return listLightning;
+    }
+
+    List<GameObject> GeneratePrefabProj(int quantity) //Genera il numero di Proiettili per il mago
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            GameObject projectile = Instantiate(_projectile);
+            projectile.transform.parent = containerProj.transform;
+            projectile.transform.position = new Vector3(containerProj.transform.position.x, containerProj.transform.position.y + 1f, containerProj.transform.position.z);
+            projectile.SetActive(false);
+            listProjectile.Add(projectile);
+        }
+        return listProjectile;
     }
     public GameObject LightningCall() //Genera l'oggetto quando chiamato
     {
@@ -76,5 +86,22 @@ public class PoolManager : MonoBehaviour
         newPrefab.transform.parent = container.transform;
         listLightning.Add(newPrefab);
         return newPrefab;
+    }
+
+    public GameObject CastProjectile() //spara proiettile
+    {
+        foreach(var prefab in listProjectile)
+        {
+            if(prefab.activeInHierarchy == false)
+            {
+                prefab.SetActive(true);
+                return prefab;
+            }
+        }
+
+        GameObject newPreFab = Instantiate(_projectile);
+        newPreFab.transform.parent = containerProj.transform;
+        listProjectile.Add(newPreFab);
+        return newPreFab;
     }
 }

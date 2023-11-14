@@ -27,6 +27,7 @@ TagManager:
   - Language
   - Vibration
   - Target
+  - Container
   layers:
   - Default
   - TransparentFX

@@ -12,26 +12,26 @@ Player
 
 Warrior
 1. Attacchi - OK
-2. Stamina per attacchi e scudo - FARE
+2. Stamina per attacchi e scudo - OK
 3. Animazioni attacco - OK
-4. Animazioni scudo - FARE
-5. Lanciare incantesimi - FARE
+4. Animazioni scudo - OK
+5. Lanciare incantesimi - DICIAMO
 6. Suoni - FARE
-7. Script modalità scudo - FARE
-8. Script spada - FARE
+7. Script modalità scudo - OK
+8. Script spada - OK
 
 Mage
-1. Attacchi - FARE
+1. Attacchi - IN CORSO
 2. Stamina - FARE
-3. Animazioni - FARE
-4. Controller - FARE
+3. Animazioni - OK
+4. Controller - OK
 5. Suoni - FARE
-6. Script - FARE
+6. Script - IN CORSO
 
 Barbarian
 1. Attacchi - FARE
 2. Stamina - FARE
 3. Animazioni - FARE
-4. Controller - FARE
+4. Controller - OK
 5. Suoni - FARE
 6. Script - FARE

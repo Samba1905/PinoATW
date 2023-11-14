@@ -16,6 +16,7 @@ public class Warrior : MonoBehaviour
     PlayerNew player;
     Rigidbody rb;
     PoolManager poolManager;
+    ParticleSystem ps;
 
     private void Start()
     {
@@ -37,7 +38,7 @@ public class Warrior : MonoBehaviour
         Vector3 warriorDirection = transform.forward * pushForce + transform.up * pushUpwardForce;
         timerAttack += Time.deltaTime;
         timerPush += Time.deltaTime;
-        playerM.anim.SetBool("isAttacking", isAttacking);
+        playerM.animW.SetBool("isAttacking", isAttacking);
 
         if (timerAttack > 1f)
         {
@@ -45,9 +46,9 @@ public class Warrior : MonoBehaviour
             secondAttack = false;
             thirdAttack = false;
             isAttacking = false;
-            playerM.anim.SetBool("firstAttack", false);
-            playerM.anim.SetBool("secondAttack", false);
-            playerM.anim.SetBool("thirdAttack", false);
+            playerM.animW.SetBool("firstAttack", false);
+            playerM.animW.SetBool("secondAttack", false);
+            playerM.animW.SetBool("thirdAttack", false);
 
         }
         if (!player.ExhaustState) //Condizione che impedisce di attaccare in caso di stato esausto
@@ -56,7 +57,7 @@ public class Warrior : MonoBehaviour
             {
                 thirdAttack = true;
                 doDamage = true;
-                playerM.anim.SetBool("thirdAttack", true);
+                playerM.animW.SetBool("thirdAttack", true);
                 timerAttack = 0f;
                 timerPush = 0f;
             }
@@ -65,7 +66,7 @@ public class Warrior : MonoBehaviour
                 secondAttack = true;
                 doDamage = true;
                 timerAttack = 0f;
-                playerM.anim.SetBool("secondAttack", true);
+                playerM.animW.SetBool("secondAttack", true);
             }
             else if (Input.GetButtonDown("Attack1"))
             {
@@ -73,7 +74,7 @@ public class Warrior : MonoBehaviour
                 doDamage = true;
                 timerAttack = 0f;
                 isAttacking = true;
-                playerM.anim.SetBool("firstAttack", true);
+                playerM.animW.SetBool("firstAttack", true);
             }
         }
     }
@@ -85,12 +86,12 @@ public class Warrior : MonoBehaviour
             if (Input.GetButton("Attack2"))
             {
                 isShielding = true;
-                playerM.anim.SetBool("isShielding", true);
+                playerM.animW.SetBool("isShielding", true);
             }
             else
             {
                 isShielding = false;
-                playerM.anim.SetBool("isShielding", false);
+                playerM.animW.SetBool("isShielding", false);
             }
         }
     }
@@ -99,10 +100,11 @@ public class Warrior : MonoBehaviour
     {
         if(Input.GetButtonDown("Attack3"))
         {
-            playerM.anim.SetBool("isCasting", true);
+            playerM.animW.SetBool("isCasting", true);
             if (player.DarkEnergyPoints >= 25f)
             {
                 poolManager.LightningCall();
+                
                 player.UpdateDarkEnergy(25f, true);
                 Debug.Log(player.DarkEnergyPoints);
             }
@@ -110,7 +112,7 @@ public class Warrior : MonoBehaviour
         }
         else
         {
-            playerM.anim.SetBool("isCasting", false);
+            playerM.animW.SetBool("isCasting", false);
         }
     }
 
@@ -134,8 +136,8 @@ public class Warrior : MonoBehaviour
         firstAttack = false;
         secondAttack = false;
         thirdAttack = false;
-        playerM.anim.SetBool("firstAttack", false);
-        playerM.anim.SetBool("secondAttack", false);
-        playerM.anim.SetBool("thirdAttack", false);
+        playerM.animW.SetBool("firstAttack", false);
+        playerM.animW.SetBool("secondAttack", false);
+        playerM.animW.SetBool("thirdAttack", false);
     }
 }

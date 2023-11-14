@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField, HideInInspector]
     Transform player;
-    [SerializeField, HideInInspector]
-    Transform character;
+    [SerializeField]
+    Transform warrior, mage, barbarian;
     [SerializeField, HideInInspector]
     Transform orientation;
     [SerializeField, HideInInspector]
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, HideInInspector]
     PlayerNew playerN;
     Camera cam;
-    public Animator anim;
+    public Animator animW, animM, animB;
 
     int actuallyCh;
     public PlayerNew.Character presentCh;
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float moveSpeed, walkSpeed, runSpeed, exhSpeed;
     Vector3 move;
+    public static Vector3 forwardNow;
     #endregion
 
     #region Dash
@@ -46,9 +47,13 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
-        anim = GetComponentInChildren<Animator>();
         player = GetComponent<Transform>();
-        character = GameObject.FindWithTag("Character").GetComponent<Transform>();
+        animW = GameObject.Find("Warrior").GetComponent<Animator>();
+        animM = GameObject.Find("Mage").GetComponent<Animator>();
+        animB = GameObject.Find("Barbarian").GetComponent<Animator>();
+        warrior = GameObject.Find("Warrior").GetComponent<Transform>();
+        mage = GameObject.Find("Mage").GetComponent<Transform>();
+        barbarian = GameObject.Find("Barbarian").GetComponent<Transform>();
         orientation = GetComponentInChildren<Transform>().Find("Orientation");
         playerN = GetComponent<PlayerNew>();
         rb = GetComponent<Rigidbody>();
@@ -59,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     {
         InputPlayer();
         Animation();
+        forwardNow = mage.forward;
     }
 
     private void FixedUpdate()
@@ -110,7 +116,9 @@ public class PlayerMovement : MonoBehaviour
         //Funzione per ruotare il player
         if (inputDir != Vector3.zero) 
         { 
-            character.forward = Vector3.Slerp(character.forward, inputDir.normalized, rotationSpeed * Time.fixedDeltaTime);
+            warrior.forward = Vector3.Slerp(warrior.forward, inputDir.normalized, rotationSpeed * Time.fixedDeltaTime);
+            mage.forward = warrior.forward;
+            barbarian.forward = warrior.forward;
             if (isRunning) consumeRun = true;
             else consumeRun = false;
         }
@@ -141,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Dash() //Funzione per fare il Dash
     {
-        Vector3 dashDirection = character.forward * dashForce + character.up * dashUpwardForce;
+        Vector3 dashDirection = warrior.forward * dashForce + warrior.up * dashUpwardForce;
         rb.AddForce(dashDirection, ForceMode.Impulse);
     }
 
@@ -166,9 +174,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Animation() //Aggiornamento animazioni
     {
-        anim.SetBool("isWalking", isWalking);
-        anim.SetBool("isRunning", isRunning);
-        anim.SetBool("isDashing", isDashing);
-        anim.SetBool("isDashing", isDashing);
+        animW.SetBool("isWalking", isWalking);
+        animW.SetBool("isRunning", isRunning);
+        animW.SetBool("isDashing", isDashing);
+        animW.SetBool("isDashing", isDashing);
+        animM.SetBool("isWalking", isWalking);
+        animM.SetBool("isRunning", isRunning);
+        animM.SetBool("isDashing", isDashing);
+        animM.SetBool("isDashing", isDashing);
+        animB.SetBool("isWalking", isWalking);
+        animB.SetBool("isRunning", isRunning);
+        animB.SetBool("isDashing", isDashing);
+        animB.SetBool("isDashing", isDashing);
     }
 }

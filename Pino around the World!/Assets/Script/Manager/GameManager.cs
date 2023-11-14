@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
     {
         PauseMenuGame();
         if (oM != FindObjectOfType<OptionManager>()) oM = FindObjectOfType<OptionManager>();
-        if (player != FindObjectOfType<PlayerMovement>()) player = FindObjectOfType<PlayerNew>();
+        if (player != FindObjectOfType<PlayerNew>()) player = FindObjectOfType<PlayerNew>();
         if(checkPauseMenu) if (!oM.pauseMenuPanel.activeSelf) checkPauseMenu = false;
     }
 
