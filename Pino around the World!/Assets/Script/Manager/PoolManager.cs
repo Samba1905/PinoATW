@@ -22,7 +22,7 @@ public class PoolManager : MonoBehaviour
     #endregion
 
     [SerializeField]
-    GameObject container, containerProj;
+    GameObject container;
     [SerializeField]
     GameObject _lightning, _projectile;
     [SerializeField]
@@ -64,8 +64,8 @@ public class PoolManager : MonoBehaviour
         for (int i = 0; i < quantity; i++)
         {
             GameObject projectile = Instantiate(_projectile);
-            projectile.transform.parent = containerProj.transform;
-            projectile.transform.position = new Vector3(containerProj.transform.position.x, containerProj.transform.position.y + 1f, containerProj.transform.position.z);
+            projectile.transform.parent = container.transform;
+            projectile.transform.position = new Vector3(container.transform.position.x, container.transform.position.y + 1f, container.transform.position.z);
             projectile.SetActive(false);
             listProjectile.Add(projectile);
         }
@@ -77,6 +77,7 @@ public class PoolManager : MonoBehaviour
         {
             if(prefab.activeInHierarchy == false)
             {
+                prefab.transform.position = PlayerNew.TargetPosition();
                 prefab.SetActive(true);
                 return prefab;
             }
@@ -100,7 +101,7 @@ public class PoolManager : MonoBehaviour
         }
 
         GameObject newPreFab = Instantiate(_projectile);
-        newPreFab.transform.parent = containerProj.transform;
+        newPreFab.transform.parent = container.transform;
         listProjectile.Add(newPreFab);
         return newPreFab;
     }

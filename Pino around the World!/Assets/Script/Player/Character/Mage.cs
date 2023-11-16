@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mage : MonoBehaviour
 {
     PoolManager poolManager;
-    public static Vector3 forwardPosition;
+    public static Vector3 forwardPosition, position;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,7 @@ public class Mage : MonoBehaviour
     void Update()
     {
         forwardPosition = Vector3.forward;
+        position = transform.position;
         if(Input.GetButtonDown("Attack1")) poolManager.CastProjectile();
     }
 }

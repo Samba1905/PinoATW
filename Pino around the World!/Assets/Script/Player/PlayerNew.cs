@@ -27,7 +27,7 @@ public class PlayerNew : MonoBehaviour
     public bool DANNO;
 
     [Header("Posizioni per Spell")]
-    public Vector3 mousePos, worldPos;
+    static Vector3 mousePos;
     GameObject target;
 
     PlayerMovement playerM;
@@ -428,14 +428,17 @@ public class PlayerNew : MonoBehaviour
         }
     }
 
-    void TargetPosition()
+    public static Vector3 TargetPosition()
     {
         mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.nearClipPlane + 1;
 
-        worldPos = Camera.main.WorldToScreenPoint(mousePos);
-
-        //target.transform.position = worldPos;
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            return hit.point;
+        }
+        return Vector3.zero;
     }
 
     void LoadLvl1()

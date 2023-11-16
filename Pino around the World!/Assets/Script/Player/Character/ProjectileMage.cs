@@ -11,9 +11,10 @@ public class ProjectileMage : MonoBehaviour
 
     private void OnEnable()
     {
+        transform.position = Mage.position + Vector3.up;
         direction = PlayerMovement.forwardNow;
-        lifetime = 2f;
-        speed = 500f;
+        lifetime = 1.5f;
+        speed = 750f;
         Invoke("Hide", lifetime);
     }
 
@@ -24,8 +25,6 @@ public class ProjectileMage : MonoBehaviour
 
     void Hide()
     {
-        transform.position = transform.parent.position + new Vector3 (0, 1, 0);
-        direction = new Vector3 (0, 0, 0);
         gameObject.SetActive(false);
     }
 }

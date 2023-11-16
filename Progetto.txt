@@ -7,7 +7,7 @@ Player
 6. Suoni - FARE
 7. Stamina per corsa e dash - OK
 8. Macchina a stati - DICIAMO FATTO
-9. Albero delle abilità e salvataggio di esso - FARE
+9. Albero delle abilità e salvataggio di esso - NO TROPPO
 10. Dash trasformatore - OK
 
 Warrior
@@ -15,7 +15,7 @@ Warrior
 2. Stamina per attacchi e scudo - OK
 3. Animazioni attacco - OK
 4. Animazioni scudo - OK
-5. Lanciare incantesimi - DICIAMO
+5. Lanciare incantesimi - OK
 6. Suoni - FARE
 7. Script modalità scudo - OK
 8. Script spada - OK
