@@ -268,6 +268,8 @@ public class PlayerNew : MonoBehaviour
             if (damage)
             {
                 playerM.animW.SetTrigger("TakeDamage");
+                playerM.animM.SetTrigger("TakeDamage");
+                playerM.animB.SetTrigger("TakeDamage");
                 timerInvulnerable = 1.5f;
                 InvulnerableStatus(true);
                 return HealtsPoints -= value;
@@ -345,6 +347,8 @@ public class PlayerNew : MonoBehaviour
     bool IsDead() //Funzione per gestire lo stato morto del player
     {
         playerM.animW.SetBool("isDead", deadState);
+        playerM.animM.SetBool("isDead", deadState);
+        playerM.animB.SetBool("isDead", deadState);
         if (HealtsPoints <= 0)
         {
             return deadState = true;

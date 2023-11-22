@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         if (inputDir != Vector3.zero) 
         { 
             warrior.forward = Vector3.Slerp(warrior.forward, inputDir.normalized, rotationSpeed * Time.fixedDeltaTime);
-            mage.forward = warrior.forward;
+            //mage.forward = warrior.forward; TopDownShooter ora
             barbarian.forward = warrior.forward;
             if (isRunning) consumeRun = true;
             else consumeRun = false;

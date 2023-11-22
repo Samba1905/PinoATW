@@ -13,8 +13,8 @@ public class ProjectileMage : MonoBehaviour
     {
         transform.position = Mage.position + Vector3.up;
         direction = PlayerMovement.forwardNow;
-        lifetime = 1.5f;
-        speed = 750f;
+        lifetime = 0.5f;
+        speed = 1000f;
         Invoke("Hide", lifetime);
     }
 
