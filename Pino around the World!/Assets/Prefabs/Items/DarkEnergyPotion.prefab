@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8010818319419144269}
   - component: {fileID: 1460043969476590842}
+  - component: {fileID: -3634061871833334650}
   m_Layer: 0
   m_Name: DarkEnergyPotion
   m_TagString: Untagged
@@ -46,6 +47,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.5, z: 2}
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!114 &-3634061871833334650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7254330187502231550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03569b0637da4a0489e791e9e2ca57e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5744460019053620793
 PrefabInstance:
   m_ObjectHideFlags: 0

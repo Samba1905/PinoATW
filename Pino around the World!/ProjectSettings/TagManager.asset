@@ -28,6 +28,7 @@ TagManager:
   - Vibration
   - Target
   - Container
+  - Coins
   layers:
   - Default
   - TransparentFX

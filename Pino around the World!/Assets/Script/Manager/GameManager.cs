@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     #endregion
     #region MenuPausa
     OptionManager oM;
-    PlayerNew player;
+    private static PlayerNew player;
     bool checkPauseMenu;
     #endregion
     public SlotGame currentSlot;
@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
     }
 
     #region Sezione salvataggi
-    public void SaveSlot1()
+    public static void SaveSlot1()
     {
         Game game = new Game();
 
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
 
         File.WriteAllText(Application.persistentDataPath + "/Slot1Data.json", json);
     }
-    public void SaveSlot2()
+    public static void SaveSlot2()
     {
         Game game = new Game();
 
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
 
         File.WriteAllText(Application.persistentDataPath + "/Slot2Data.json", json);
     }
-    public void SaveSlot3()
+    public static void SaveSlot3()
     {
         Game game = new Game();
 
@@ -226,7 +226,7 @@ public class GameManager : MonoBehaviour
     }
     #endregion
     #region Gestione Livelli
-    public void CheckLevelStatus()
+    public static void CheckLevelStatus()
     {
         _level1 = player.Lvl1;
         _level2 = player.Lvl2;

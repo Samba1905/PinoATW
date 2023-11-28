@@ -414,6 +414,14 @@ public class OptionManager : MonoBehaviour
     }
     #endregion
 
+    #region GoToNextLevel
+    public void GoToNextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        else SceneManager.LoadScene("MainScene");
+    }
+    #endregion
+
     void SaveOptions()
     {
         Options options = new Options();

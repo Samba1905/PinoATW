@@ -23,6 +23,15 @@ public class ProjectileMage : MonoBehaviour
         rb.velocity = direction * Time.fixedDeltaTime * speed;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 0 || other.gameObject.layer == 6)
+        {
+            other.gameObject.GetComponentInParent<Enemy>().LoseHP(1);
+            Debug.Log(other.gameObject.GetComponentInParent<Enemy>().CurrentHP);
+        }
+    }
+
     void Hide()
     {
         gameObject.SetActive(false);

@@ -857,7 +857,6 @@ MonoBehaviour:
   timer: 0
   timerImmune: 0
   isDeath: 0
-  immune: 0
 --- !u!114 &2078724210
 MonoBehaviour:
   m_ObjectHideFlags: 0

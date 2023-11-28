@@ -27,7 +27,7 @@ public class TriggerArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.layer == 10)
         {
             SM.levelEnd = true;
         }
@@ -46,10 +46,10 @@ public class TriggerArea : MonoBehaviour
             case "ThirdMap":
                 currentLevel = LevelComplete._level3;
                 break;
-            case "Fourh":
+            case "FourhMap":
                 currentLevel = LevelComplete._level4;
                 break;
-            case "Five":
+            case "FiveMap":
                 currentLevel = LevelComplete._level5;
                 break;
             default:

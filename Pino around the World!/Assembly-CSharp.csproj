@@ -59,6 +59,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Script\Saved\Game.cs" />
+    <Compile Include="Assets\Script\ItemsInteraction\HealthPotion\HealtPotion.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Script\Enemies\Cactus\Cactus.cs" />
     <Compile Include="Assets\Script\Manager\CameraManager.cs" />
@@ -91,8 +92,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Script\Player\Character\Mage.cs" />
+    <Compile Include="Assets\Script\ItemsInteraction\TreasureChest\TreasureChest.cs" />
     <Compile Include="Assets\Script\Player\Sword.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Script\ItemsInteraction\DarkEnergyPotion\DarkEnergyPotion.cs" />
     <Compile Include="Assets\Script\Player\Character\Warrior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Script\Player\Character\ProjectileMage.cs" />

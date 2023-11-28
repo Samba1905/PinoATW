@@ -40,9 +40,11 @@ public class PlayerNew : MonoBehaviour
     [SerializeField]
     TriggerArea triggerArea;
     GameManager.SlotGame SG; //Era pubblico in caso di prob
+    ScoreManager SM;
 
-    bool lvl1, lvl2, lvl3, lvl4, lvl5;
+    bool tutorial, lvl1, lvl2, lvl3, lvl4, lvl5;
 
+    public bool Tutorial { get { return tutorial; } }
     public bool Lvl1 { get { return lvl1; } }
     public bool Lvl2 { get { return lvl2; } }
     public bool Lvl3 { get { return lvl3; } }
@@ -173,10 +175,12 @@ public class PlayerNew : MonoBehaviour
         recoverySTA = true;
         HealtsPoints = maxHP;
         StaminaPoints = maxSTA;
+        DarkEnergyPoints = 50f;
         vulnerable = true;
         playerM = GetComponent<PlayerMovement>();
         target = GameObject.FindGameObjectWithTag("Target");
         if (GameObject.FindGameObjectWithTag("TriggerScene")) triggerArea = GameObject.Find("TriggerArea").GetComponent<TriggerArea>();
+        if (SM == null) SM = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         m.SetActive(false);
         b.SetActive(false);
         fullColor255 = new Color32(255, 255, 255, 255);
@@ -188,7 +192,7 @@ public class PlayerNew : MonoBehaviour
         chColorDmg60 = new Color32(255, 60, 60, 255);
         chColorRed = new Color32(255, 0, 0, 255);
 
-        DarkEnergyPoints = maxDE;
+        
     }
 
     private void Update()
@@ -203,7 +207,7 @@ public class PlayerNew : MonoBehaviour
 
         if (DANNO) //per fare test
         {
-            UpdateHP(5, true);
+            UpdateHP(50, true);
             DANNO = false;
         }
     }
@@ -215,6 +219,7 @@ public class PlayerNew : MonoBehaviour
             switch(triggerArea.currentLevel)
             {
                 case TriggerArea.LevelComplete._tutorial:
+                    tutorial = true;
                     break;
                 case TriggerArea.LevelComplete._level1:
                     lvl1 = true;
@@ -351,6 +356,7 @@ public class PlayerNew : MonoBehaviour
         playerM.animB.SetBool("isDead", deadState);
         if (HealtsPoints <= 0)
         {
+            SM.playerDeath = true;
             return deadState = true;
         }           
         return deadState = false;

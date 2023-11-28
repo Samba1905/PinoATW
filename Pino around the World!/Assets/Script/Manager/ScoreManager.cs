@@ -18,9 +18,10 @@ public class ScoreManager : MonoBehaviour
     GameObject levelEndPanel;
     [SerializeField]
     TextMeshProUGUI gameOver, scoreVal, coinsVal, enemiesVal;
+    [SerializeField]
+    Button continueButton;
 
-    GameManager gameManager;
-    public GameManager.SlotGame slotGameSM;
+    GameManager.SlotGame slotGameSM;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class ScoreManager : MonoBehaviour
         if (scoreVal != GameObject.Find("ScoreVal")) scoreVal = GameObject.Find("ScoreVal").GetComponent<TextMeshProUGUI>();
         if (coinsVal != GameObject.Find("CoinsVal")) coinsVal = GameObject.Find("CoinsVal").GetComponent<TextMeshProUGUI>();
         if (enemiesVal != GameObject.Find("EnemyVal")) enemiesVal = GameObject.Find("EnemyVal").GetComponent<TextMeshProUGUI>();
+        if (continueButton != GameObject.Find("ContinueButton")) continueButton = GameObject.Find("ContinueButton").GetComponent<Button>();
         if (levelEnd != GameObject.Find("LevelEndPanel")) levelEnd = GameObject.Find("LevelEndPanel");
     }
     void Start()
@@ -59,28 +61,33 @@ public class ScoreManager : MonoBehaviour
             levelEndPanel.SetActive(true);
             gameOver.text = "Victory!";
             scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
-            coinsVal.text = $"{coinsCount} / {coinsCollect} Coins!";
+            coinsVal.text = $"{coinsCollect} / {coinsCount} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
-            gameManager.CheckLevelStatus();
+            GameManager.CheckLevelStatus();
             switch(slotGameSM)
             {
                 case (GameManager.SlotGame)0:
-                    gameManager.SaveSlot1();
+
+                    
+
+
+                    GameManager.SaveSlot1();
                     break;
                 case (GameManager.SlotGame)1:
-                    gameManager.SaveSlot2();
+                    GameManager.SaveSlot2();
                     break;
                 case (GameManager.SlotGame)2:
-                    gameManager.SaveSlot3();
+                    GameManager.SaveSlot3();
                     break;
             }
         }
-        if(playerDeath)//Funzione da riprogrammare
+        if(playerDeath) //Se muore il Player
         {
             Time.timeScale = 0f;
             EnemiesCount();
             MoneyCount();
             levelEndPanel.SetActive(true);
+            continueButton.interactable = false;
             gameOver.text = "Game Over!";
             scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
             coinsVal.text = $"{coinsCollect} / {coinsCount} Coins!";
@@ -96,7 +103,7 @@ public class ScoreManager : MonoBehaviour
 
     int MoneyCount()
     {
-        coinsCollect = coinsCount - GameObject.FindGameObjectsWithTag("TreasureChest").Length;
+        coinsCollect = coinsCount - GameObject.FindGameObjectsWithTag("Coins").Length;
         return coinsCollect;
     }
 }
