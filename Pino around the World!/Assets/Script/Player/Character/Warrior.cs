@@ -10,13 +10,14 @@ public class Warrior : MonoBehaviour
     [SerializeField]
     float powerPush, powerPushTh;
     public bool firstAttack, secondAttack, thirdAttack, isAttacking, isShielding, doDamage;
-    float _damage = 1;
+    float _damage = 2;
     public float Damage { get { return _damage; } }
     PlayerMovement playerM;
     PlayerNew player;
     Rigidbody rb;
     PoolManager poolManager;
     ParticleSystem ps;
+    public AudioClip clipAtt, thunderSpell;
 
     private void Start()
     {
@@ -104,11 +105,11 @@ public class Warrior : MonoBehaviour
             if (player.DarkEnergyPoints >= 25f)
             {
                 poolManager.LightningCall();
-                
+                playerM.audioSourceSFX.PlayOneShot(thunderSpell);
                 player.UpdateDarkEnergy(25f, true);
                 Debug.Log(player.DarkEnergyPoints);
             }
-            else Debug.Log("Fallimento");
+            else playerM.audioSourceSFX.PlayOneShot(playerM.failSpell);
         }
         else
         {
@@ -120,6 +121,8 @@ public class Warrior : MonoBehaviour
     void EvNormalAttack() //Funzione per attacco più immersivo richiamato da evento
     {
         Vector3 warriorDirection = transform.forward * pushForce + transform.up * pushUpwardForce;
+        playerM.audioSourceSFX.pitch = Random.Range(0.90f, 1.10f);
+        playerM.audioSourceSFX.PlayOneShot(clipAtt);
         rb.AddForce(warriorDirection * powerPush, ForceMode.Impulse);
         player.UpdateSTA(7.5f);
     }
@@ -127,6 +130,8 @@ public class Warrior : MonoBehaviour
     void EvThirdAttack() //Funzione per terzo attacco più immersivo richiamato da evento
     {
         Vector3 warriorDirection = transform.forward * pushForce + transform.up * pushUpwardForce;
+        playerM.audioSourceSFX.pitch = Random.Range(0.90f, 1.10f);
+        playerM.audioSourceSFX.PlayOneShot(clipAtt);
         rb.AddForce(warriorDirection * powerPushTh, ForceMode.Impulse);
         player.UpdateSTA(15f);
     }
@@ -139,5 +144,19 @@ public class Warrior : MonoBehaviour
         playerM.animW.SetBool("firstAttack", false);
         playerM.animW.SetBool("secondAttack", false);
         playerM.animW.SetBool("thirdAttack", false);
+    }
+    void EvFootStep()
+    {
+        playerM.audioSourceSFX.pitch = Random.Range(0.95f, 1.05f);
+        playerM.audioSourceSFX.PlayOneShot(playerM.footStep);
+    }
+    void EvFootStep2()
+    {
+        playerM.audioSourceSFX.pitch = Random.Range(0.85f, 1.15f);
+        playerM.audioSourceSFX.PlayOneShot(playerM.footStep2);
+    }
+    void EvIdle()
+    {
+        playerM.audioSourceSFX.pitch = 1f;
     }
 }

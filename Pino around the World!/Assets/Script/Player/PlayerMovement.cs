@@ -15,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField, HideInInspector]
     PlayerNew playerN;
     Camera cam;
+    public AudioSource audioSourceSFX;
     public Animator animW, animM, animB;
+
+    public AudioClip footStep, footStep2, dashSFX, failSpell;
 
     int actuallyCh;
     public PlayerNew.Character presentCh;
@@ -55,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         mage = GameObject.Find("Mage").GetComponent<Transform>();
         barbarian = GameObject.Find("Barbarian").GetComponent<Transform>();
         orientation = GetComponentInChildren<Transform>().Find("Orientation");
+        audioSourceSFX = GameObject.Find("SFX").GetComponentInChildren<AudioSource>();
         playerN = GetComponent<PlayerNew>();
         rb = GetComponent<Rigidbody>();
         actuallyCh = 0;
@@ -96,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 consumeDash = true;
                 isDashing = true;
+                audioSourceSFX.PlayOneShot(dashSFX);
             }
         }
 

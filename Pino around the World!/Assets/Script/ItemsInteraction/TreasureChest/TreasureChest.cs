@@ -10,6 +10,7 @@ public class TreasureChest : MonoBehaviour
     [SerializeField]
     GameObject coins;
     Animator anim;
+    AudioSource clip;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class TreasureChest : MonoBehaviour
         interactable = false;
         dist = 3.5f;
         player = FindObjectOfType<PlayerNew>();
+        clip = GetComponent<AudioSource>();
     }
     private void LateUpdate()
     {
@@ -44,5 +46,10 @@ public class TreasureChest : MonoBehaviour
     {
         coins.SetActive(false);
         isOpen = true;
+    }
+
+    void EvCoins()
+    {
+        clip.Play();
     }
 }

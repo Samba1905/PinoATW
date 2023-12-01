@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2653008503528766167
 Transform:
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9987a670116e4f74e82cba382007ac07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 70c2c90a9ba04d24b8afa564bef993b6, type: 3}
 --- !u!1001 &1614776540516989321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,9 +68,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2653008503528766167}
     m_Modifications:
+    - target: {fileID: 120294, guid: c9dfc371066374e41b2b80c29e19dc9b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 186262, guid: c9dfc371066374e41b2b80c29e19dc9b, type: 3}
       propertyPath: m_Name
       value: Potion 01 Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 186262, guid: c9dfc371066374e41b2b80c29e19dc9b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 450820, guid: c9dfc371066374e41b2b80c29e19dc9b, type: 3}
       propertyPath: m_RootOrder
@@ -115,6 +124,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19900548, guid: c9dfc371066374e41b2b80c29e19dc9b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9dfc371066374e41b2b80c29e19dc9b, type: 3}
 --- !u!4 &1614776540516636813 stripped
@@ -132,6 +145,10 @@ PrefabInstance:
     - target: {fileID: 135760, guid: 9e436e1551d21f945a4c0de8a82ffaa8, type: 3}
       propertyPath: m_Name
       value: Crate Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 135760, guid: 9e436e1551d21f945a4c0de8a82ffaa8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 415470, guid: 9e436e1551d21f945a4c0de8a82ffaa8, type: 3}
       propertyPath: m_RootOrder

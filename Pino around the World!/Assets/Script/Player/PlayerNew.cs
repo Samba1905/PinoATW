@@ -42,6 +42,8 @@ public class PlayerNew : MonoBehaviour
     GameManager.SlotGame SG; //Era pubblico in caso di prob
     ScoreManager SM;
 
+    public AudioClip hitDmg, shieldClip;
+
     bool tutorial, lvl1, lvl2, lvl3, lvl4, lvl5;
 
     public bool Tutorial { get { return tutorial; } }
@@ -168,6 +170,11 @@ public class PlayerNew : MonoBehaviour
         w = GameObject.Find("Warrior");
         m = GameObject.Find("Mage");
         b = GameObject.Find("Barbarian");
+
+        STABColor = GameObject.Find("BarraSTAB").GetComponent<Image>();
+        HPB = GameObject.Find("HPBar").GetComponent<Slider>();
+        DEB = GameObject.Find("DEBar").GetComponent<Slider>();
+        STAB = GameObject.Find("STABar").GetComponent<Slider>();
     }
 
     private void Start()
@@ -191,8 +198,6 @@ public class PlayerNew : MonoBehaviour
         chColorDmg125 = new Color32(255, 125, 125, 255);
         chColorDmg60 = new Color32(255, 60, 60, 255);
         chColorRed = new Color32(255, 0, 0, 255);
-
-        
     }
 
     private void Update()
@@ -204,12 +209,6 @@ public class PlayerNew : MonoBehaviour
         FeedbackDamage();
         ChangeClass();
         TargetPosition();
-
-        if (DANNO) //per fare test
-        {
-            UpdateHP(50, true);
-            DANNO = false;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -275,6 +274,7 @@ public class PlayerNew : MonoBehaviour
                 playerM.animW.SetTrigger("TakeDamage");
                 playerM.animM.SetTrigger("TakeDamage");
                 playerM.animB.SetTrigger("TakeDamage");
+                playerM.audioSourceSFX.PlayOneShot(hitDmg);
                 timerInvulnerable = 1.5f;
                 InvulnerableStatus(true);
                 return HealtsPoints -= value;
@@ -283,6 +283,7 @@ public class PlayerNew : MonoBehaviour
         if(damage && warrior.isShielding)
         {
             UpdateSTA(15);
+            playerM.audioSourceSFX.PlayOneShot(shieldClip);
             return 0;
         }
         if (damage) return 0;

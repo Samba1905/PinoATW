@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8010818319419144269
 Transform:
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03569b0637da4a0489e791e9e2ca57e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 70c2c90a9ba04d24b8afa564bef993b6, type: 3}
 --- !u!1001 &5744460019053620793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 135760, guid: 9e436e1551d21f945a4c0de8a82ffaa8, type: 3}
       propertyPath: m_TagString
       value: DarkEnergyPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 135760, guid: 9e436e1551d21f945a4c0de8a82ffaa8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 415470, guid: 9e436e1551d21f945a4c0de8a82ffaa8, type: 3}
       propertyPath: m_RootOrder
@@ -140,6 +145,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DarkEnergyPotion
       objectReference: {fileID: 0}
+    - target: {fileID: 194238, guid: 3a574517f0fd99244ab1540204c5a138, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 447570, guid: 3a574517f0fd99244ab1540204c5a138, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -183,6 +192,10 @@ PrefabInstance:
     - target: {fileID: 447570, guid: 3a574517f0fd99244ab1540204c5a138, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586480964833412804, guid: 3a574517f0fd99244ab1540204c5a138, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a574517f0fd99244ab1540204c5a138, type: 3}

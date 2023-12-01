@@ -5,7 +5,7 @@ UI
 4. Creare menu selezione livelli (FATTO)
 5. Creare selezione difficoltà livello
 6. Creare la modifica dei comandi (COMPLESSO PIU AVANTI)
-7. Creare e implementare i personaggi Mage e Barbarian
+7. Creare e implementare i personaggi Mage e Barbarian (FATTO)
 8. Strana interazione con la creazione di un account (IL TESTO STRANO MA NON GRAVE ACCETTABILE)
 9. Cambiare tutti gli accessi della UI da X to GameObject (FATTO)
 10. Dopo la build non apre gli SpecificOptions (RISOLTO)
@@ -17,10 +17,10 @@ UI
 ---------------------------------------------------------------------------------------------------
 
 Gameplay
-1. Migliorare Deficenza artificiale
+1. Migliorare Deficenza artificiale (SOLO CACTUS)
 2. Migliorare sistema combattimento (FATTO)
-3. Implementare sistema spell personaggio
-4. Creare companion per storia (RIPENSATO, FORSE NO)
+3. Implementare sistema spell personaggio (FATTO)
+4. Creare companion per storia (NO)
 5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE, ERRORI CARICAMENTO MENUMAIN)
 6. Creare sistema di stamina interno (FATTO)
 7. Creare UI stamina (FATTO)
@@ -46,3 +46,9 @@ PostProcessing
 Ottimizzazione
 1. Aggiungere LOD agli oggetti (FATTO)
 2. Aggiungere Occlusion Culling (FATTO)
+
+---------------------------------------------------------------------------------------------------
+
+IL GIOCO:
+1. Master dell'audio non conta da vedere perchè
+2. Non salva il gioco

@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     bool isDeath;
     Animator anim;
     PlayerNew player;
+    public AudioClip hitDmg;
+    AudioSource SFX;
 
     public float CurrentHP
     {
@@ -43,17 +45,21 @@ public class Enemy : MonoBehaviour
         isDeath = false;
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player").GetComponent<PlayerNew>();
+        SFX = GameObject.Find("SFX").GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        isDead();
         AnimUpdate();
     }
 
     bool isDead()
     {
-        if (CurrentHP == minHP) return isDeath = true;
+        if (CurrentHP == minHP)
+        {
+            DEP();
+            return isDeath = true;
+        }          
         return isDeath = false;
     }
 
@@ -63,14 +69,20 @@ public class Enemy : MonoBehaviour
         {
             anim.SetBool("isDeath", true);
             timer += Time.deltaTime;
-            player.UpdateDarkEnergy(10f, false);
             if(timer > 5f) gameObject.SetActive(false);
         }
+    }
+
+    void DEP() //DarkEnergyPlayer
+    {
+        player.UpdateDarkEnergy(10, false);
     }
 
     public void LoseHP(float dmg)
     {
         CurrentHP -= dmg;
+        SFX.PlayOneShot(hitDmg);
+        isDead();
         anim.SetTrigger("takeDmg");
         Debug.Log("Danno");
     }

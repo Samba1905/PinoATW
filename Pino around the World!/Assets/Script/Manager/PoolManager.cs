@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class PoolManager : MonoBehaviour
@@ -24,9 +23,9 @@ public class PoolManager : MonoBehaviour
     [SerializeField]
     GameObject container;
     [SerializeField]
-    GameObject _lightning, _projectile;
+    GameObject _lightning, _projectile, _explosion;
     [SerializeField]
-    List<GameObject> listLightning, listProjectile;
+    List<GameObject> listLightning, listProjectile, listExplosion;
 
     private void Awake()
     {
@@ -45,6 +44,7 @@ public class PoolManager : MonoBehaviour
     {
         listLightning = GeneratePrefabLight(3);
         listProjectile = GeneratePrefabProj(10);
+        listExplosion = GeneratePrefabExplosion(3);
     }
 
     List<GameObject> GeneratePrefabLight(int quantity) //Genera il numero di fulmini per il warrior in una lista
@@ -71,6 +71,19 @@ public class PoolManager : MonoBehaviour
         }
         return listProjectile;
     }
+
+    List<GameObject> GeneratePrefabExplosion(int quantity) //Genera il numero di esplosioni per il mago
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            GameObject explosion = Instantiate(_explosion);
+            explosion.transform.parent = container.transform;
+            explosion.SetActive(false);
+            listExplosion.Add(explosion);
+        }
+        return listExplosion;
+    }
+
     public GameObject LightningCall() //Genera l'oggetto quando chiamato
     {
         foreach (var prefab in listLightning)
@@ -103,6 +116,24 @@ public class PoolManager : MonoBehaviour
         GameObject newPreFab = Instantiate(_projectile);
         newPreFab.transform.parent = container.transform;
         listProjectile.Add(newPreFab);
+        return newPreFab;
+    }
+
+    public GameObject CastExplosion() //spara proiettile
+    {
+        foreach (var prefab in listExplosion)
+        {
+            if (prefab.activeInHierarchy == false)
+            {
+                prefab.transform.position = PlayerNew.TargetPosition() + Vector3.up;
+                prefab.SetActive(true);
+                return prefab;
+            }
+        }
+
+        GameObject newPreFab = Instantiate(_explosion);
+        newPreFab.transform.parent = container.transform;
+        listExplosion.Add(newPreFab);
         return newPreFab;
     }
 }

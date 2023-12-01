@@ -77,8 +77,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   container: {fileID: 1107802725421516622}
-  containerProj: {fileID: 0}
   _lightning: {fileID: 13301048646092075, guid: fc00828c038d8cf46af3d7c93de75c0c, type: 3}
   _projectile: {fileID: 149480, guid: 808302400462fb2479b99c3a1832334d, type: 3}
+  _explosion: {fileID: 621846293696078086, guid: eeb543cf04c0eef4fa10a1367ffa52e1, type: 3}
   listLightning: []
   listProjectile: []
+  listExplosion: []

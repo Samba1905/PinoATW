@@ -14,7 +14,7 @@ public class ProjectileMage : MonoBehaviour
         transform.position = Mage.position + Vector3.up;
         direction = PlayerMovement.forwardNow;
         lifetime = 0.5f;
-        speed = 1000f;
+        speed = 1250f;
         Invoke("Hide", lifetime);
     }
 
@@ -25,10 +25,12 @@ public class ProjectileMage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 0 || other.gameObject.layer == 6)
+        if (other.gameObject.layer == 3)
         {
             other.gameObject.GetComponentInParent<Enemy>().LoseHP(1);
+            
             Debug.Log(other.gameObject.GetComponentInParent<Enemy>().CurrentHP);
+            gameObject.SetActive(false);
         }
     }
 
