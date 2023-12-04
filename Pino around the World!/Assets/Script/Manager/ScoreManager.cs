@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
@@ -72,15 +73,15 @@ public class ScoreManager : MonoBehaviour
             switch(slotGameSM)
             {
                 case (GameManager.SlotGame)0:
-                    SaveRecord(triggerA.currentLevel);
+                    SaveRecord(triggerA.currentLevel, "/Slot1Data.json");
                     GameManager.SaveSlot1();
                     break;
                 case (GameManager.SlotGame)1:
-                    SaveRecord(triggerA.currentLevel);
+                    SaveRecord(triggerA.currentLevel, "/Slot2Data.json");
                     GameManager.SaveSlot2();
                     break;
                 case (GameManager.SlotGame)2:
-                    SaveRecord(triggerA.currentLevel);
+                    SaveRecord(triggerA.currentLevel, "/Slot3Data.json");
                     GameManager.SaveSlot3();
                     break;
             }
@@ -117,9 +118,11 @@ public class ScoreManager : MonoBehaviour
         return coinsCollect;
     }
 
-    void SaveRecord(TriggerArea.LevelComplete current)
+    void SaveRecord(TriggerArea.LevelComplete current, string jsonData)
     {
-        Game game = new Game();
+        string json = File.ReadAllText(Application.persistentDataPath + jsonData);
+
+        Game game = JsonUtility.FromJson<Game>(json);
 
         switch (current)
         {
@@ -160,8 +163,9 @@ public class ScoreManager : MonoBehaviour
                 Debug.Log("livello5");
                 break;
         }
-        string json = JsonUtility.ToJson(game);
 
+        json = JsonUtility.ToJson(game);
 
+        File.WriteAllText(Application.persistentDataPath + jsonData, json);
     }
 }

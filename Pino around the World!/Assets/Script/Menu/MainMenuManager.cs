@@ -69,13 +69,13 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        LoadSlotData();
-        LoadInteraction();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); 
     }
 
     private void LateUpdate()
-    {    
+    {
+        LoadInteraction();
+        LoadSlotData();
         CamInteraction();
         DeleteButtonsInteraction();
         SlotGameTextInteraction();

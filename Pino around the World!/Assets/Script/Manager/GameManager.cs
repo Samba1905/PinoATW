@@ -147,7 +147,9 @@ public class GameManager : MonoBehaviour
     #region Sezione salvataggi
     public static void SaveSlot1()
     {
-        Game game = new Game();
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot1Data.json");
+
+        Game game = JsonUtility.FromJson<Game>(json);
 
         game.level1 = Level1;
         game.level2 = Level2;
@@ -155,13 +157,15 @@ public class GameManager : MonoBehaviour
         game.level4 = Level4;
         game.level5 = Level5;
 
-        string json = JsonUtility.ToJson(game);
+        json = JsonUtility.ToJson(game);
 
         File.WriteAllText(Application.persistentDataPath + "/Slot1Data.json", json);
     }
     public static void SaveSlot2()
     {
-        Game game = new Game();
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot2Data.json");
+
+        Game game = JsonUtility.FromJson<Game>(json);
 
         game.level1 = Level1;
         game.level2 = Level2;
@@ -169,13 +173,15 @@ public class GameManager : MonoBehaviour
         game.level4 = Level4;
         game.level5 = Level5;
 
-        string json = JsonUtility.ToJson(game);
+        json = JsonUtility.ToJson(game);
 
         File.WriteAllText(Application.persistentDataPath + "/Slot2Data.json", json);
     }
     public static void SaveSlot3()
     {
-        Game game = new Game();
+        string json = File.ReadAllText(Application.persistentDataPath + "/Slot3Data.json");
+
+        Game game = JsonUtility.FromJson<Game>(json);
 
         game.level1 = Level1;
         game.level2 = Level2;
@@ -183,7 +189,7 @@ public class GameManager : MonoBehaviour
         game.level4 = Level4;
         game.level5 = Level5;
 
-        string json = JsonUtility.ToJson(game);
+        json = JsonUtility.ToJson(game);
 
         File.WriteAllText(Application.persistentDataPath + "/Slot3Data.json", json);
     }
