@@ -856,7 +856,9 @@ MonoBehaviour:
   speed: 0
   timer: 0
   timerImmune: 0
+  distDetect: 15
   isDeath: 0
+  anim: {fileID: 0}
   hitDmg: {fileID: 8300000, guid: a5a39a5f1a68a944aad2c7bc473476a3, type: 3}
 --- !u!114 &2078724210
 MonoBehaviour:

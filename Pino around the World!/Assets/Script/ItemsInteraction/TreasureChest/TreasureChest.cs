@@ -11,6 +11,7 @@ public class TreasureChest : MonoBehaviour
     GameObject coins;
     Animator anim;
     AudioSource clip;
+    public AudioClip audioClip;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class TreasureChest : MonoBehaviour
         interactable = false;
         dist = 3.5f;
         player = FindObjectOfType<PlayerNew>();
-        clip = GetComponent<AudioSource>();
+        clip = GameObject.Find("SFX").GetComponent<AudioSource>();
     }
     private void LateUpdate()
     {
@@ -50,6 +51,6 @@ public class TreasureChest : MonoBehaviour
 
     void EvCoins()
     {
-        clip.Play();
+        clip.PlayOneShot(audioClip);
     }
 }

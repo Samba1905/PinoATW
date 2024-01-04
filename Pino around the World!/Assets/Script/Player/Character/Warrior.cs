@@ -29,9 +29,12 @@ public class Warrior : MonoBehaviour
 
     private void Update()
     {
-        AttackMode();
-        ShieldMode();
-        SpellCast();
+        if(Time.timeScale > 0.2f)
+        {
+            AttackMode();
+            ShieldMode();
+            SpellCast();
+        }      
     }
 
     void AttackMode()

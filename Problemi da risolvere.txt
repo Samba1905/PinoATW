@@ -50,7 +50,7 @@ Ottimizzazione
 ---------------------------------------------------------------------------------------------------
 
 IL GIOCO:
-1. Master dell'audio non conta da vedere perchè (CAPITO MA DA RISOLVERE)
-2. Non salva il gioco (APPOSTO)
+1. Master dell'audio non conta da vedere perchè (RISOLTO)
+2. Non salva il gioco (RISOLTO)
 3. Sarà da mettere evidenti i record
 4. Implementare Barbaro

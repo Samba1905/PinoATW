@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Input per dash
-        if (!playerN.ExhaustState)
+        if (!playerN.ExhaustState && Time.timeScale > 0.2f)
         {
             if (Input.GetButtonDown("Dash"))
             {

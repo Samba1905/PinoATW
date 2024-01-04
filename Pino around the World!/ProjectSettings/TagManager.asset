@@ -29,6 +29,8 @@ TagManager:
   - Target
   - Container
   - Coins
+  - FxTemporaire
+  - TutorialStep
   layers:
   - Default
   - TransparentFX
@@ -42,7 +44,7 @@ TagManager:
   - NPC
   - Player
   - PostProcess
-  - 
+  - Tutorial
   - 
   - 
   - 

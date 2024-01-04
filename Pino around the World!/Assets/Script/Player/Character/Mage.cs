@@ -22,11 +22,14 @@ public class Mage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
-        forwardPosition = Vector3.forward;
-        position = transform.position;
-        RotationMage();
-        SpellCast();
+        if (Time.timeScale > 0.2f)
+        {
+            Attack();
+            forwardPosition = Vector3.forward;
+            position = transform.position;
+            RotationMage();
+            SpellCast();
+        }
     }
 
     void Attack()

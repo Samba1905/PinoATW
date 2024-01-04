@@ -275,7 +275,7 @@ public class PlayerNew : MonoBehaviour
                 playerM.animM.SetTrigger("TakeDamage");
                 playerM.animB.SetTrigger("TakeDamage");
                 playerM.audioSourceSFX.PlayOneShot(hitDmg);
-                timerInvulnerable = 1.5f;
+                timerInvulnerable = 0.5f;
                 InvulnerableStatus(true);
                 return HealtsPoints -= value;
             }
@@ -458,6 +458,7 @@ public class PlayerNew : MonoBehaviour
 
         Game game = JsonUtility.FromJson<Game>(json);
 
+        tutorial = game.tutorial;
         lvl1 = game.level1;
         lvl2 = game.level2;
         lvl3 = game.level3;
@@ -471,6 +472,7 @@ public class PlayerNew : MonoBehaviour
 
         Game game = JsonUtility.FromJson<Game>(json);
 
+        tutorial = game.tutorial;
         lvl1 = game.level1;
         lvl2 = game.level2;
         lvl3 = game.level3;
@@ -484,6 +486,7 @@ public class PlayerNew : MonoBehaviour
 
         Game game = JsonUtility.FromJson<Game>(json);
 
+        tutorial = game.tutorial;
         lvl1 = game.level1;
         lvl2 = game.level2;
         lvl3 = game.level3;

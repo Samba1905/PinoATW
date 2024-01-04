@@ -52,6 +52,9 @@ public class TriggerArea : MonoBehaviour
             case "FiveMap":
                 currentLevel = LevelComplete._level5;
                 break;
+            case "Tutorial":
+                currentLevel = LevelComplete._tutorial;
+                break;
             default:
                 currentLevel = LevelComplete._null;
                 break;

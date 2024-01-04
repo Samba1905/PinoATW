@@ -13,7 +13,6 @@ public class HealtPotion : MonoBehaviour
     {
         player = FindObjectOfType<PlayerNew>();
         clip = GameObject.Find("SFX").GetComponent<AudioSource>();
-
     }
     private void OnTriggerEnter(Collider other)
     {

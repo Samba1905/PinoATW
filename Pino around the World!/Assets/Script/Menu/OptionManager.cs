@@ -45,7 +45,7 @@ public class OptionManager : MonoBehaviour
     [SerializeField]
     AudioMixer audioMixer;
     [SerializeField]
-    AudioSource masterSource, musicSource, SFXSource;
+    AudioSource musicSource, SFXSource;
     [SerializeField]
     Slider masterValue, musicValue, SFXValue;
     [SerializeField]
@@ -86,7 +86,6 @@ public class OptionManager : MonoBehaviour
         controlsMenu = GameObject.Find("ControlsSettings"); ;
         helpMenu = GameObject.Find("HelpSettings"); ;
 
-        masterSource = GameObject.Find("Master").GetComponent<AudioSource>();
         musicSource = GameObject.Find("Music").GetComponent<AudioSource>();
         SFXSource = GameObject.Find("SFX").GetComponent<AudioSource>();
 
@@ -304,9 +303,8 @@ public class OptionManager : MonoBehaviour
     //Funzione per poter abbassare il volume
     public void AudioChanger()
     {
-        masterSource.volume = masterValue.value;
-        musicSource.volume = musicValue.value;
-        SFXSource.volume = SFXValue.value;
+        musicSource.volume = (masterValue.value / 100) * (musicValue.value / 100);
+        SFXSource.volume = (masterValue.value / 100) * (SFXValue.value / 100);
     }
 
     //Chiude il menu del volume

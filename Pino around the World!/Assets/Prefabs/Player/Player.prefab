@@ -83,7 +83,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!114 &7670842716423226084
 MonoBehaviour:
@@ -138,8 +138,8 @@ MonoBehaviour:
   animW: {fileID: 0}
   animM: {fileID: 0}
   animB: {fileID: 0}
-  footStep: {fileID: 8300000, guid: 888aa2a4462a1be428771b9b77a271d0, type: 3}
-  footStep2: {fileID: 8300000, guid: f17fc90b2e2d6c84ea76858a3244a9ad, type: 3}
+  footStep: {fileID: 8300000, guid: cfeb2304e0e2a25488ffe85536f4b41e, type: 3}
+  footStep2: {fileID: 8300000, guid: 71797a67dd864a94c87df25c8efdde8e, type: 3}
   dashSFX: {fileID: 8300000, guid: 79d00ae99557c054e8d440626244fb93, type: 3}
   failSpell: {fileID: 8300000, guid: 5d0de6f278fc2b34a89470348660bf31, type: 3}
   presentCh: 0

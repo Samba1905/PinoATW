@@ -10972,7 +10972,6 @@ MonoBehaviour:
   postProcess: {fileID: 0}
   confirmedVideoChanges: 0
   audioMixer: {fileID: 24100000, guid: e676c7d4b3c85974da6543742106bb5f, type: 2}
-  masterSource: {fileID: 0}
   musicSource: {fileID: 0}
   SFXSource: {fileID: 0}
   masterValue: {fileID: 0}
@@ -13509,10 +13508,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8381211038530118417, guid: e354baaa68e051c44bc3a03598953ad8, type: 3}
-      propertyPath: m_Value
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 8381211038820642300, guid: e354baaa68e051c44bc3a03598953ad8, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13525,14 +13520,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1706581131}
-    - target: {fileID: 8381211039313748298, guid: e354baaa68e051c44bc3a03598953ad8, type: 3}
-      propertyPath: m_Value
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8381211039524678413, guid: e354baaa68e051c44bc3a03598953ad8, type: 3}
-      propertyPath: m_Value
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 8381211039701671265, guid: e354baaa68e051c44bc3a03598953ad8, type: 3}
       propertyPath: m_Name
       value: AudioSettings

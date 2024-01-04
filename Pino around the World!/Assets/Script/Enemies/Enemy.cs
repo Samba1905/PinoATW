@@ -8,13 +8,14 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     float maxHP, minHP = 0;
     [SerializeField]
-    float speed, timer, timerImmune;
+    float speed, timer, timerImmune, distDetect;
     [SerializeField]
     bool isDeath;
-    Animator anim;
+    public Animator anim;
     PlayerNew player;
     public AudioClip hitDmg;
     AudioSource SFX;
+    Collider colliderB;
 
     public float CurrentHP
     {
@@ -46,11 +47,13 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player").GetComponent<PlayerNew>();
         SFX = GameObject.Find("SFX").GetComponent<AudioSource>();
+        colliderB = GetComponent<Collider>();
     }
 
     private void Update()
     {
         AnimUpdate();
+        PlayerDetect();
     }
 
     bool isDead()
@@ -58,6 +61,7 @@ public class Enemy : MonoBehaviour
         if (CurrentHP == minHP)
         {
             DEP();
+            colliderB.isTrigger = true;
             return isDeath = true;
         }          
         return isDeath = false;
@@ -69,13 +73,28 @@ public class Enemy : MonoBehaviour
         {
             anim.SetBool("isDeath", true);
             timer += Time.deltaTime;
-            if(timer > 5f) gameObject.SetActive(false);
+            if(timer > 3.5f) gameObject.SetActive(false);
         }
     }
 
     void DEP() //DarkEnergyPlayer
     {
         player.UpdateDarkEnergy(10, false);
+    }
+
+    public bool PlayerDetect() //Detect Player
+    {
+        Ray ray = new Ray(transform.position + new Vector3 (0f,0.5f,0f), (player.transform.position - transform.position).normalized);
+        RaycastHit hit;
+
+        if(Physics.Raycast(ray, out hit, distDetect))
+        {
+            if (hit.collider.gameObject.layer == 10)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void LoseHP(float dmg)

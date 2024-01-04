@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     private static bool _level3;
     private static bool _level4;
     private static bool _level5;
+    private static bool _tutorial;
 
     public static bool Level1
     {
@@ -76,6 +77,13 @@ public class GameManager : MonoBehaviour
         get
         {
             return _level5;
+        }
+    }
+    public static bool Tutorial
+    {
+        get
+        {
+            return _tutorial;
         }
     }
 
@@ -117,11 +125,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static bool PlayerStatus
-    {
-        get ;
-    }
-
     private void Awake()
     {
         #region Singleton
@@ -156,6 +159,7 @@ public class GameManager : MonoBehaviour
         game.level3 = Level3;
         game.level4 = Level4;
         game.level5 = Level5;
+        game.tutorial = Tutorial;
 
         json = JsonUtility.ToJson(game);
 
@@ -172,6 +176,7 @@ public class GameManager : MonoBehaviour
         game.level3 = Level3;
         game.level4 = Level4;
         game.level5 = Level5;
+        game.tutorial = Tutorial;
 
         json = JsonUtility.ToJson(game);
 
@@ -188,6 +193,7 @@ public class GameManager : MonoBehaviour
         game.level3 = Level3;
         game.level4 = Level4;
         game.level5 = Level5;
+        game.tutorial = Tutorial;
 
         json = JsonUtility.ToJson(game);
 
@@ -205,6 +211,7 @@ public class GameManager : MonoBehaviour
         _level3 = game.level3;
         _level4 = game.level4;
         _level5 = game.level5;
+        _tutorial = game.tutorial;
     }
     public void LoadSlot2()
     {
@@ -217,6 +224,7 @@ public class GameManager : MonoBehaviour
         _level3 = game.level3;
         _level4 = game.level4;
         _level5 = game.level5;
+        _tutorial = game.tutorial;
     }
     public void LoadSlot3()
     {
@@ -229,6 +237,7 @@ public class GameManager : MonoBehaviour
         _level3 = game.level3;
         _level4 = game.level4;
         _level5 = game.level5;
+        _tutorial = game.tutorial;
     }
     #endregion
     #region Gestione Livelli
@@ -239,6 +248,7 @@ public class GameManager : MonoBehaviour
         _level3 = player.Lvl3;
         _level4 = player.Lvl4;
         _level5 = player.Lvl5;
+        _tutorial = player.Tutorial;
     }
     #endregion
     #region MenuPausa
