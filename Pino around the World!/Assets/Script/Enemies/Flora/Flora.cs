@@ -10,6 +10,8 @@ public class Flora : MonoBehaviour
     public AudioClip roarClip;
     AudioSource audioSourceSFX;
     PlayerNew player;
+    [SerializeField]
+    GameObject [] proj;
 
     void Start()
     {
@@ -21,22 +23,27 @@ public class Flora : MonoBehaviour
     void Update()
     {
         if(!firstDamage && enemy.CurrentHP != 3) Roar();
-        if(firstDamage && enemy.PlayerDetect()) Attack();
+        if(firstDamage && enemy.PlayerDetect() && enemy.CurrentHP != 0) Attack();
     }
 
     bool Roar()
     {
         audioSourceSFX.PlayOneShot(roarClip);
+        timerAttack = 1.25f;
         return firstDamage = true;
     }
 
     void Attack()
     {
-        transform.forward = player.transform.position;
         timerAttack += Time.deltaTime;
-        if(timerAttack > 1.5f)
-        {
-            Debug.Log("SFERA");
+        if (!proj[0].activeInHierarchy) transform.forward = (transform.position - player.transform.position) * -1;
+
+        if (timerAttack > 1.55f)
+        {            
+            foreach (GameObject p in proj)
+            {            
+                p.SetActive(true);
+            }
             timerAttack = 0f;
         }
     }

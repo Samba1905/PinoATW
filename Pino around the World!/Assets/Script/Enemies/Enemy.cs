@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player").GetComponent<PlayerNew>();
         SFX = GameObject.Find("SFX").GetComponent<AudioSource>();
-        colliderB = GetComponent<Collider>();
+        colliderB = GetComponentInParent<Collider>();
     }
 
     private void Update()
@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         if (CurrentHP == minHP)
         {
             DEP();
-            colliderB.isTrigger = true;
+            colliderB.enabled = false;
             return isDeath = true;
         }          
         return isDeath = false;

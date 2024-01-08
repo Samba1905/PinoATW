@@ -680,6 +680,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3678620355593280972}
     m_Modifications:
+    - target: {fileID: 1392079791, guid: dbe01c2052ba74b43a557b5a8c87252d, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 8300000, guid: 54d0857bcb42e23438862135a012163a, type: 3}
     - target: {fileID: 1456797687667090, guid: dbe01c2052ba74b43a557b5a8c87252d, type: 3}
       propertyPath: m_Name
       value: Mage

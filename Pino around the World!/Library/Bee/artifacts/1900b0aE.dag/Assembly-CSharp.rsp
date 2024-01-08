@@ -367,6 +367,7 @@
 "Assets/Script/Enemies/Cactus/Cactus.cs"
 "Assets/Script/Enemies/Enemy.cs"
 "Assets/Script/Enemies/Flora/Flora.cs"
+"Assets/Script/Enemies/Flora/ProjFlora.cs"
 "Assets/Script/Enemies/Swine/Swine.cs"
 "Assets/Script/ItemsInteraction/DarkEnergyPotion/DarkEnergyPotion.cs"
 "Assets/Script/ItemsInteraction/HealthPotion/HealtPotion.cs"
