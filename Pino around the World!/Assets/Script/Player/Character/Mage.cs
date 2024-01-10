@@ -8,8 +8,9 @@ public class Mage : MonoBehaviour
     PlayerNew player;
     PlayerMovement playerM;
     Animator anim;
-    public AudioClip clipAtt, explosion;
+    public AudioClip clipAtt, explosion, fireball;
     public static Vector3 forwardPosition, position;
+    float timerSpell;
 
     void Start()
     {
@@ -38,21 +39,54 @@ public class Mage : MonoBehaviour
         {           
             anim.SetTrigger("isAttacking");
         }
+        else if(Input.GetButtonDown("Attack1") && player.DarkEnergyPoints < 3f)
+        {
+            playerM.audioSourceSFX.PlayOneShot(playerM.failSpell);
+        }
     }
 
     void SpellCast()
     {
-        if (Input.GetButtonDown("Attack3"))
+        timerSpell += Time.deltaTime;
+
+        if (Input.GetButtonDown("Attack3") && timerSpell > 0.5f)
         {
             playerM.animM.SetBool("isCasting", true);
-            if (player.DarkEnergyPoints >= 17f)
+            if (player.DarkEnergyPoints >= 30f)
             {
                 poolManager.CastExplosion();
-                player.UpdateDarkEnergy(17f, true);
+                player.UpdateDarkEnergy(30f, true);
                 playerM.audioSourceSFX.PlayOneShot(explosion);
+                timerSpell = 0f;
                 Debug.Log(player.DarkEnergyPoints);
             }
-            else playerM.audioSourceSFX.PlayOneShot(playerM.failSpell);
+            else
+            {
+                timerSpell = 0f;
+                playerM.audioSourceSFX.PlayOneShot(playerM.failSpell);
+            }
+        }
+        else
+        {
+            playerM.animM.SetBool("isCasting", false);
+        }
+
+        if (Input.GetButtonDown("Attack2") && timerSpell > 0.5f)
+        {
+            playerM.animM.SetBool("isCasting", true);
+            if (player.DarkEnergyPoints >= 12f)
+            {
+                poolManager.CastFireball();
+                player.UpdateDarkEnergy(12f, true);
+                playerM.audioSourceSFX.PlayOneShot(fireball);
+                timerSpell = 0f;
+                Debug.Log(player.DarkEnergyPoints);
+            }
+            else
+            {
+                timerSpell = 0f;
+                playerM.audioSourceSFX.PlayOneShot(playerM.failSpell);
+            }
         }
         else
         {

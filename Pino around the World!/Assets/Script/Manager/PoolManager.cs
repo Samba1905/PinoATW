@@ -23,9 +23,9 @@ public class PoolManager : MonoBehaviour
     [SerializeField]
     GameObject container;
     [SerializeField]
-    GameObject _lightning, _projectile, _explosion;
+    GameObject _lightning, _projectile, _explosion, _fireball;
     [SerializeField]
-    List<GameObject> listLightning, listProjectile, listExplosion;
+    List<GameObject> listLightning, listProjectile, listExplosion, listFireball;
 
     private void Awake()
     {
@@ -43,8 +43,9 @@ public class PoolManager : MonoBehaviour
     private void Start()
     {
         listLightning = GeneratePrefabLight(3);
-        listProjectile = GeneratePrefabProj(10);
+        listProjectile = GeneratePrefabProj(2);
         listExplosion = GeneratePrefabExplosion(3);
+        listFireball = GeneratePrefabFireball(2);
     }
 
     List<GameObject> GeneratePrefabLight(int quantity) //Genera il numero di fulmini per il warrior in una lista
@@ -65,7 +66,7 @@ public class PoolManager : MonoBehaviour
         {
             GameObject projectile = Instantiate(_projectile);
             projectile.transform.parent = container.transform;
-            projectile.transform.position = new Vector3(container.transform.position.x, container.transform.position.y + 1f, container.transform.position.z);
+            projectile.transform.position = new Vector3(container.transform.position.x, container.transform.position.y + 0.5f, container.transform.position.z);
             projectile.SetActive(false);
             listProjectile.Add(projectile);
         }
@@ -82,6 +83,19 @@ public class PoolManager : MonoBehaviour
             listExplosion.Add(explosion);
         }
         return listExplosion;
+    }
+
+    List<GameObject> GeneratePrefabFireball(int quantity) //Genera il numero di fireball per il mago
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            GameObject fireball = Instantiate(_fireball);
+            fireball.transform.parent = container.transform;
+            fireball.transform.position = new Vector3(container.transform.position.x, container.transform.position.y + 0.5f, container.transform.position.z);
+            fireball.SetActive(false);
+            listExplosion.Add(fireball);
+        }
+        return listFireball;
     }
 
     public GameObject LightningCall() //Genera l'oggetto quando chiamato
@@ -134,6 +148,23 @@ public class PoolManager : MonoBehaviour
         GameObject newPreFab = Instantiate(_explosion);
         newPreFab.transform.parent = container.transform;
         listExplosion.Add(newPreFab);
+        return newPreFab;
+    }
+
+    public GameObject CastFireball() //spara fireball
+    {
+        foreach (var prefab in listFireball)
+        {
+            if (prefab.activeInHierarchy == false)
+            {
+                prefab.SetActive(true);
+                return prefab;
+            }
+        }
+
+        GameObject newPreFab = Instantiate(_fireball);
+        newPreFab.transform.parent = container.transform;
+        listFireball.Add(newPreFab);
         return newPreFab;
     }
 }

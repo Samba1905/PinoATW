@@ -5228,4 +5228,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: {fileID: 155432}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 2f65217856b86c9479bf686dd0df9c5b, type: 3}

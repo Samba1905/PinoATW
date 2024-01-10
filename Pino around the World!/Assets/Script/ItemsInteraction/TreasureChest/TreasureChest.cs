@@ -39,7 +39,7 @@ public class TreasureChest : MonoBehaviour
         if (interactable && Input.GetButton("Interact") && !isOpen)
         {
             anim.SetBool("openChest", true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 2.5f);
         }
     }
 

@@ -1878,17 +1878,21 @@ MonoBehaviour:
     You can recover it with
     Red Potions!
 
-    Bottom left your Dark energy, you consume it when attack with
-    powerful spell or attack with mage!
+    Under the HP bar there is the Stamina, it will be consumed
+    when you run, dash or use Warrior! Be careful do not exhaust your character or
+    you will be an easy target!
 
-    You can recover it when you gather Green
-    Potions or kill Enemies!
+    Bottom left your Dark energy, you consume it
+    when attack with powerful spell or attack with mage!
 
-    Top Right your Treasure Chest you collect!
+    You can recover it
+    when you gather Green Potions or kill Enemies!
 
-    On
-    top the timer! You can decrease it when you collecting Trasure Chest or if you
-    kill Enemies!
+    Top Right your Treasure Chest
+    you collect!
+
+    On top the timer! You can decrease it when you collecting Trasure
+    Chest or if you kill Enemies!
 
 
     Left click to continue!'
@@ -5517,7 +5521,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
+  m_text: 'Little explanation of your character:
+
+    The Warrior is your melee fighter,
+    he can slash enemies with sword or block damage with shield! Be careful at the
+    stamina!
+
+    The Mage is your ranged character, he consume Dark Energy to spell
+    basic attack!
+
+    The Barbarian is a coward! He run so good but is armless!
+
+
+    Here
+    the end of tutorial!
+
+    Kill this little cute and pacific flower to end the
+    Tutorial!
 
 
     Left click to continue!'
@@ -16634,7 +16654,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c58c43dcbbb9a2945b55730439462d3c, type: 2}
+  - {fileID: 2100000, guid: ca6241ddad60c1842b04fd69c4bb0715, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21844,6 +21864,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8826354705480527198, guid: 31695ec91881c594ea4a93e4c7717d56, type: 3}
   m_PrefabInstance: {fileID: 834018509}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1446550181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4400987780622888047, guid: 73e2fef7aea305149b29ebf9336e8b0e, type: 3}
+  m_PrefabInstance: {fileID: 4401485463140359003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1450794393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25263,7 +25288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3678620355593280972, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3678620355593280972, guid: eaacc0cdd061e054e9db219d003b56aa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26421,7 +26446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2520212441576684011, guid: 811ee47f760be8c4f9cf80a76819cbb0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 2520212441576684011, guid: 811ee47f760be8c4f9cf80a76819cbb0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30322,11 +30347,6 @@ MonoBehaviour:
     direction!
 
 
-    Your Timer decrease if you collect Treasure Chest or kill Enemies!
-
-    Do
-    your best and beat your record!
-
     Left click to continue!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3e280e0a1bf63bb45a4a22ef9408b719, type: 2}
@@ -32243,6 +32263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BLOCCO PASSAGGIO
       objectReference: {fileID: 0}
+    - target: {fileID: 8560562259624946010, guid: 24db47c7d45dfc14cbd3bb8669836cc1, type: 3}
+      propertyPath: flora
+      value: 
+      objectReference: {fileID: 1446550181}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24db47c7d45dfc14cbd3bb8669836cc1, type: 3}
 --- !u!1001 &2406525700344827769

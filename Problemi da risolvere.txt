@@ -6,7 +6,7 @@ UI
 5. Creare selezione difficoltà livello
 6. Creare la modifica dei comandi (COMPLESSO PIU AVANTI)
 7. Creare e implementare i personaggi Mage e Barbarian (FATTO)
-8. Strana interazione con la creazione di un account (IL TESTO STRANO MA NON GRAVE ACCETTABILE)
+8. Strana interazione con la creazione di un account (IL TESTO STRANO MA NON GRAVE ACCETTABILE) (14)
 9. Cambiare tutti gli accessi della UI da X to GameObject (FATTO)
 10. Dopo la build non apre gli SpecificOptions (RISOLTO)
 11. Non salva davvero (RISOLTO)
@@ -17,11 +17,11 @@ UI
 ---------------------------------------------------------------------------------------------------
 
 Gameplay
-1. Migliorare Deficenza artificiale (SOLO CACTUS)
+1. Migliorare Deficenza artificiale (SOLO CACTUS)(FATTO)
 2. Migliorare sistema combattimento (FATTO)
 3. Implementare sistema spell personaggio (FATTO)
 4. Creare companion per storia (NO)
-5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE, ERRORI CARICAMENTO MENUMAIN)
+5. Implementare tutto il sistema salvataggio progressi giocatore (DA TESTARE, ERRORI CARICAMENTO MENUMAIN)(SEMBRA OK TEST FUTURI)
 6. Creare sistema di stamina interno (FATTO)
 7. Creare UI stamina (FATTO)
 8. Animazione non sempre funzionale (RISOLTO)
@@ -54,3 +54,6 @@ IL GIOCO:
 2. Non salva il gioco (RISOLTO)
 3. Sarà da mettere evidenti i record
 4. Implementare Barbaro
+5. Treasure chest buggata (RISOLTO)
+6. Stamina buggata (CAPIRE, GUERRIERO)
+7. cactus innoquo (AGGRESSIVO ORA)

@@ -44,7 +44,7 @@ public class Warrior : MonoBehaviour
         timerPush += Time.deltaTime;
         playerM.animW.SetBool("isAttacking", isAttacking);
 
-        if (timerAttack > 1f)
+        if (timerAttack > 0.5f)
         {
             firstAttack = false;
             secondAttack = false;
@@ -57,7 +57,7 @@ public class Warrior : MonoBehaviour
         }
         if (!player.ExhaustState) //Condizione che impedisce di attaccare in caso di stato esausto
         {
-            if (Input.GetButtonDown("Attack1") && firstAttack && secondAttack && timerAttack < 1f)
+            if (Input.GetButtonDown("Attack1") && firstAttack && secondAttack && timerAttack < 0.5f)
             {
                 thirdAttack = true;
                 doDamage = true;
@@ -65,7 +65,7 @@ public class Warrior : MonoBehaviour
                 timerAttack = 0f;
                 timerPush = 0f;
             }
-            else if (Input.GetButtonDown("Attack1") && firstAttack && timerAttack < 1f)
+            else if (Input.GetButtonDown("Attack1") && firstAttack && timerAttack < 0.5f)
             {
                 secondAttack = true;
                 doDamage = true;

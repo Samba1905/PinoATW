@@ -977,6 +977,7 @@ MonoBehaviour:
   isDeath: 0
   anim: {fileID: 0}
   hitDmg: {fileID: 8300000, guid: a521e90f2cd74d94387d420534ed47cd, type: 3}
+  death: {fileID: 8300000, guid: d8ac21fbd9e920141995c502c3c48ca0, type: 3}
 --- !u!114 &4500391323704610404
 MonoBehaviour:
   m_ObjectHideFlags: 0

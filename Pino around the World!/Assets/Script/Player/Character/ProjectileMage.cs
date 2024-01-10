@@ -11,7 +11,7 @@ public class ProjectileMage : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.position = Mage.position + Vector3.up;
+        transform.position = Mage.position + new Vector3(0f,0.5f,0f);
         direction = PlayerMovement.forwardNow;
         lifetime = 0.5f;
         speed = 1250f;

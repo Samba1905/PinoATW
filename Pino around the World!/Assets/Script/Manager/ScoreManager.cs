@@ -15,6 +15,7 @@ public class ScoreManager : MonoBehaviour
     TextMeshProUGUI timeText, coinsText;
     [SerializeField]
     float timeLevel;
+    float timeRecord;
     [SerializeField]
     GameObject levelEndPanel;
     [SerializeField]
@@ -66,7 +67,8 @@ public class ScoreManager : MonoBehaviour
             MoneyCount();
             levelEndPanel.SetActive(true);
             gameOver.text = "Victory!";
-            scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
+            timeRecord = timeLevel - ((5f * enemyKilled) + (7.5f * coinsCollect));
+            scoreVal.text = $"{timeRecord.ToString("0.0")} Sec!";
             coinsVal.text = $"{coinsCollect} / {coinsCount} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
             GameManager.CheckLevelStatus();
@@ -94,7 +96,8 @@ public class ScoreManager : MonoBehaviour
             levelEndPanel.SetActive(true);
             continueButton.interactable = false;
             gameOver.text = "Game Over!";
-            scoreVal.text = $"{timeLevel.ToString("0.0")} Sec!";
+            timeRecord = timeLevel - ((5f * enemyKilled) + (7.5f * coinsCollect));
+            scoreVal.text = $"{timeRecord.ToString("0.0")} Sec!";
             coinsVal.text = $"{coinsCollect} / {coinsCount} Coins!";
             enemiesVal.text = $"{enemyKilled} / {enemyCount} Enemies!";
         }
@@ -103,7 +106,7 @@ public class ScoreManager : MonoBehaviour
     void CoinText()
     {
         coinsText.text = coinsCollect.ToString("0");
-        if (Input.GetButtonUp("Interact")) Invoke("MoneyCount", 5.5f);
+        if (Input.GetButtonUp("Interact")) Invoke("MoneyCount", 3.0f);
     }
 
     int EnemiesCount()
@@ -133,31 +136,31 @@ public class ScoreManager : MonoBehaviour
                 Debug.Log("Tutorial");
                 break;
             case (TriggerArea.LevelComplete)2:
-                if (timeLevel > game.timer1) game.timer1 = timeLevel;
+                if (timeRecord > game.timer1) game.timer1 = timeRecord;
                 if (coinsCollect > game.coins1) game.coins1 = coinsCollect;
                 if (enemyKilled > game.enemies1) game.enemies1 = enemyKilled;
                 Debug.Log("livello1");
                 break;
             case (TriggerArea.LevelComplete)3:
-                if (timeLevel > game.timer2) game.timer2 = timeLevel;
+                if (timeRecord > game.timer2) game.timer2 = timeRecord;
                 if (coinsCollect > game.coins2) game.coins2 = coinsCollect;
                 if (enemyKilled > game.enemies2) game.enemies2 = enemyKilled;
                 Debug.Log("livello2");
                 break;
             case (TriggerArea.LevelComplete)4:
-                if (timeLevel > game.timer3) game.timer3 = timeLevel;
+                if (timeRecord > game.timer3) game.timer3 = timeRecord;
                 if (coinsCollect > game.coins3) game.coins3 = coinsCollect;
                 if (enemyKilled > game.enemies3) game.enemies3 = enemyKilled;
                 Debug.Log("livello3");
                 break;
             case (TriggerArea.LevelComplete)5:
-                if (timeLevel > game.timer4) game.timer4 = timeLevel;
+                if (timeRecord > game.timer4) game.timer4 = timeRecord;
                 if (coinsCollect > game.coins4) game.coins4 = coinsCollect;
                 if (enemyKilled > game.enemies4) game.enemies4 = enemyKilled;
                 Debug.Log("livello4");
                 break;
             case (TriggerArea.LevelComplete)6:
-                if (timeLevel > game.timer5) game.timer5 = timeLevel;
+                if (timeRecord > game.timer5) game.timer5 = timeRecord;
                 if (coinsCollect > game.coins5) game.coins5 = coinsCollect;
                 if (enemyKilled > game.enemies5) game.enemies5 = enemyKilled;
                 Debug.Log("livello5");

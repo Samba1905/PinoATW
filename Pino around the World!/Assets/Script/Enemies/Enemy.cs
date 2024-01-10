@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     bool isDeath;
     public Animator anim;
     PlayerNew player;
-    public AudioClip hitDmg;
+    public AudioClip hitDmg, death;
     AudioSource SFX;
     Collider colliderB;
 
@@ -61,6 +61,7 @@ public class Enemy : MonoBehaviour
         if (CurrentHP == minHP)
         {
             DEP();
+            SFX.PlayOneShot(death);
             colliderB.enabled = false;
             return isDeath = true;
         }          
