@@ -120,6 +120,11 @@ public class Warrior : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        isAttacking = false;
+    }
+
 
     void EvNormalAttack() //Funzione per attacco più immersivo richiamato da evento
     {

@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float rotationSpeed;
     [SerializeField]
-    float moveSpeed, walkSpeed, runSpeed, exhSpeed;
+    float moveSpeed, walkSpeed, runSpeed, exhSpeed, walkBSpeed, runBSpeed;
     Vector3 move;
     public static Vector3 forwardNow;
     #endregion
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     bool isDashing;
     #endregion
 
-    public bool consumeRun, consumeDash;
+    public bool consumeRun, consumeDash, barbarianRun;
 
     private void Start()
     {
@@ -122,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
         if (inputDir != Vector3.zero) 
         { 
             warrior.forward = Vector3.Slerp(warrior.forward, inputDir.normalized, rotationSpeed * Time.fixedDeltaTime);
-            //mage.forward = warrior.forward; TopDownShooter ora
             barbarian.forward = warrior.forward;
             if (isRunning) consumeRun = true;
             else consumeRun = false;
@@ -130,9 +129,10 @@ public class PlayerMovement : MonoBehaviour
 
         //Velocita di movimento
         if (playerN.ExhaustState) moveSpeed = exhSpeed;
+        else if (barbarianRun && !isRunning) moveSpeed = walkBSpeed;
+        else if (barbarianRun && isRunning) moveSpeed = runBSpeed;
         else if (!isRunning) moveSpeed = walkSpeed;
         else if (isRunning) moveSpeed = runSpeed;
-
 
         //Movimento del player
         rb.velocity = (inputDir.normalized * moveSpeed * Time.fixedDeltaTime);

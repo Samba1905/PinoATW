@@ -21,7 +21,7 @@ public class Cactus : MonoBehaviour
         {
             anim.SetBool("Attack", true);
             dmgPlayer += Time.deltaTime;
-            if (dmgPlayer > 0.55f && timer == 0f && enemy.CurrentHP != 0)
+            if (dmgPlayer > 0.45f && timer == 0f && enemy.CurrentHP != 0)
             {
                 other.gameObject.GetComponentInParent<PlayerNew>().UpdateHP(damageCactus, true);
                 dmgPlayer = 0f;

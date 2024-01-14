@@ -147,7 +147,9 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 300
   runSpeed: 500
-  exhSpeed: 220
+  exhSpeed: 180
+  walkBSpeed: 450
+  runBSpeed: 850
   dashForce: 20
   dashUpwardForce: 0
   timeDash: 0.15
@@ -155,6 +157,7 @@ MonoBehaviour:
   isDashing: 0
   consumeRun: 0
   consumeDash: 0
+  barbarianRun: 0
 --- !u!1001 &1764907064885295284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -398,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b542b315b64761949b08678a9bc7198b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runBarb: {fileID: 8300000, guid: 5341ea4d0c17f7d45850251607520f74, type: 3}
 --- !u!1001 &3678620355539812537
 PrefabInstance:
   m_ObjectHideFlags: 0
