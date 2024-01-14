@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     Camera cam;
     public AudioSource audioSourceSFX;
     public Animator animW, animM, animB;
+    [SerializeField]
+    GameObject smokeTrail;
 
     public AudioClip footStep, footStep2, dashSFX, failSpell;
 
@@ -58,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
         mage = GameObject.Find("Mage").GetComponent<Transform>();
         barbarian = GameObject.Find("Barbarian").GetComponent<Transform>();
         orientation = GetComponentInChildren<Transform>().Find("Orientation");
-        audioSourceSFX = GameObject.Find("SFX").GetComponentInChildren<AudioSource>();
+        //audioSourceSFX = GameObject.Find("SFX").GetComponentInChildren<AudioSource>();
+        audioSourceSFX = GetComponentInParent<AudioSource>();
         playerN = GetComponent<PlayerNew>();
         rb = GetComponent<Rigidbody>();
         actuallyCh = 0;
@@ -74,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovementPlayer();
+        audioSourceSFX.volume = OptionManager.SFXVolume;
     }
 
     void InputPlayer()

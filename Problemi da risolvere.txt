@@ -53,7 +53,7 @@ IL GIOCO:
 1. Master dell'audio non conta da vedere perchè (RISOLTO)
 2. Non salva il gioco (RISOLTO)
 3. Sarà da mettere evidenti i record
-4. Implementare Barbaro
+4. Implementare Barbaro (IN CORSO)
 5. Treasure chest buggata (RISOLTO)
-6. Stamina buggata (CAPIRE, GUERRIERO)
-7. cactus innoquo (AGGRESSIVO ORA)
+6. Stamina buggata (RISOLTO)
+7. cactus innoquo (AGGRESSIVO ORA PERFETTO)

@@ -48,6 +48,7 @@ public class OptionManager : MonoBehaviour
     AudioSource musicSource, SFXSource;
     [SerializeField]
     Slider masterValue, musicValue, SFXValue;
+    public static float SFXVolume;
     [SerializeField]
     GameObject audioMenu;
     #endregion
@@ -137,6 +138,7 @@ public class OptionManager : MonoBehaviour
         CheckOptionsMenu();
         AudioChanger();
         GameChanger();
+        SFXVolume = SFXSource.volume;
     }
 
     private void OnApplicationQuit()

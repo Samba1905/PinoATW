@@ -81,7 +81,9 @@ MonoBehaviour:
   _projectile: {fileID: 149480, guid: 808302400462fb2479b99c3a1832334d, type: 3}
   _explosion: {fileID: 621846293696078086, guid: eeb543cf04c0eef4fa10a1367ffa52e1, type: 3}
   _fireball: {fileID: 3025433686038941977, guid: 5e3e6b49c5033f74d97783f2042e3e31, type: 3}
+  _smokeTrail: {fileID: 8467259507541557604, guid: 76d9322789ae3fd4299a28e029fc3ffa, type: 3}
   listLightning: []
   listProjectile: []
   listExplosion: []
   listFireball: []
+  listSmokeTrail: []

@@ -71064,15 +71064,15 @@ PrefabInstance:
       objectReference: {fileID: 1573761526}
     - target: {fileID: 3980346558088860367, guid: dbd153970649f9c4493155385c900236, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3980346558088860367, guid: dbd153970649f9c4493155385c900236, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3980346558088860367, guid: dbd153970649f9c4493155385c900236, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 3980346558341887490, guid: dbd153970649f9c4493155385c900236, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -6,6 +6,7 @@ public class Barbarian : MonoBehaviour
 {
     PlayerMovement playerM;
     PlayerNew player;
+    PoolManager poolManager;
     float timerSpellCD, timerSpell;
     bool restoreDE;
     public AudioClip runBarb;
@@ -15,6 +16,7 @@ public class Barbarian : MonoBehaviour
     {
         playerM = GetComponentInParent<PlayerMovement>();
         player = GetComponentInParent<PlayerNew>();
+        poolManager = FindObjectOfType<PoolManager>();
     }
 
     
@@ -27,6 +29,10 @@ public class Barbarian : MonoBehaviour
     {
         timerSpellCD += Time.deltaTime;
         timerSpell += Time.deltaTime;
+        if(Input.GetButtonDown("Attack1"))
+        {
+
+        }
 
         if (Input.GetButtonDown("Attack2") && timerSpellCD > 0.33f && !player.ExhaustState)
         {
@@ -46,20 +52,20 @@ public class Barbarian : MonoBehaviour
             }
         }
 
-        if(timerSpell > 2.5f)
+        if(Input.GetButtonDown("Attack3"))
+        {
+
+        }
+
+        if(timerSpell > 2f)
         {
             playerM.barbarianRun = false;
             if(restoreDE)
             {
-                player.UpdateDarkEnergy(5f, false);
+                player.UpdateDarkEnergy(10f, false);
                 restoreDE = false;
             }
         }
-    }
-
-    private void OnDisable()
-    {
-        playerM.barbarianRun = false;
     }
 
     void EvFootStep()

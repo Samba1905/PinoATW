@@ -29,10 +29,10 @@ Mage
 6. Script - OK
 
 Barbarian
-1. Attacchi - FARE
-2. Stamina - FARE
-3. Animazioni - FARE
+1. Attacchi - NON CI SONO
+2. Stamina - IN CORSO
+3. Animazioni - IN CORSO
 4. Controller - OK
-5. Suoni - FARE
-6. Script - FARE
+5. Suoni - OK/IN CORSO
+6. Script - IN CORSo
 
