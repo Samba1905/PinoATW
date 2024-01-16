@@ -380,6 +380,7 @@
 "Assets/Script/Menu/MainMenuManager.cs"
 "Assets/Script/Menu/OptionManager.cs"
 "Assets/Script/Player/Character/Barbarian.cs"
+"Assets/Script/Player/Character/ElectricSpell.cs"
 "Assets/Script/Player/Character/Explosion.cs"
 "Assets/Script/Player/Character/Fireball.cs"
 "Assets/Script/Player/Character/LightningStrike.cs"

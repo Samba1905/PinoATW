@@ -27,7 +27,7 @@ public class ProjectileMage : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
-            other.gameObject.GetComponentInParent<Enemy>().LoseHP(1);
+            other.gameObject.GetComponentInParent<Enemy>().LoseHP(2);
             
             Debug.Log(other.gameObject.GetComponentInParent<Enemy>().CurrentHP);
             gameObject.SetActive(false);

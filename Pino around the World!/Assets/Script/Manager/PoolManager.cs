@@ -23,9 +23,9 @@ public class PoolManager : MonoBehaviour
     [SerializeField]
     GameObject container;
     [SerializeField]
-    GameObject _lightning, _projectile, _explosion, _fireball;
+    GameObject _lightning, _projectile, _explosion, _fireball, _electricS;
     [SerializeField]
-    List<GameObject> listLightning, listProjectile, listExplosion, listFireball;
+    List<GameObject> listLightning, listProjectile, listExplosion, listFireball, listElectricS;
 
     private void Awake()
     {
@@ -46,6 +46,8 @@ public class PoolManager : MonoBehaviour
         listProjectile = GeneratePrefabProj(2);
         listExplosion = GeneratePrefabExplosion(3);
         listFireball = GeneratePrefabFireball(2);
+        listElectricS = GeneratePrefabElectric(1);
+
     }
 
     List<GameObject> GeneratePrefabLight(int quantity) //Genera il numero di fulmini per il warrior in una lista
@@ -96,6 +98,19 @@ public class PoolManager : MonoBehaviour
             listExplosion.Add(fireball);
         }
         return listFireball;
+    }
+
+    List<GameObject> GeneratePrefabElectric(int quantity) //Genera il numero di elettricita per il barbaro in una lista
+    {
+        for (int i = 0; i < quantity; i++)
+        {
+            GameObject electricS = Instantiate(_electricS);
+            electricS.transform.parent = container.transform;
+            electricS.transform.position = new Vector3(container.transform.position.x, container.transform.position.y + 1.5f, container.transform.position.z);
+            electricS.SetActive(false);
+            listElectricS.Add(electricS);
+        }
+        return listElectricS;
     }
 
     public GameObject LightningCall() //Genera l'oggetto quando chiamato
@@ -166,5 +181,23 @@ public class PoolManager : MonoBehaviour
         newPreFab.transform.parent = container.transform;
         listFireball.Add(newPreFab);
         return newPreFab;
+    }
+
+    public GameObject CastElectric() //Genera l'oggetto quando chiamato
+    {
+        foreach (var prefab in listElectricS)
+        {
+            if (prefab.activeInHierarchy == false)
+            {
+                prefab.SetActive(true);
+                return prefab;
+            }
+        }
+
+        GameObject newPrefab = Instantiate(_electricS);
+        newPrefab.transform.parent = container.transform;
+        newPrefab.transform.position = new Vector3(container.transform.position.x, container.transform.position.y + 1.5f, container.transform.position.z);
+        listElectricS.Add(newPrefab);
+        return newPrefab;
     }
 }

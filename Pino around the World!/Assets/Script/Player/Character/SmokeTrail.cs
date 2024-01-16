@@ -7,6 +7,8 @@ public class SmokeTrail : MonoBehaviour
     PlayerMovement playerM;
     [SerializeField]
     ParticleSystem ps, ps1;
+
+    [System.Obsolete]
     private void Start()
     {
         playerM = FindObjectOfType<PlayerMovement>();
@@ -14,6 +16,7 @@ public class SmokeTrail : MonoBehaviour
         ps1.enableEmission = false;
     }
 
+    [System.Obsolete]
     private void Update()
     {
         if (playerM.barbarianRun)
@@ -27,6 +30,7 @@ public class SmokeTrail : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     void Emission()
     {
         ps.enableEmission = false;

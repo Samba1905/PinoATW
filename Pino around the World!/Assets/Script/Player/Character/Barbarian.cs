@@ -9,7 +9,8 @@ public class Barbarian : MonoBehaviour
     PoolManager poolManager;
     float timerSpellCD, timerSpell;
     bool restoreDE;
-    public AudioClip runBarb;
+    public static Vector3 position;
+    public AudioClip runBarb, electricBoom;
 
 
     void Start()
@@ -22,10 +23,11 @@ public class Barbarian : MonoBehaviour
     
     void Update()
     {
-        BarbRun();
+        BarbSpell();
+        position = transform.position;
     }
 
-    void BarbRun()
+    void BarbSpell()
     {
         timerSpellCD += Time.deltaTime;
         timerSpell += Time.deltaTime;
@@ -52,9 +54,26 @@ public class Barbarian : MonoBehaviour
             }
         }
 
-        if(Input.GetButtonDown("Attack3"))
+        if(Input.GetButtonDown("Attack3") && timerSpellCD > 1f)
         {
-
+            playerM.animB.SetBool("isCasting", true);
+            if(player.DarkEnergyPoints >= 0f)
+            {
+                player.UpdateDarkEnergy(0f, true);
+                poolManager.CastElectric();
+                playerM.audioSourceSFX.PlayOneShot(electricBoom);
+                timerSpellCD = 0f;
+                timerSpell = 0f;
+            }
+            else
+            {
+                playerM.audioSourceSFX.PlayOneShot(playerM.failSpell);
+                timerSpellCD = 0f;
+            }
+        }
+        else
+        {
+            playerM.animB.SetBool("isCasting", false);
         }
 
         if(timerSpell > 2f)

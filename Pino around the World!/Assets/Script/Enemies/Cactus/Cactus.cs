@@ -13,7 +13,7 @@ public class Cactus : MonoBehaviour
     {
         anim = GetComponentInParent<Animator>();
         enemy = GetComponent<Enemy>();
-        damageCactus = 8f;
+        damageCactus = 11f;
     }
     private void OnTriggerStay(Collider other)
     {

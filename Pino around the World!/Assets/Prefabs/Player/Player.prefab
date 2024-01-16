@@ -501,6 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runBarb: {fileID: 8300000, guid: d702177005210e84aa351eed36dfd3c8, type: 3}
+  electricBoom: {fileID: 8300000, guid: 07f28f63d6a110847b17f90e6cf0a1ec, type: 3}
 --- !u!1001 &3678620355077658349
 PrefabInstance:
   m_ObjectHideFlags: 0

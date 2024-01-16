@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
 
     void DEP() //DarkEnergyPlayer
     {
-        player.UpdateDarkEnergy(10, false);
+        player.UpdateDarkEnergy(15, false);
     }
 
     public bool PlayerDetect() //Detect Player
