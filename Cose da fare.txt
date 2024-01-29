@@ -1,0 +1,37 @@
+Simboli legenda ✅ or ❌ or ⌛
+
+
+Livelli:
+Tutorial	✅
+Livello 1 	⌛
+Livello 2 	❌
+Livello 3 	❌
+Livello 4	❌
+Livello 5	❌
+Livello 6	❌
+Livello 7	❌
+Livello 8	❌
+Livello 9	❌
+Livello 10	❌
+
+Nemici:
+Beary		❌
+Swine		❌
+Cactus		✅
+Flora		✅
+
+other...
+
+Level design:
+Start level 	❌
+End Level	❌
+Mission Level	❌
+
+Menu:
+Check record	❌
+Record vs altri	❌
+Achievents	❌
+
+Options:
+Controls	❌
+Help		❌

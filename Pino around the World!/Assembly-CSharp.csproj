@@ -101,6 +101,7 @@
     <Compile Include="Assets\Script\Player\Sword.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Script\ItemsInteraction\DarkEnergyPotion\DarkEnergyPotion.cs" />
+    <Compile Include="Assets\Script\Player\Character\ElectricSpell.cs" />
     <Compile Include="Assets\Script\Player\Character\Warrior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Script\Player\Character\ProjectileMage.cs" />
@@ -128,7 +129,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Script\Player\Character\LightningStrike.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Script\Player\Character\ElectricSpell.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

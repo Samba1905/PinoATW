@@ -7,8 +7,9 @@ public class Barbarian : MonoBehaviour
     PlayerMovement playerM;
     PlayerNew player;
     PoolManager poolManager;
+    Rigidbody rb;
     float timerSpellCD, timerSpell;
-    bool restoreDE;
+    bool restoreDE, stopMove;
     public static Vector3 position;
     public AudioClip runBarb, electricBoom;
 
@@ -18,6 +19,8 @@ public class Barbarian : MonoBehaviour
         playerM = GetComponentInParent<PlayerMovement>();
         player = GetComponentInParent<PlayerNew>();
         poolManager = FindObjectOfType<PoolManager>();
+        rb = GetComponentInParent<Rigidbody>();
+        stopMove = false;
     }
 
     
@@ -31,9 +34,14 @@ public class Barbarian : MonoBehaviour
     {
         timerSpellCD += Time.deltaTime;
         timerSpell += Time.deltaTime;
-        if(Input.GetButtonDown("Attack1"))
+        if(stopMove && timerSpellCD > 1.5f)
         {
-
+            stopMove = false;
+        }
+        else if(!stopMove)
+        {         
+            rb.constraints = RigidbodyConstraints.None;
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
         }
 
         if (Input.GetButtonDown("Attack2") && timerSpellCD > 0.33f && !player.ExhaustState)
@@ -57,9 +65,11 @@ public class Barbarian : MonoBehaviour
         if(Input.GetButtonDown("Attack3") && timerSpellCD > 1f)
         {
             playerM.animB.SetBool("isCasting", true);
-            if(player.DarkEnergyPoints >= 0f)
+            if(player.DarkEnergyPoints >= 40f)
             {
-                player.UpdateDarkEnergy(0f, true);
+                player.UpdateDarkEnergy(40f, true);
+                stopMove = true;
+                rb.constraints = RigidbodyConstraints.FreezeAll;
                 poolManager.CastElectric();
                 playerM.audioSourceSFX.PlayOneShot(electricBoom);
                 timerSpellCD = 0f;
