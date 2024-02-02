@@ -23,9 +23,6 @@ public class PlayerNew : MonoBehaviour
     [SerializeField] Image STABColor;
     [SerializeField] Slider HPB, STAB, DEB;
 
-    [Header("Danno per prove")]
-    public bool DANNO;
-
     [Header("Posizioni per Spell")]
     static Vector3 mousePos;
     GameObject target;
@@ -36,11 +33,13 @@ public class PlayerNew : MonoBehaviour
     Barbarian barbarian;
     [HideInInspector]
     public GameObject w, m, b;
+
     [Header("Altro")]
     [SerializeField]
     TriggerArea triggerArea;
     GameManager.SlotGame SG; //Era pubblico in caso di prob
     ScoreManager SM;
+    bool levelKey;
 
     public AudioClip hitDmg, shieldClip;
 
@@ -184,6 +183,7 @@ public class PlayerNew : MonoBehaviour
         StaminaPoints = maxSTA;
         DarkEnergyPoints = 50f;
         vulnerable = true;
+        levelKey = false;
         playerM = GetComponent<PlayerMovement>();
         target = GameObject.FindGameObjectWithTag("Target");
         if (GameObject.FindGameObjectWithTag("TriggerScene")) triggerArea = GameObject.Find("TriggerArea").GetComponent<TriggerArea>();
@@ -213,6 +213,8 @@ public class PlayerNew : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.layer == 13) levelKey = true;
+
         if(other.gameObject.CompareTag("TriggerScene"))
         {
             switch(triggerArea.currentLevel)

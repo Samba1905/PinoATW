@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 4394604831624591621}
   m_Layer: 3
   m_Name: Boximon Flora
-  m_TagString: Untagged
+  m_TagString: Flora
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -968,12 +968,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4eb6c58ece63db4685f46229688408c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 3
+  maxHP: 4
   minHP: 0
   speed: 0
   timer: 0
   timerImmune: 0
-  distDetect: 15
+  distDetect: 16
   isDeath: 0
   anim: {fileID: 0}
   hitDmg: {fileID: 8300000, guid: a521e90f2cd74d94387d420534ed47cd, type: 3}
@@ -990,11 +990,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84122adbe08708e40aa20f71fac5e4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allFlora: 0
   roarClip: {fileID: 8300000, guid: 1cd301de67c4fb54cab5bbb72f3c6bd0, type: 3}
   proj:
   - {fileID: 4759517114385468005}
   - {fileID: 4759517114550891726}
   - {fileID: 4759517113515524078}
+  research: []
 --- !u!1 &4401073817761015819
 GameObject:
   m_ObjectHideFlags: 0

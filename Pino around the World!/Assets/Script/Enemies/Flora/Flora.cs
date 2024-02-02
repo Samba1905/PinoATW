@@ -5,25 +5,41 @@ using UnityEngine;
 public class Flora : MonoBehaviour
 {
     Enemy enemy;
-    bool firstDamage;
+    bool firstDamage, firstRoar;
+    public bool allFlora;
     float timerAttack;
     public AudioClip roarClip;
     AudioSource audioSourceSFX;
     PlayerNew player;
     [SerializeField]
     GameObject [] proj;
+    [SerializeField]
+    GameObject [] research; 
 
     void Start()
     {
         enemy = GetComponent<Enemy>();
         audioSourceSFX = GameObject.Find("SFX").GetComponent<AudioSource>();
         player = FindObjectOfType<PlayerNew>();
+        research = GameObject.FindGameObjectsWithTag("Flora");
     }
 
     void Update()
     {
-        if(!firstDamage && enemy.CurrentHP != 3) Roar();
-        if(firstDamage && enemy.PlayerDetect() && enemy.CurrentHP != 0) Attack();
+        if (!firstDamage && enemy.CurrentHP != 4)
+        {
+            foreach(GameObject g in research)
+            {
+                g.GetComponentInParent<Flora>().allFlora = true;
+                g.GetComponentInParent<Flora>().firstRoar = true;
+            }
+        }
+        if (firstRoar)
+        {
+            Roar();
+            firstRoar = false;
+        }
+        if (allFlora && enemy.PlayerDetect() && enemy.CurrentHP != 0) Attack();
     }
 
     bool Roar()

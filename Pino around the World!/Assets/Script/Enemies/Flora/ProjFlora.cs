@@ -8,7 +8,7 @@ public class ProjFlora : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Hide", 1.15f);
+        Invoke("Hide", 1.35f);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +20,7 @@ public class ProjFlora : MonoBehaviour
 
     private void LateUpdate()
     {
-        rb.AddForce(transform.forward * 7.5f, ForceMode.Acceleration);
+        rb.AddForce(transform.forward * 9.25f, ForceMode.Acceleration);
     }
 
     void Hide()
